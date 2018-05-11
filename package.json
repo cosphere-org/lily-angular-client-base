@@ -1,0 +1,25 @@
+{
+  "name": "cosphere-angular-client",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Domain driven CoSohere API Client",
+  "repository": "https://bitbucket.org/goodai/cosphere-angular-client",
+  "author": "cosphere.org",
+  "scripts": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "rxjs": "^5.5.3",
+    "systemjs": "0.20.19",
+    "ts-node": "^6.0.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.53",
+    "@types/systemjs": "^0.20.6",
+    "@types/underscore": "^1.7.36",
+    "gulp": "^3.9.1",
+    "gulp-tslint": "^8.1.2",
+    "gulp-typescript": "~3.2.3",
+    "typescript": "^2.6.1"
+  }
+}
