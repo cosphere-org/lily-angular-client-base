@@ -17,7 +17,7 @@ import { ConfigService } from './index';
 
 export interface Options {
   cache?: boolean;
-  etag?: number;
+  etag?: string;
   authRequired?: boolean;
   params?: HttpParams | { [param: string]: any };
   headers?: HttpHeaders | { [header: string]: string | string[] };
@@ -199,7 +199,7 @@ export class ClientService {
 
   private getHeaders(
     authenticationRequired: boolean,
-    etag?: number
+    etag?: string
   ): HttpHeaders {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -210,7 +210,7 @@ export class ClientService {
     }
 
     if (etag) {
-      headers.append('Last-Modified', `${etag}`);
+      headers.append('ETag', etag);
     }
 
     return headers;

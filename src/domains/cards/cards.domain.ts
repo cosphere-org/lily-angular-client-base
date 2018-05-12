@@ -27,19 +27,19 @@ export class CardsDomain {
 
   createCard(body: any): Observable<Card> {
     return this.client
-      .post<Card>('cadrs', body)
-      .pipe(filter(card => !_.isEmpty(card)));
+      .post<Card>('cards', body)
+      .pipe(filter(x => !_.isEmpty(x)));
   }
 
   updateCard(cardId: number, body: any): Observable<Card> {
     return this.client
       .put<Card>(`cards/${cardId}`, body)
-      .pipe(filter(card => !_.isEmpty(card)));
+      .pipe(filter(x => !_.isEmpty(x)));
   }
 
   deleteCard(cardId: number): Observable<Card> {
     return this.client
       .delete<Card>(`cards/${cardId}`)
-      .pipe(filter(card => !_.isEmpty(card)));
+      .pipe(filter(x => !_.isEmpty(x)));
   }
 }

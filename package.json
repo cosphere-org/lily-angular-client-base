@@ -1,9 +1,9 @@
 {
   "name": "@cosphere/client",
   "version": "0.0.1",
-  "description": "API client for cosphere angular app",
+  "description": "API client for CoSphere App",
   "main": "index.js",
-  "repository": "https://jarekzielin@bitbucket.org/goodai/cosphere-angular-client.git",
+  "repository": "https://bitbucket.org/goodai/cosphere-angular-client.git",
   "author": "cosphere.org",
   "scripts": {
     "clean": "shx rm -rf _bundles lib lib-esm",

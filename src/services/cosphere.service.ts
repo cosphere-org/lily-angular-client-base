@@ -11,11 +11,13 @@ import { CardsDomain, Card, BulkReadCardsParams } from '../domains/cards/index';
 @Injectable()
 export class CoSphereService {
   /**
-   * Inject Cards domain
+   * Cards domain
    */
   private _cardsDomain: CardsDomain;
   public get cardsDomain(): CardsDomain {
     if (!this._cardsDomain) {
+      // Inject CardsDomain service into facade
+      // when it has been called first time
       this._cardsDomain = this.injector.get(CardsDomain);
     }
     return this._cardsDomain;
