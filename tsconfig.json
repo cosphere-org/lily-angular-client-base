@@ -1,37 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "moduleResolution": "node",
     "module": "commonjs",
-    "declaration": false,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
+    "target": "es5",
+    "lib": [ "es2015", "dom" ],
+    "outDir": "lib",
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
-    "lib": [
-      "es2015",
-      "dom"
-    ],
+    "emitDecoratorMetadata": true,
     "sourceMap": true,
-    "pretty": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitUseStrict": false,
-    "noFallthroughCasesInSwitch": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules"
-    ],
-    "types": [
-      "node"
-    ]
+    "declaration": true,
+    "jsx": "react"
   },
-  "files": [],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "src"
+  "files": [
+    "./src/index.ts"
   ],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "buildOnSave": false
 }

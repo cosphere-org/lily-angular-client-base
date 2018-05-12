@@ -1,25 +1,27 @@
 {
-  "name": "cosphere-angular-client",
+  "name": "@cosphere/client",
   "version": "0.0.1",
-  "license": "MIT",
-  "description": "Domain driven CoSohere API Client",
-  "repository": "https://bitbucket.org/goodai/cosphere-angular-client",
+  "description": "API client for CoSphere App",
+  "main": "index.js",
+  "repository": "https://bitbucket.org/goodai/cosphere-angular-client.git",
   "author": "cosphere.org",
-  "scripts": {},
+  "scripts": {
+    "clean": "shx rm -rf _bundles lib lib-esm",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "rxjs": "^5.5.3",
-    "systemjs": "0.20.19",
-    "ts-node": "^6.0.3",
-    "underscore": "^1.8.3"
+    "@angular/common": "^5.2.9",
+    "@angular/core": "^5.2.9",
+    "@angular/http": "^5.2.9",
+    "core-js": "^2.4.1",
+    "rxjs": "5.5.9",
+    "underscore": "^1.8.3",
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@types/node": "^8.0.53",
-    "@types/systemjs": "^0.20.6",
-    "@types/underscore": "^1.7.36",
-    "gulp": "^3.9.1",
-    "gulp-tslint": "^8.1.2",
-    "gulp-typescript": "~3.2.3",
-    "typescript": "^2.6.1"
+    "awesome-typescript-loader": "^3.0.4-rc.2",
+    "shx": "^0.2.2",
+    "typescript": "^2.6.2",
+    "webpack": "^2.2.1"
   }
 }
