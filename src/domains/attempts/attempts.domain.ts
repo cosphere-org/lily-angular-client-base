@@ -14,15 +14,13 @@ export class AttemptsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Update Attempt
+     * List Attempts By Card
      * -------------
      *
-     * Update existing Attempt with new cells and / or style.
+     * List Attempts for a specific Card given by its Id.
      */
-    public updateAttempt(attemptId: any, body: X.UpdateAttemptBody): Observable<X.UpdateAttemptResponse> {
-        return this.client
-            .put<X.UpdateAttemptResponse>(`/recall/attempts/${attemptId}`, body)
-            .pipe(filter(x => !_.isEmpty(x)));
+    public bulkReadAttemptsByCards(cardId: any): DataState<X.BulkReadAttemptsByCardsResponse> {
+        return this.client.getDataState<X.BulkReadAttemptsByCardsResponse>(`/recall/attempts/by_card/${cardId}`);
     }
 
     /**
@@ -38,13 +36,15 @@ export class AttemptsDomain {
     }
 
     /**
-     * List Attempts By Card
+     * Update Attempt
      * -------------
      *
-     * List Attempts for a specific Card given by its Id.
+     * Update existing Attempt with new cells and / or style.
      */
-    public bulkReadAttemptsByCards(cardId: any): DataState<X.BulkReadAttemptsByCardsResponse> {
-        return this.client.getDataState<X.BulkReadAttemptsByCardsResponse>(`/recall/attempts/by_card/${cardId}`);
+    public updateAttempt(attemptId: any, body: X.UpdateAttemptBody): Observable<X.UpdateAttemptResponse> {
+        return this.client
+            .put<X.UpdateAttemptResponse>(`/recall/attempts/${attemptId}`, body)
+            .pipe(filter(x => !_.isEmpty(x)));
     }
 
 }

@@ -14,28 +14,6 @@ export class AccountsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Authenticate a given token
-     * -------------
-     *
-     * Can be called by the API Gateway in order to authenticate every request using provided token and user's account token
-     */
-    public authenticateUser(body: X.AuthenticateUserBody): Observable<X.AuthenticateUserResponse> {
-        return this.client
-            .post<X.AuthenticateUserResponse>('/auth/authenticate/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Read My Account
-     * -------------
-     *
-     * Read my Account data.
-     */
-    public readAccount(): DataState<X.ReadAccountResponse> {
-        return this.client.getDataState<X.ReadAccountResponse>('/auth/accounts/me/');
-    }
-
-    /**
      * Activate Account
      * -------------
      *
@@ -48,62 +26,14 @@ export class AccountsDomain {
     }
 
     /**
-     * Reset Password
+     * Authenticate a given token
      * -------------
      *
-     * Enables one to reset her password in case the old one cannot be recalled.
+     * Can be called by the API Gateway in order to authenticate every request using provided token and user's account token
      */
-    public resetPassword(body: X.ResetPasswordBody): Observable<X.ResetPasswordResponse> {
+    public authenticateUser(body: X.AuthenticateUserBody): Observable<X.AuthenticateUserResponse> {
         return this.client
-            .post<X.ResetPasswordResponse>('/auth/reset_password/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Update My Account
-     * -------------
-     *
-     * Update my Account data.
-     */
-    public updateAccount(body: X.UpdateAccountBody): Observable<X.UpdateAccountResponse> {
-        return this.client
-            .put<X.UpdateAccountResponse>('/auth/accounts/me/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Create Account
-     * -------------
-     *
-     * Creates User and Account if provided data are valid.
-     */
-    public createAccount(body: X.CreateAccountBody): Observable<X.CreateAccountResponse> {
-        return this.client
-            .post<X.CreateAccountResponse>('/auth/accounts/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Send Reset Password Email
-     * -------------
-     *
-     * Send an Email containing the confirmation link which when clicked kicks of the real Reset Password operation.
-     */
-    public sendResetPasswordEmail(body: X.SendResetPasswordEmailBody): Observable<X.SendResetPasswordEmailResponse> {
-        return this.client
-            .post<X.SendResetPasswordEmailResponse>('/auth/send_reset_password_email/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Send Account Activation Email
-     * -------------
-     *
-     * Send an Email containing the confirmation link which when clicked kicks of the Account Activation. Even though the activation email is send automatically during the Sign Up phase one should have a way to send it again in case it was not delivered.
-     */
-    public sendAccountActivationEmail(body: X.SendAccountActivationEmailBody): Observable<X.SendAccountActivationEmailResponse> {
-        return this.client
-            .post<X.SendAccountActivationEmailResponse>('/auth/send_activation_email/', body)
+            .post<X.AuthenticateUserResponse>('/auth/authenticate/', body)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -126,6 +56,76 @@ export class AccountsDomain {
     public changePassword(body: X.ChangePasswordBody): Observable<X.ChangePasswordResponse> {
         return this.client
             .post<X.ChangePasswordResponse>('/auth/change_password/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Create Account
+     * -------------
+     *
+     * Creates User and Account if provided data are valid.
+     */
+    public createAccount(body: X.CreateAccountBody): Observable<X.CreateAccountResponse> {
+        return this.client
+            .post<X.CreateAccountResponse>('/auth/accounts/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Read My Account
+     * -------------
+     *
+     * Read my Account data.
+     */
+    public readAccount(): DataState<X.ReadAccountResponse> {
+        return this.client.getDataState<X.ReadAccountResponse>('/auth/accounts/me/');
+    }
+
+    /**
+     * Reset Password
+     * -------------
+     *
+     * Enables one to reset her password in case the old one cannot be recalled.
+     */
+    public resetPassword(body: X.ResetPasswordBody): Observable<X.ResetPasswordResponse> {
+        return this.client
+            .post<X.ResetPasswordResponse>('/auth/reset_password/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Send Account Activation Email
+     * -------------
+     *
+     * Send an Email containing the confirmation link which when clicked kicks of the Account Activation. Even though the activation email is send automatically during the Sign Up phase one should have a way to send it again in case it was not delivered.
+     */
+    public sendAccountActivationEmail(body: X.SendAccountActivationEmailBody): Observable<X.SendAccountActivationEmailResponse> {
+        return this.client
+            .post<X.SendAccountActivationEmailResponse>('/auth/send_activation_email/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Send Reset Password Email
+     * -------------
+     *
+     * Send an Email containing the confirmation link which when clicked kicks of the real Reset Password operation.
+     */
+    public sendResetPasswordEmail(body: X.SendResetPasswordEmailBody): Observable<X.SendResetPasswordEmailResponse> {
+        return this.client
+            .post<X.SendResetPasswordEmailResponse>('/auth/send_reset_password_email/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Update My Account
+     * -------------
+     *
+     * Update my Account data.
+     */
+    public updateAccount(body: X.UpdateAccountBody): Observable<X.UpdateAccountResponse> {
+        return this.client
+            .put<X.UpdateAccountResponse>('/auth/accounts/me/', body)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

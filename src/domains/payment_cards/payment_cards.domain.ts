@@ -14,13 +14,37 @@ export class PaymentCardsDomain {
     constructor(private client: ClientService) {}
 
     /**
+     * Mark a given Payment Card as a default one
+     * -------------
+     *
+     * Enables the the User to mark a specific Payment Card as a default one, meaning that it will be used for all upcoming payments. Marking Payment Card as a default one automatically leads to the unmarking of any Payment Card which was default one before the invocation of the command.
+     */
+    public asDefaultMarkPaymentcard(paymentCardId: any): Observable<X.AsDefaultMarkPaymentcardResponse> {
+        return this.client
+            .put<X.AsDefaultMarkPaymentcardResponse>(`/payments/payment_cards/${paymentCardId}/mark_as_default/`, {})
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * List all Payment Cards belonging to a given user
+     * -------------
+     *
+     * Enables the the User to list all of the Payment Cards which were added by him / her. Among all returned Payment Cards there must be one and only one which is marked as **default**.
+     */
+    public bulkReadPaymentcards(): DataState<X.BulkReadPaymentcardsResponse> {
+        return this.client.getDataState<X.BulkReadPaymentcardsResponse>('/payments/payment_cards/');
+    }
+
+    /**
      * Create a Payment Card
      * -------------
      *
-     * Enables the the User to add new Payment Card, which could be needed in cases when the User would like to replace existing Payment Card because: - it expired - is empty - the User prefers another one to be used from now on
+     * Enables the the User to add new Payment Card, which could be needed in cases when the User would like to replace existing Payment Card because: - it expired - is empty - the User prefers another one to be used from now on. Using the optional `mark_as_default` field one can mark just created Payment Card as the default one.
      */
-    public renderPaymentCardWidget(): DataState<X.RenderPaymentCardWidgetResponse> {
-        return this.client.getDataState<X.RenderPaymentCardWidgetResponse>('/payments/payment_cards/widget/');
+    public createPaymentcard(body: X.CreatePaymentcardBody): Observable<X.CreatePaymentcardResponse> {
+        return this.client
+            .post<X.CreatePaymentcardResponse>('/payments/payment_cards/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
     }
 
     /**
@@ -33,16 +57,6 @@ export class PaymentCardsDomain {
         return this.client
             .delete<X.DeletePaymentcardResponse>(`/payments/payment_cards/${paymentCardId}`)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * List all Payment Cards belonging to a given user
-     * -------------
-     *
-     * Enables the the User to list all of the Payment Cards which were added by him / her. Among all returned Payment Cards there must be one and only one which is marked as **default**.
-     */
-    public bulkReadPaymentcards(): DataState<X.BulkReadPaymentcardsResponse> {
-        return this.client.getDataState<X.BulkReadPaymentcardsResponse>('/payments/payment_cards/');
     }
 
     /**
@@ -61,24 +75,10 @@ export class PaymentCardsDomain {
      * Create a Payment Card
      * -------------
      *
-     * Enables the the User to add new Payment Card, which could be needed in cases when the User would like to replace existing Payment Card because: - it expired - is empty - the User prefers another one to be used from now on. Using the optional `mark_as_default` field one can mark just created Payment Card as the default one.
+     * Enables the the User to add new Payment Card, which could be needed in cases when the User would like to replace existing Payment Card because: - it expired - is empty - the User prefers another one to be used from now on
      */
-    public createPaymentcard(body: X.CreatePaymentcardBody): Observable<X.CreatePaymentcardResponse> {
-        return this.client
-            .post<X.CreatePaymentcardResponse>('/payments/payment_cards/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Mark a given Payment Card as a default one
-     * -------------
-     *
-     * Enables the the User to mark a specific Payment Card as a default one, meaning that it will be used for all upcoming payments. Marking Payment Card as a default one automatically leads to the unmarking of any Payment Card which was default one before the invocation of the command.
-     */
-    public asDefaultMarkPaymentcard(paymentCardId: any): Observable<X.AsDefaultMarkPaymentcardResponse> {
-        return this.client
-            .put<X.AsDefaultMarkPaymentcardResponse>(`/payments/payment_cards/${paymentCardId}/mark_as_default/`, {})
-            .pipe(filter(x => !_.isEmpty(x)));
+    public renderPaymentCardWidget(): DataState<X.RenderPaymentCardWidgetResponse> {
+        return this.client.getDataState<X.RenderPaymentCardWidgetResponse>('/payments/payment_cards/widget/');
     }
 
 }

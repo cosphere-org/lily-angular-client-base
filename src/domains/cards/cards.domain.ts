@@ -14,16 +14,6 @@ export class CardsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Read Card by Id
-     * -------------
-     *
-     * Read Card by `id`.
-     */
-    public readCard(cardId: any): DataState<X.ReadCardResponse> {
-        return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`);
-    }
-
-    /**
      * Remove Card
      * -------------
      *
@@ -51,10 +41,20 @@ export class CardsDomain {
      *
      * Enables one to create a single Card instance.
      */
-    public updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse> {
+    public createCard(body: X.CreateCardBody): Observable<X.CreateCardResponse> {
         return this.client
-            .put<X.UpdateCardResponse>(`/cards/${cardId}`, body)
+            .post<X.CreateCardResponse>('/cards/', body)
             .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Read Card by Id
+     * -------------
+     *
+     * Read Card by `id`.
+     */
+    public readCard(cardId: any): DataState<X.ReadCardResponse> {
+        return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`);
     }
 
     /**
@@ -63,9 +63,9 @@ export class CardsDomain {
      *
      * Enables one to create a single Card instance.
      */
-    public createCard(body: X.CreateCardBody): Observable<X.CreateCardResponse> {
+    public updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse> {
         return this.client
-            .post<X.CreateCardResponse>('/cards/', body)
+            .put<X.UpdateCardResponse>(`/cards/${cardId}`, body)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

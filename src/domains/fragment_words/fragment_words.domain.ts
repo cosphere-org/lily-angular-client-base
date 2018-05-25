@@ -14,16 +14,6 @@ export class FragmentWordsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * List Published Words
-     * -------------
-     *
-     * List Published Words
-     */
-    public bulkReadPublishedFragmentWords(params: X.BulkReadPublishedFragmentWordsQuery): DataState<X.BulkReadPublishedFragmentWordsResponse> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponse>('/fragments/words/published/', { params });
-    }
-
-    /**
      * List Words
      * -------------
      *
@@ -31,6 +21,16 @@ export class FragmentWordsDomain {
      */
     public bulkReadFragmentWords(params: X.BulkReadFragmentWordsQuery): DataState<X.BulkReadFragmentWordsResponse> {
         return this.client.getDataState<X.BulkReadFragmentWordsResponse>('/fragments/words/', { params });
+    }
+
+    /**
+     * List Published Words
+     * -------------
+     *
+     * List Published Words
+     */
+    public bulkReadPublishedFragmentWords(params: X.BulkReadPublishedFragmentWordsQuery): DataState<X.BulkReadPublishedFragmentWordsResponse> {
+        return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponse>('/fragments/words/published/', { params });
     }
 
 }

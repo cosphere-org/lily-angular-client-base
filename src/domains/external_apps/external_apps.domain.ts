@@ -16,17 +16,17 @@ export class ExternalAppsDomain {
     /**
      * Read External App configuration
      */
-    public readExternalappconf(params: X.ReadExternalappconfQuery): DataState<X.ReadExternalappconfResponse> {
-        return this.client.getDataState<X.ReadExternalappconfResponse>('/external/apps/', { params });
+    public createExternalAppAuthToken(body: X.CreateExternalAppAuthTokenBody): Observable<X.CreateExternalAppAuthTokenResponse> {
+        return this.client
+            .post<X.CreateExternalAppAuthTokenResponse>('/external/tokens/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
     }
 
     /**
      * Read External App configuration
      */
-    public createExternalAppAuthToken(body: X.CreateExternalAppAuthTokenBody): Observable<X.CreateExternalAppAuthTokenResponse> {
-        return this.client
-            .post<X.CreateExternalAppAuthTokenResponse>('/external/tokens/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
+    public readExternalappconf(params: X.ReadExternalappconfQuery): DataState<X.ReadExternalappconfResponse> {
+        return this.client.getDataState<X.ReadExternalappconfResponse>('/external/apps/', { params });
     }
 
 }

@@ -14,13 +14,13 @@ export class HashtagsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * List Hashtags TOC
+     * List Hashtags
      * -------------
      *
-     * Enables one to list Hashtags Table of Contents made out of Hashtags. Note: Currently this endpoint returns only a flat list of hashtags with the count of Cards with which they're attached to. In the future though one could propose a mechanism which could calculate hierarchy between those hashtags (parent - child relationships) and ordering based on the knowledge grid topology. It accepts various query parameters such as: - `limit` - `offset`
+     * Enables one to list a series of Hashtag instances. It accepts various query parameters such as: - `limit` - `offset` - `first_character`
      */
-    public readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse> {
-        return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc', { params });
+    public bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponse> {
+        return this.client.getDataState<X.BulkReadHashtagsResponse>('/hashtags/', { params });
     }
 
     /**
@@ -48,6 +48,16 @@ export class HashtagsDomain {
     }
 
     /**
+     * List Hashtags TOC
+     * -------------
+     *
+     * Enables one to list Hashtags Table of Contents made out of Hashtags. Note: Currently this endpoint returns only a flat list of hashtags with the count of Cards with which they're attached to. In the future though one could propose a mechanism which could calculate hierarchy between those hashtags (parent - child relationships) and ordering based on the knowledge grid topology. It accepts various query parameters such as: - `limit` - `offset`
+     */
+    public readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse> {
+        return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc', { params });
+    }
+
+    /**
      * Updating a single Hashtag
      * -------------
      *
@@ -57,16 +67,6 @@ export class HashtagsDomain {
         return this.client
             .put<X.UpdateHashtagResponse>(`/hashtags/${hashtagId}`, body)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * List Hashtags
-     * -------------
-     *
-     * Enables one to list a series of Hashtag instances. It accepts various query parameters such as: - `limit` - `offset` - `first_character`
-     */
-    public bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponse> {
-        return this.client.getDataState<X.BulkReadHashtagsResponse>('/hashtags/', { params });
     }
 
 }

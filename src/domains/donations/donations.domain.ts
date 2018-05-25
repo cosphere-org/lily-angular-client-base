@@ -14,6 +14,28 @@ export class DonationsDomain {
     constructor(private client: ClientService) {}
 
     /**
+     * Check if one can attempt a request displaying donation
+     * -------------
+     *
+     * Since we don't want to overflow user with unnecessary requests for him donating we do it in a smarter way using set of heuristics that together help us to answer the following question: "Is it the best moment to ask for the donation?". Currently we use the following heuristics: - is account old enough? - whether user recently donated - whether we attempted recently to request donation from the user - if the user in a good mood (after doing some successful recalls)
+     */
+    public checkIfCanAttemptDonation(params: X.CheckIfCanAttemptDonationQuery): DataState<X.CheckIfCanAttemptDonationResponse> {
+        return this.client.getDataState<X.CheckIfCanAttemptDonationResponse>('/payments/donations/can_attempt/', { params });
+    }
+
+    /**
+     * Register anonymous donation
+     * -------------
+     *
+     * One can perform a donation payment even if not being an authenticated user. Even in that case we cannot allow full anonymity and we must require at least email address to send information regarding the status of the payment.
+     */
+    public createAnonymousDonation(body: X.CreateAnonymousDonationBody): Observable<X.CreateAnonymousDonationResponse> {
+        return this.client
+            .post<X.CreateAnonymousDonationResponse>('/payments/donations/register_anonymous/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
      * Register donation from authenticated user
      * -------------
      *
@@ -34,28 +56,6 @@ export class DonationsDomain {
     public createDonationattempt(body: X.CreateDonationattemptBody): Observable<X.CreateDonationattemptResponse> {
         return this.client
             .post<X.CreateDonationattemptResponse>('/payments/donations/attempts/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Check if one can attempt a request displaying donation
-     * -------------
-     *
-     * Since we don't want to overflow user with unnecessary requests for him donating we do it in a smarter way using set of heuristics that together help us to answer the following question: "Is it the best moment to ask for the donation?". Currently we use the following heuristics: - is account old enough? - whether user recently donated - whether we attempted recently to request donation from the user - if the user in a good mood (after doing some successful recalls)
-     */
-    public checkIfCanAttemptDonation(params: X.CheckIfCanAttemptDonationQuery): DataState<X.CheckIfCanAttemptDonationResponse> {
-        return this.client.getDataState<X.CheckIfCanAttemptDonationResponse>('/payments/donations/can_attempt/', { params });
-    }
-
-    /**
-     * Register anonymous donation
-     * -------------
-     *
-     * One can perform a donation payment even if not being an authenticated user. Even in that case we cannot allow full anonymity and we must require at least email address to send information regarding the status of the payment.
-     */
-    public createAnonymousDonation(body: X.CreateAnonymousDonationBody): Observable<X.CreateAnonymousDonationResponse> {
-        return this.client
-            .post<X.CreateAnonymousDonationResponse>('/payments/donations/register_anonymous/', body)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

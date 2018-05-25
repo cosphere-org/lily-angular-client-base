@@ -3,33 +3,6 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
- */
-
-export interface ReadCardResponse {
-    author_id?: any;
-    created_timestamp: number;
-    external_app_uri?: string;
-    hashtags: {
-        count: number;
-        id?: number;
-        normalized_text: string;
-        text: string;
-    }[];
-    id?: number;
-    paths_count: number;
-    source: {
-        cells?: Object;
-        style?: Object;
-    };
-    target: {
-        cells?: Object;
-        style?: Object;
-    };
-    updated_timestamp: number;
-}
-
-/**
  * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-274
  */
 
@@ -90,27 +63,25 @@ export interface BulkReadCardsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-66
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-179
  */
 
-export interface UpdateCardBody {
-    external_app_uri?: string;
-    source?: {
+export interface CreateCardBody {
+    source: {
         cells: Object;
         style?: Object;
     };
-    target?: {
+    target: {
         cells: Object;
         style?: Object;
     };
-    terms: string[];
 }
 
 /**
  * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
  */
 
-export interface UpdateCardResponse {
+export interface CreateCardResponse {
     author_id?: any;
     created_timestamp: number;
     external_app_uri?: string;
@@ -134,25 +105,54 @@ export interface UpdateCardResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-179
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
  */
 
-export interface CreateCardBody {
+export interface ReadCardResponse {
+    author_id?: any;
+    created_timestamp: number;
+    external_app_uri?: string;
+    hashtags: {
+        count: number;
+        id?: number;
+        normalized_text: string;
+        text: string;
+    }[];
+    id?: number;
+    paths_count: number;
     source: {
-        cells: Object;
+        cells?: Object;
         style?: Object;
     };
     target: {
+        cells?: Object;
+        style?: Object;
+    };
+    updated_timestamp: number;
+}
+
+/**
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-66
+ */
+
+export interface UpdateCardBody {
+    external_app_uri?: string;
+    source?: {
         cells: Object;
         style?: Object;
     };
+    target?: {
+        cells: Object;
+        style?: Object;
+    };
+    terms: string[];
 }
 
 /**
  * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
  */
 
-export interface CreateCardResponse {
+export interface UpdateCardResponse {
     author_id?: any;
     created_timestamp: number;
     external_app_uri?: string;

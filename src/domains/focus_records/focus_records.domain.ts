@@ -14,19 +14,19 @@ export class FocusRecordsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Read Focus Record Summary
-     */
-    public readFocusRecordSummary(): DataState<X.ReadFocusRecordSummaryResponse> {
-        return this.client.getDataState<X.ReadFocusRecordSummaryResponse>('/focus_records/summary/');
-    }
-
-    /**
      * Create Focus Record
      */
     public createFocusrecord(body: X.CreateFocusrecordBody): Observable<X.CreateFocusrecordResponse> {
         return this.client
             .post<X.CreateFocusrecordResponse>('/focus_records/', body)
             .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Read Focus Record Summary
+     */
+    public readFocusRecordSummary(): DataState<X.ReadFocusRecordSummaryResponse> {
+        return this.client.getDataState<X.ReadFocusRecordSummaryResponse>('/focus_records/summary/');
     }
 
 }

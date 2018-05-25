@@ -3,10 +3,11 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/views.py/#lines-190
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/views.py/#lines-64
  */
 
-export interface ReadHashtagsTocQuery {
+export interface BulkReadHashtagsQuery {
+    first_character?: string;
     limit?: number;
     offset?: number;
 }
@@ -15,7 +16,7 @@ export interface ReadHashtagsTocQuery {
  * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/serializers.py/#lines-28
  */
 
-export interface ReadHashtagsTocResponse {
+export interface BulkReadHashtagsResponse {
     hashtags: {
         count: number;
         id?: number;
@@ -59,6 +60,28 @@ export interface DeleteHashtagQuery {
 export interface DeleteHashtagResponse {}
 
 /**
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/views.py/#lines-190
+ */
+
+export interface ReadHashtagsTocQuery {
+    limit?: number;
+    offset?: number;
+}
+
+/**
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/serializers.py/#lines-28
+ */
+
+export interface ReadHashtagsTocResponse {
+    hashtags: {
+        count: number;
+        id?: number;
+        normalized_text: string;
+        text: string;
+    }[];
+}
+
+/**
  * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/views.py/#lines-119
  */
 
@@ -71,26 +94,3 @@ export interface UpdateHashtagBody {
  */
 
 export interface UpdateHashtagResponse {}
-
-/**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/views.py/#lines-64
- */
-
-export interface BulkReadHashtagsQuery {
-    first_character?: string;
-    limit?: number;
-    offset?: number;
-}
-
-/**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/hashtag/serializers.py/#lines-28
- */
-
-export interface BulkReadHashtagsResponse {
-    hashtags: {
-        count: number;
-        id?: number;
-        normalized_text: string;
-        text: string;
-    }[];
-}

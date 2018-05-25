@@ -14,15 +14,23 @@ export class FragmentsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Publish Remote Fragment
+     * List Remote Fragments
      * -------------
      *
-     * Publish Remote Fragment
+     * List Remote Fragments
      */
-    public publishFragment(fragmentId: any): Observable<X.PublishFragmentResponse> {
-        return this.client
-            .put<X.PublishFragmentResponse>(`/fragments/${fragmentId}/publish/`, {})
-            .pipe(filter(x => !_.isEmpty(x)));
+    public bulkReadFragments(params: X.BulkReadFragmentsQuery): DataState<X.BulkReadFragmentsResponse> {
+        return this.client.getDataState<X.BulkReadFragmentsResponse>('/fragments/', { params });
+    }
+
+    /**
+     * List Published Remote Fragments
+     * -------------
+     *
+     * List Published Remote Fragments
+     */
+    public bulkReadPublishedFragments(params: X.BulkReadPublishedFragmentsQuery): DataState<X.BulkReadPublishedFragmentsResponse> {
+        return this.client.getDataState<X.BulkReadPublishedFragmentsResponse>('/fragments/published/', { params });
     }
 
     /**
@@ -34,6 +42,18 @@ export class FragmentsDomain {
     public createFragment(): Observable<X.CreateFragmentResponse> {
         return this.client
             .post<X.CreateFragmentResponse>('/fragments/', {})
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Delete Remote Fragment
+     * -------------
+     *
+     * Delete Remote Fragment
+     */
+    public deleteFragment(fragmentId: any): Observable<X.DeleteFragmentResponse> {
+        return this.client
+            .delete<X.DeleteFragmentResponse>(`/fragments/${fragmentId}`)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -50,36 +70,14 @@ export class FragmentsDomain {
     }
 
     /**
-     * Update Remote Fragment
+     * Publish Remote Fragment
      * -------------
      *
-     * Update Remote Fragment
+     * Publish Remote Fragment
      */
-    public updateFragment(fragmentId: any, body: X.UpdateFragmentBody): Observable<X.UpdateFragmentResponse> {
+    public publishFragment(fragmentId: any): Observable<X.PublishFragmentResponse> {
         return this.client
-            .put<X.UpdateFragmentResponse>(`/fragments/${fragmentId}`, body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Read Fragment Sample
-     * -------------
-     *
-     * Read Fragment Sample
-     */
-    public readFragmentSample(fragmentId: any): DataState<X.ReadFragmentSampleResponse> {
-        return this.client.getDataState<X.ReadFragmentSampleResponse>(`/fragments/${fragmentId}/sample/`);
-    }
-
-    /**
-     * Delete Remote Fragment
-     * -------------
-     *
-     * Delete Remote Fragment
-     */
-    public deleteFragment(fragmentId: any): Observable<X.DeleteFragmentResponse> {
-        return this.client
-            .delete<X.DeleteFragmentResponse>(`/fragments/${fragmentId}`)
+            .put<X.PublishFragmentResponse>(`/fragments/${fragmentId}/publish/`, {})
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -94,26 +92,6 @@ export class FragmentsDomain {
     }
 
     /**
-     * List Published Remote Fragments
-     * -------------
-     *
-     * List Published Remote Fragments
-     */
-    public bulkReadPublishedFragments(params: X.BulkReadPublishedFragmentsQuery): DataState<X.BulkReadPublishedFragmentsResponse> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentsResponse>('/fragments/published/', { params });
-    }
-
-    /**
-     * List Remote Fragments
-     * -------------
-     *
-     * List Remote Fragments
-     */
-    public bulkReadFragments(params: X.BulkReadFragmentsQuery): DataState<X.BulkReadFragmentsResponse> {
-        return this.client.getDataState<X.BulkReadFragmentsResponse>('/fragments/', { params });
-    }
-
-    /**
      * Read Fragment Diff
      * -------------
      *
@@ -121,6 +99,28 @@ export class FragmentsDomain {
      */
     public readFragmentDiff(fragmentId: any): DataState<X.ReadFragmentDiffResponse> {
         return this.client.getDataState<X.ReadFragmentDiffResponse>(`/fragments/${fragmentId}/diff/`);
+    }
+
+    /**
+     * Read Fragment Sample
+     * -------------
+     *
+     * Read Fragment Sample
+     */
+    public readFragmentSample(fragmentId: any): DataState<X.ReadFragmentSampleResponse> {
+        return this.client.getDataState<X.ReadFragmentSampleResponse>(`/fragments/${fragmentId}/sample/`);
+    }
+
+    /**
+     * Update Remote Fragment
+     * -------------
+     *
+     * Update Remote Fragment
+     */
+    public updateFragment(fragmentId: any, body: X.UpdateFragmentBody): Observable<X.UpdateFragmentResponse> {
+        return this.client
+            .put<X.UpdateFragmentResponse>(`/fragments/${fragmentId}`, body)
+            .pipe(filter(x => !_.isEmpty(x)));
     }
 
 }

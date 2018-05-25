@@ -14,16 +14,6 @@ export class NotificationsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * List Notifications
-     * -------------
-     *
-     * List Notifications
-     */
-    public bulkReadNotifications(params: X.BulkReadNotificationsQuery): DataState<X.BulkReadNotificationsResponse> {
-        return this.client.getDataState<X.BulkReadNotificationsResponse>('/notifications/', { params });
-    }
-
-    /**
      * Acknowledge Notification
      * -------------
      *
@@ -33,6 +23,16 @@ export class NotificationsDomain {
         return this.client
             .put<X.AcknowledgeNotificationResponse>(`/notifications/${notificationId}/acknowledge/`, {})
             .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * List Notifications
+     * -------------
+     *
+     * List Notifications
+     */
+    public bulkReadNotifications(params: X.BulkReadNotificationsQuery): DataState<X.BulkReadNotificationsResponse> {
+        return this.client.getDataState<X.BulkReadNotificationsResponse>('/notifications/', { params });
     }
 
 }

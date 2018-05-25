@@ -24,18 +24,6 @@ export class AttemptStatsDomain {
     }
 
     /**
-     * Create External Attempt Stat
-     * -------------
-     *
-     * Create External Attempt Stat meaning one which was rendered elsewhere in any of the multiple CoSphere apps.
-     */
-    public createExternalAttemptStat(body: X.CreateExternalAttemptStatBody): Observable<X.CreateExternalAttemptStatResponse> {
-        return this.client
-            .post<X.CreateExternalAttemptStatResponse>('/recall/attempt_stats/external/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
      * Create Attempt Stat
      * -------------
      *
@@ -44,6 +32,18 @@ export class AttemptStatsDomain {
     public createAttemptstat(body: X.CreateAttemptstatBody): Observable<X.CreateAttemptstatResponse> {
         return this.client
             .post<X.CreateAttemptstatResponse>('/recall/attempt_stats/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Create External Attempt Stat
+     * -------------
+     *
+     * Create External Attempt Stat meaning one which was rendered elsewhere in any of the multiple CoSphere apps.
+     */
+    public createExternalAttemptStat(body: X.CreateExternalAttemptStatBody): Observable<X.CreateExternalAttemptStatResponse> {
+        return this.client
+            .post<X.CreateExternalAttemptStatResponse>('/recall/attempt_stats/external/', body)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

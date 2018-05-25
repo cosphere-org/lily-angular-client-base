@@ -14,19 +14,19 @@ export class AccountSettingsDomain {
     constructor(private client: ClientService) {}
 
     /**
+     * Read Account Settings
+     */
+    public readAccountsetting(): DataState<X.ReadAccountsettingResponse> {
+        return this.client.getDataState<X.ReadAccountsettingResponse>('/account/settings/');
+    }
+
+    /**
      * Update Account Settings
      */
     public updateAccountsetting(body: X.UpdateAccountsettingBody): Observable<X.UpdateAccountsettingResponse> {
         return this.client
             .put<X.UpdateAccountsettingResponse>('/account/settings/', body)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Read Account Settings
-     */
-    public readAccountsetting(): DataState<X.ReadAccountsettingResponse> {
-        return this.client.getDataState<X.ReadAccountsettingResponse>('/account/settings/');
     }
 
 }

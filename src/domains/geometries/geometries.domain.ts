@@ -14,6 +14,16 @@ export class GeometriesDomain {
     constructor(private client: ClientService) {}
 
     /**
+     * List Geometries
+     * -------------
+     *
+     * List Geometries.
+     */
+    public bulkReadGeometries(params: X.BulkReadGeometriesQuery): DataState<X.BulkReadGeometriesResponse> {
+        return this.client.getDataState<X.BulkReadGeometriesResponse>('/grid/geometries/', { params });
+    }
+
+    /**
      * Bulk Update Geometries
      * -------------
      *
@@ -23,16 +33,6 @@ export class GeometriesDomain {
         return this.client
             .put<X.BulkUpdateGeometriesResponse>('/grid/geometries/', body)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * List Geometries
-     * -------------
-     *
-     * List Geometries.
-     */
-    public bulkReadGeometries(params: X.BulkReadGeometriesQuery): DataState<X.BulkReadGeometriesResponse> {
-        return this.client.getDataState<X.BulkReadGeometriesResponse>('/grid/geometries/', { params });
     }
 
     /**

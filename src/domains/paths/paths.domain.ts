@@ -26,6 +26,16 @@ export class PathsDomain {
     }
 
     /**
+     * List Paths
+     * -------------
+     *
+     * List all user's Paths
+     */
+    public bulkReadPaths(params: X.BulkReadPathsQuery): DataState<X.BulkReadPathsResponse> {
+        return this.client.getDataState<X.BulkReadPathsResponse>('/paths/', { params });
+    }
+
+    /**
      * Create Path
      * -------------
      *
@@ -38,13 +48,13 @@ export class PathsDomain {
     }
 
     /**
-     * List Paths
+     * Read Path
      * -------------
      *
-     * List all user's Paths
+     * Read single Path
      */
-    public bulkReadPaths(params: X.BulkReadPathsQuery): DataState<X.BulkReadPathsResponse> {
-        return this.client.getDataState<X.BulkReadPathsResponse>('/paths/', { params });
+    public readPath(pathId: any): DataState<X.ReadPathResponse> {
+        return this.client.getDataState<X.ReadPathResponse>(`/paths/${pathId}`);
     }
 
     /**
@@ -57,16 +67,6 @@ export class PathsDomain {
         return this.client
             .put<X.UpdatePathResponse>(`/paths/${pathId}`, body)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Read Path
-     * -------------
-     *
-     * Read single Path
-     */
-    public readPath(pathId: any): DataState<X.ReadPathResponse> {
-        return this.client.getDataState<X.ReadPathResponse>(`/paths/${pathId}`);
     }
 
 }

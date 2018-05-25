@@ -3,23 +3,16 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/views.py/#lines-61
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/serializers.py/#lines-29
  */
 
-export interface UpdateAttemptBody {
-    cells: Object;
-    style?: Object;
-}
-
-/**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/serializers.py/#lines-9
- */
-
-export interface UpdateAttemptResponse {
-    card_id: number;
-    cells?: Object;
-    id?: number;
-    style?: Object;
+export interface BulkReadAttemptsByCardsResponse {
+    attempts: {
+        card_id: number;
+        cells?: Object;
+        id?: number;
+        style?: Object;
+    }[];
 }
 
 /**
@@ -44,14 +37,21 @@ export interface CreateAttemptResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/serializers.py/#lines-29
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/views.py/#lines-61
  */
 
-export interface BulkReadAttemptsByCardsResponse {
-    attempts: {
-        card_id: number;
-        cells?: Object;
-        id?: number;
-        style?: Object;
-    }[];
+export interface UpdateAttemptBody {
+    cells: Object;
+    style?: Object;
+}
+
+/**
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/serializers.py/#lines-9
+ */
+
+export interface UpdateAttemptResponse {
+    card_id: number;
+    cells?: Object;
+    id?: number;
+    style?: Object;
 }

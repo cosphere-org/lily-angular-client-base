@@ -14,6 +14,18 @@ export class ContactsDomain {
     constructor(private client: ClientService) {}
 
     /**
+     * Create Anonymous Contact Attempt
+     * -------------
+     *
+     * Enables one to send messages to CoSphere's support even if the sender is not authenticated.
+     */
+    public createAnonymousContactAttempt(body: X.CreateAnonymousContactAttemptBody): Observable<X.CreateAnonymousContactAttemptResponse> {
+        return this.client
+            .post<X.CreateAnonymousContactAttemptResponse>('/contacts/anonymous/', body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
      * Send Authenticated Contact Message
      * -------------
      *
@@ -34,18 +46,6 @@ export class ContactsDomain {
     public verifyAnonymousContactAttempt(body: X.VerifyAnonymousContactAttemptBody): Observable<X.VerifyAnonymousContactAttemptResponse> {
         return this.client
             .post<X.VerifyAnonymousContactAttemptResponse>('/contacts/anonymous/verify/', body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Create Anonymous Contact Attempt
-     * -------------
-     *
-     * Enables one to send messages to CoSphere's support even if the sender is not authenticated.
-     */
-    public createAnonymousContactAttempt(body: X.CreateAnonymousContactAttemptBody): Observable<X.CreateAnonymousContactAttemptResponse> {
-        return this.client
-            .post<X.CreateAnonymousContactAttemptResponse>('/contacts/anonymous/', body)
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

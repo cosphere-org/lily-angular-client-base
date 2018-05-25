@@ -24,6 +24,18 @@ export class MediaitemsDomain {
     }
 
     /**
+     * Remove MediaItem
+     * -------------
+     *
+     * Remove MediaItem instance.
+     */
+    public deleteMediaitem(mediaitemId: any, params: X.DeleteMediaitemQuery): Observable<X.DeleteMediaitemResponse> {
+        return this.client
+            .delete<X.DeleteMediaitemResponse>(`/mediaitems/${mediaitemId}`, { params })
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
      * Read MediaItem
      * -------------
      *
@@ -34,27 +46,13 @@ export class MediaitemsDomain {
     }
 
     /**
-     * Update MediaItem
+     * Read By Process Id
      * -------------
      *
-     * Update MediaItem instance.
+     * Read MediaItem by Process Id
      */
-    public updateMediaitem(mediaitemId: any, body: X.UpdateMediaitemBody): Observable<X.UpdateMediaitemResponse> {
-        return this.client
-            .put<X.UpdateMediaitemResponse>(`/mediaitems/${mediaitemId}`, body)
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Remove MediaItem
-     * -------------
-     *
-     * Remove MediaItem instance.
-     */
-    public deleteMediaitem(mediaitemId: any, params: X.DeleteMediaitemQuery): Observable<X.DeleteMediaitemResponse> {
-        return this.client
-            .delete<X.DeleteMediaitemResponse>(`/mediaitems/${mediaitemId}`, { params })
-            .pipe(filter(x => !_.isEmpty(x)));
+    public readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
+        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`);
     }
 
     /**
@@ -70,6 +68,18 @@ export class MediaitemsDomain {
     }
 
     /**
+     * Update MediaItem
+     * -------------
+     *
+     * Update MediaItem instance.
+     */
+    public updateMediaitem(mediaitemId: any, body: X.UpdateMediaitemBody): Observable<X.UpdateMediaitemResponse> {
+        return this.client
+            .put<X.UpdateMediaitemResponse>(`/mediaitems/${mediaitemId}`, body)
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
      * Update MediaItem Representation
      * -------------
      *
@@ -79,16 +89,6 @@ export class MediaitemsDomain {
         return this.client
             .put<X.UpdateMediaitemRepresentationResponse>(`/mediaitems/${mediaitemId}/representation/`, body)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Read By Process Id
-     * -------------
-     *
-     * Read MediaItem by Process Id
-     */
-    public readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
-        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`);
     }
 
 }
