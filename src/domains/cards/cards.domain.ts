@@ -14,6 +14,16 @@ export class CardsDomain {
     constructor(private client: ClientService) {}
 
     /**
+     * Read Card by Id
+     * -------------
+     *
+     * Read Card by `id`.
+     */
+    public readCard(cardId: any): DataState<X.ReadCardResponse> {
+        return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`);
+    }
+
+    /**
      * Remove Card
      * -------------
      *
@@ -23,6 +33,16 @@ export class CardsDomain {
         return this.client
             .delete<X.BulkDeleteCardsResponse>('/cards/', { params })
             .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Bulk Read Multiple Cards
+     * -------------
+     *
+     * List subset of Cards depending on various filtering flags.
+     */
+    public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponse> {
+        return this.client.getDataState<X.BulkReadCardsResponse>('/cards/', { params });
     }
 
     /**
@@ -38,16 +58,6 @@ export class CardsDomain {
     }
 
     /**
-     * Read Card by Id
-     * -------------
-     *
-     * Read Card by `id`.
-     */
-    public readCard(cardId: any): DataState<X.ReadCardResponse> {
-        return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`);
-    }
-
-    /**
      * Creating a single Card
      * -------------
      *
@@ -57,16 +67,6 @@ export class CardsDomain {
         return this.client
             .post<X.CreateCardResponse>('/cards/', body)
             .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
-     * Bulk Read Multiple Cards
-     * -------------
-     *
-     * List subset of Cards depending on various filtering flags.
-     */
-    public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponse> {
-        return this.client.getDataState<X.BulkReadCardsResponse>('/cards/', { params });
     }
 
 }
