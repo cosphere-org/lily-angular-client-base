@@ -6,7 +6,7 @@ import { CardsDomain } from './domains/cards/index';
 
 /** Services */
 import {
-  CoSphereService,
+  APIService,
   ClientService,
   ConfigService,
   Config
@@ -31,7 +31,7 @@ export class ClientModule {
         CardsDomain,
 
         // Facade
-        CoSphereService,
+        APIService,
       ]
     };
   }

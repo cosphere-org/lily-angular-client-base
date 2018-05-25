@@ -1,6 +1,6 @@
 {
   "name": "@cosphere/client",
-  "version": "0.4.0",
+  "version": "0.20.0",
   "description": "API client for CoSphere App",
   "main": "index.js",
   "repository": "https://bitbucket.org/goodai/cosphere-angular-client.git",
