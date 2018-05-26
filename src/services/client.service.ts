@@ -5,42 +5,16 @@ import {
   HttpHeaders,
   HttpErrorResponse
 } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 // FIXME - uncomment it when use rxjs 6.0.0
 // import { throwError } from 'rxjs';
 import * as _ from 'underscore';
 
-import { ConfigService } from './index';
-
-export interface Options {
-  cache?: boolean;
-  etag?: string;
-  authRequired?: boolean;
-  params?: HttpParams | { [param: string]: any };
-  headers?: HttpHeaders | { [header: string]: string | string[] };
-  reportProgress?: boolean;
-}
-
-export interface State<T> {
-  [key: string]: {
-    dataState: DataState<T>;
-    requestState: RequestState;
-  };
-}
-
-export interface DataState<T> {
-  loading$?: BehaviorSubject<boolean>;
-  isData$?: BehaviorSubject<boolean>;
-  data$?: BehaviorSubject<T>;
-}
-
-export interface RequestState {
-  pending: boolean;
-  cachedAt: number;
-}
+import { ConfigService } from './config.service';
+import { Options, State, DataState, RequestState } from './client.interface';
 
 @Injectable()
 export class ClientService {
@@ -102,7 +76,7 @@ export class ClientService {
   getDataState<T>(endpoint: string, options?: Options): DataState<T> {
     this.initState(endpoint);
 
-    let cache: boolean = true;
+    let cache = true;
     let params: HttpParams | { [param: string]: string | string[] };
 
     if (_.has(options, 'cache')) {
@@ -181,9 +155,11 @@ export class ClientService {
     };
 
     if (_.has(options, 'headres')) {
+      // tslint:disable
       for (let key in options.headers) {
         httpOptions.headers.append(key, (<any>options).headers[key]);
       }
+      // tslint:enable
     }
 
     if (_.has(options, 'params')) {
@@ -217,7 +193,7 @@ export class ClientService {
   }
 
   private getUrl(endpoint: string): string {
-    return `${this.baseUrl}/${endpoint}`;
+    return `${this.baseUrl}${endpoint}`;
   }
 
   private getToken(): string {

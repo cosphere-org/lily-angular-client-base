@@ -6,7 +6,9 @@ import { filter } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import * as _ from 'underscore';
 
-import { ClientService, DataState } from '../../services/client.service';
+import { ClientService } from '../../services/client.service';
+import { DataState } from '../../services/client.interface';
+
 import * as X from './account_settings.models';
 
 @Injectable()

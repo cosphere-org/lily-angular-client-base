@@ -4,7 +4,7 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { DataState, Options } from './index';
+import { DataState, Options } from './client.interface';
 
 import * as X from '../domains/index';
 

@@ -4,6 +4,7 @@ var webpack = require("webpack");
 var PATHS = {
   entryPoint: path.resolve(__dirname, 'src/index.ts'),
   bundles: path.resolve(__dirname, 'js'),
+  root: path.resolve(__dirname, 'src'),
 }
 
 var config = {
@@ -43,7 +44,21 @@ var config = {
       minimize: true,
       sourceMap: true,
       include: /\.min\.js$/,
-    })
+    }),
+
+    new webpack.ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)core/,
+      PATHS.root, // location of your src
+      { }
+    ),
+
+    new webpack.ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)http/,
+      PATHS.root, // location of your src
+      { }
+    )
   ],
   module: {
     // Webpack doesn't understand TypeScript files and a loader is needed.
