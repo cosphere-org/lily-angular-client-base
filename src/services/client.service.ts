@@ -8,7 +8,7 @@ import {
 import { BehaviorSubject } from 'rxjs';
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, retry, map } from 'rxjs/operators';
 // FIXME - uncomment it when use rxjs 6.0.0
 // import { throwError } from 'rxjs';
 import * as _ from 'underscore';
@@ -100,21 +100,25 @@ export class ClientService {
       !cache
     ) {
       this.state[endpoint].requestState.pending = true;
-      this.get(endpoint, options).subscribe(
-        data => {
-          this.state[endpoint].dataState.data$.next(data);
-          this.state[endpoint].dataState.isData$.next(!_.isEmpty(data));
-          this.state[endpoint].dataState.loading$.next(false);
-          this.state[endpoint].requestState.pending = false;
-          this.state[endpoint].requestState.cachedAt = currentTime;
-        },
-        err => {
-          this.state[endpoint].dataState.isData$.next(false);
-          this.state[endpoint].dataState.data$.error({});
-          this.state[endpoint].dataState.loading$.next(false);
-          this.state[endpoint].requestState.pending = false;
-        }
-      );
+      this.get(endpoint, options)
+        .pipe(
+          map(data => options.responseMap ? data[options.responseMap] : data)
+        )
+        .subscribe(
+          data => {
+            this.state[endpoint].dataState.data$.next(data);
+            this.state[endpoint].dataState.isData$.next(!_.isEmpty(data));
+            this.state[endpoint].dataState.loading$.next(false);
+            this.state[endpoint].requestState.pending = false;
+            this.state[endpoint].requestState.cachedAt = currentTime;
+          },
+          err => {
+            this.state[endpoint].dataState.isData$.next(false);
+            this.state[endpoint].dataState.data$.error({});
+            this.state[endpoint].dataState.loading$.next(false);
+            this.state[endpoint].requestState.pending = false;
+          }
+        );
     } else {
       this.state[endpoint].dataState.loading$.next(false);
     }

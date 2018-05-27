@@ -12,6 +12,7 @@ export interface Options {
   params?: HttpParams | { [param: string]: any };
   headers?: HttpHeaders | { [header: string]: string | string[] };
   reportProgress?: boolean;
+  responseMap?: string;
 }
 
 export interface State<T> {

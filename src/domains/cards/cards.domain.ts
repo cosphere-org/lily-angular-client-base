@@ -33,7 +33,7 @@ export class CardsDomain {
      * List subset of Cards depending on various filtering flags.
      */
     public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponse> {
-        return this.client.getDataState<X.BulkReadCardsResponse>('/cards/', { params });
+        return this.client.getDataState<X.BulkReadCardsResponse>('/cards/', { params, responseMap: 'cards' });
     }
 
     /**
