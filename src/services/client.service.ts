@@ -5,12 +5,8 @@ import {
   HttpHeaders,
   HttpErrorResponse
 } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
-import { Subject } from 'rxjs';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Subject, Observable, throwError } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
-// FIXME - uncomment it when use rxjs 6.0.0
-// import { throwError } from 'rxjs';
 import * as _ from 'underscore';
 
 import { ConfigService } from './config.service';
@@ -21,7 +17,7 @@ export class ClientService {
   /**
    * State for all GET payloads
    */
-  state: State<any> = {};
+  state = new Map<string, State<any>>();
 
   readonly baseUrl: string;
   readonly authToken: string;
@@ -87,48 +83,50 @@ export class ClientService {
       params = options.params;
     }
 
+    // Get the endpoint state
+    const state = this.state.get(endpoint);
+
     // Do not allow invoke the same GET request while one is pending
-    if (this.state[endpoint].requestState.pending && !_.isEmpty(params)) {
-      return this.state[endpoint].dataState;
+    if (state.requestState.pending && !_.isEmpty(params)) {
+      return state.dataState;
     }
 
     const currentTime = +new Date();
     if (
-      currentTime - this.state[endpoint].requestState.cachedAt >
-        this.cacheTime ||
+      currentTime - state.requestState.cachedAt > this.cacheTime ||
       !_.isEmpty(params) ||
       !cache
     ) {
-      this.state[endpoint].requestState.pending = true;
+      state.requestState.pending = true;
       this.get(endpoint, options)
         .pipe(
-          map(data => options.responseMap ? data[options.responseMap] : data)
+          map(data => (options.responseMap ? data[options.responseMap] : data))
         )
         .subscribe(
           data => {
-            this.state[endpoint].dataState.data$.next(data);
-            this.state[endpoint].dataState.isData$.next(!_.isEmpty(data));
-            this.state[endpoint].dataState.loading$.next(false);
-            this.state[endpoint].requestState.pending = false;
-            this.state[endpoint].requestState.cachedAt = currentTime;
+            state.dataState.data$.next(data);
+            state.dataState.isData$.next(!_.isEmpty(data));
+            state.dataState.loading$.next(false);
+            state.requestState.pending = false;
+            state.requestState.cachedAt = currentTime;
           },
           err => {
-            this.state[endpoint].dataState.isData$.next(false);
-            this.state[endpoint].dataState.data$.error({});
-            this.state[endpoint].dataState.loading$.next(false);
-            this.state[endpoint].requestState.pending = false;
+            state.dataState.isData$.next(false);
+            state.dataState.data$.error({});
+            state.dataState.loading$.next(false);
+            state.requestState.pending = false;
           }
         );
     } else {
-      this.state[endpoint].dataState.loading$.next(false);
+      state.dataState.loading$.next(false);
     }
 
-    return this.state[endpoint].dataState;
+    return state.dataState;
   }
 
   private initState(endpoint: string): void {
-    if (!this.state[endpoint]) {
-      this.state[endpoint] = {
+    if (!this.state.has(endpoint)) {
+      this.state.set(endpoint, {
         dataState: {
           loading$: new BehaviorSubject(true),
           isData$: new BehaviorSubject(false),
@@ -138,9 +136,9 @@ export class ClientService {
           cachedAt: 0,
           pending: false
         }
-      };
+      });
     } else {
-      this.state[endpoint].dataState.loading$.next(true);
+      this.state.get(endpoint).dataState.loading$.next(true);
     }
   }
 
@@ -151,7 +149,9 @@ export class ClientService {
     headers?: HttpHeaders | { [header: string]: string | string[] };
     reportProgress?: boolean;
   } {
-    const authRequired = (options && options.authRequired) || true;
+    const authRequired = _.has(options, 'authRequired')
+      ? options.authRequired
+      : true;
     const etag = (options && options.etag) || undefined;
 
     let httpOptions = {
@@ -161,7 +161,7 @@ export class ClientService {
     if (_.has(options, 'headres')) {
       // tslint:disable
       for (let key in options.headers) {
-        httpOptions.headers.append(key, (<any>options).headers[key]);
+        httpOptions.headers[key] = (<any>options).headers[key];
       }
       // tslint:enable
     }
@@ -180,17 +180,17 @@ export class ClientService {
   private getHeaders(
     authenticationRequired: boolean,
     etag?: string
-  ): HttpHeaders {
-    let headers = new HttpHeaders({
+  ): { [key: string]: string } {
+    let headers = {
       'Content-Type': 'application/json'
-    });
+    };
 
     if (authenticationRequired) {
-      headers.append('Authorization', `Bearer ${this.getToken()}`);
+      headers['Authorization'] = `Bearer ${this.getToken()}`;
     }
 
     if (etag) {
-      headers.append('ETag', etag);
+      headers['ETag'] = etag;
     }
 
     return headers;
@@ -215,10 +215,8 @@ export class ClientService {
         `Backend returned code ${error.status}, ` + `body was: ${error.error}`
       );
     }
+
     // return an observable with a user-facing error message
-    return Observable.throw('Something bad happened; please try again later.');
-    // FIXME - uncomment it when use rxjs 6.0.0
-    // return throwError(
-    //   'Something bad happened; please try again later.');
+    return throwError('Something bad happened; please try again later.');
   }
 }

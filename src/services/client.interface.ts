@@ -16,10 +16,8 @@ export interface Options {
 }
 
 export interface State<T> {
-  [key: string]: {
-    dataState: DataState<T>;
-    requestState: RequestState;
-  };
+  dataState: DataState<T>;
+  requestState: RequestState;
 }
 
 export interface DataState<T> {
