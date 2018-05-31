@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export interface Options {
   cache?: boolean;
   etag?: string;
-  authRequired?: boolean;
+  authorizationRequired?: boolean;
   params?: HttpParams | { [param: string]: any };
   headers?: HttpHeaders | { [header: string]: string | string[] };
   reportProgress?: boolean;

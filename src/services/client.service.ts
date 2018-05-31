@@ -149,16 +149,16 @@ export class ClientService {
     headers?: HttpHeaders | { [header: string]: string | string[] };
     reportProgress?: boolean;
   } {
-    const authRequired = _.has(options, 'authRequired')
-      ? options.authRequired
+    const authorizationRequired = _.has(options, 'authorizationRequired')
+      ? options.authorizationRequired
       : true;
     const etag = (options && options.etag) || undefined;
 
     let httpOptions = {
-      headers: this.getHeaders(authRequired, etag)
+      headers: this.getHeaders(authorizationRequired, etag)
     };
 
-    if (_.has(options, 'headres')) {
+    if (_.has(options, 'headers')) {
       // tslint:disable
       for (let key in options.headers) {
         httpOptions.headers[key] = (<any>options).headers[key];
@@ -178,14 +178,14 @@ export class ClientService {
   }
 
   private getHeaders(
-    authenticationRequired: boolean,
+    authorizationRequired: boolean,
     etag?: string
   ): { [key: string]: string } {
     let headers = {
       'Content-Type': 'application/json'
     };
 
-    if (authenticationRequired) {
+    if (authorizationRequired) {
       headers['Authorization'] = `Bearer ${this.getToken()}`;
     }
 
