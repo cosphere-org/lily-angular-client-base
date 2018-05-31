@@ -28,7 +28,7 @@ export class AccountsDomain {
      */
     public activateAccount(body: X.ActivateAccountBody): Observable<X.ActivateAccountResponse> {
         return this.client
-            .post<X.ActivateAccountResponse>('/auth/activate/', body)
+            .post<X.ActivateAccountResponse>('/auth/activate/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -40,7 +40,7 @@ export class AccountsDomain {
      */
     public authenticateUser(body: X.AuthenticateUserBody): Observable<X.AuthenticateUserResponse> {
         return this.client
-            .post<X.AuthenticateUserResponse>('/auth/authenticate/', body)
+            .post<X.AuthenticateUserResponse>('/auth/authenticate/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -51,7 +51,7 @@ export class AccountsDomain {
      * Enable one to Read all available Mentor accounts
      */
     public bulkReadAccounts(params: X.BulkReadAccountsQuery): DataState<X.BulkReadAccountsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -62,7 +62,7 @@ export class AccountsDomain {
      */
     public changePassword(body: X.ChangePasswordBody): Observable<X.ChangePasswordResponse> {
         return this.client
-            .post<X.ChangePasswordResponse>('/auth/change_password/', body)
+            .post<X.ChangePasswordResponse>('/auth/change_password/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -74,7 +74,7 @@ export class AccountsDomain {
      */
     public createAccount(body: X.CreateAccountBody): Observable<X.CreateAccountResponse> {
         return this.client
-            .post<X.CreateAccountResponse>('/auth/accounts/', body)
+            .post<X.CreateAccountResponse>('/auth/accounts/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -85,7 +85,7 @@ export class AccountsDomain {
      * Read my Account data.
      */
     public readAccount(): DataState<X.ReadAccountResponse> {
-        return this.client.getDataState<X.ReadAccountResponse>('/auth/accounts/me/');
+        return this.client.getDataState<X.ReadAccountResponse>('/auth/accounts/me/', { authorizationRequired: true });
     }
 
     /**
@@ -96,7 +96,7 @@ export class AccountsDomain {
      */
     public resetPassword(body: X.ResetPasswordBody): Observable<X.ResetPasswordResponse> {
         return this.client
-            .post<X.ResetPasswordResponse>('/auth/reset_password/', body)
+            .post<X.ResetPasswordResponse>('/auth/reset_password/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -108,7 +108,7 @@ export class AccountsDomain {
      */
     public sendAccountActivationEmail(body: X.SendAccountActivationEmailBody): Observable<X.SendAccountActivationEmailResponse> {
         return this.client
-            .post<X.SendAccountActivationEmailResponse>('/auth/send_activation_email/', body)
+            .post<X.SendAccountActivationEmailResponse>('/auth/send_activation_email/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -120,7 +120,7 @@ export class AccountsDomain {
      */
     public sendResetPasswordEmail(body: X.SendResetPasswordEmailBody): Observable<X.SendResetPasswordEmailResponse> {
         return this.client
-            .post<X.SendResetPasswordEmailResponse>('/auth/send_reset_password_email/', body)
+            .post<X.SendResetPasswordEmailResponse>('/auth/send_reset_password_email/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -132,7 +132,7 @@ export class AccountsDomain {
      */
     public updateAccount(body: X.UpdateAccountBody): Observable<X.UpdateAccountResponse> {
         return this.client
-            .put<X.UpdateAccountResponse>('/auth/accounts/me/', body)
+            .put<X.UpdateAccountResponse>('/auth/accounts/me/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

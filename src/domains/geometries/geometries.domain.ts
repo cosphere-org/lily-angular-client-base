@@ -27,7 +27,7 @@ export class GeometriesDomain {
      * List Geometries.
      */
     public bulkReadGeometries(params: X.BulkReadGeometriesQuery): DataState<X.BulkReadGeometriesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -38,7 +38,7 @@ export class GeometriesDomain {
      */
     public bulkUpdateGeometries(body: X.BulkUpdateGeometriesBody): Observable<X.BulkUpdateGeometriesResponse> {
         return this.client
-            .put<X.BulkUpdateGeometriesResponse>('/grid/geometries/', body)
+            .put<X.BulkUpdateGeometriesResponse>('/grid/geometries/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -49,7 +49,7 @@ export class GeometriesDomain {
      * Read a Geometry entity given the id of Card which is the parent of the Geometry entity.
      */
     public readGeometryByCard(cardId: any): DataState<X.ReadGeometryByCardResponse> {
-        return this.client.getDataState<X.ReadGeometryByCardResponse>(`/grid/geometries/by_card/${cardId}`);
+        return this.client.getDataState<X.ReadGeometryByCardResponse>(`/grid/geometries/by_card/${cardId}`, { authorizationRequired: true });
     }
 
     /**
@@ -59,7 +59,7 @@ export class GeometriesDomain {
      * Render and read Graph made out of all Cards and Links belonging to a given user.
      */
     public readGraph(params: X.ReadGraphQuery): DataState<X.ReadGraphResponse> {
-        return this.client.getDataState<X.ReadGraphResponse>('/grid/graphs/', { params });
+        return this.client.getDataState<X.ReadGraphResponse>('/grid/graphs/', { params, authorizationRequired: true });
     }
 
 }

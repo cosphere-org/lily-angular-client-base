@@ -28,7 +28,7 @@ export class InternalDomain {
      */
     public updateAccountTypeAsAdmin(body: X.UpdateAccountTypeAsAdminBody): Observable<X.UpdateAccountTypeAsAdminResponse> {
         return this.client
-            .put<X.UpdateAccountTypeAsAdminResponse>('/internal/change_account_type/', body)
+            .put<X.UpdateAccountTypeAsAdminResponse>('/internal/change_account_type/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

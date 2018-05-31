@@ -28,7 +28,7 @@ export class AuthTokensDomain {
      */
     public createAuthToken(body: X.CreateAuthTokenBody): Observable<X.CreateAuthTokenResponse> {
         return this.client
-            .post<X.CreateAuthTokenResponse>('/auth/auth_token/', body)
+            .post<X.CreateAuthTokenResponse>('/auth/auth_token/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -37,7 +37,7 @@ export class AuthTokensDomain {
      */
     public createFacebookBasedAuthToken(body: X.CreateFacebookBasedAuthTokenBody): Observable<X.CreateFacebookBasedAuthTokenResponse> {
         return this.client
-            .post<X.CreateFacebookBasedAuthTokenResponse>('/auth/auth_token/facebook/', body)
+            .post<X.CreateFacebookBasedAuthTokenResponse>('/auth/auth_token/facebook/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -46,7 +46,7 @@ export class AuthTokensDomain {
      */
     public createFacebookBasedMobileAuthToken(body: X.CreateFacebookBasedMobileAuthTokenBody): Observable<X.CreateFacebookBasedMobileAuthTokenResponse> {
         return this.client
-            .post<X.CreateFacebookBasedMobileAuthTokenResponse>('/auth/auth_token/facebook/mobile/', body)
+            .post<X.CreateFacebookBasedMobileAuthTokenResponse>('/auth/auth_token/facebook/mobile/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -55,7 +55,7 @@ export class AuthTokensDomain {
      */
     public createGoogleBasedAuthToken(body: X.CreateGoogleBasedAuthTokenBody): Observable<X.CreateGoogleBasedAuthTokenResponse> {
         return this.client
-            .post<X.CreateGoogleBasedAuthTokenResponse>('/auth/auth_token/google/', body)
+            .post<X.CreateGoogleBasedAuthTokenResponse>('/auth/auth_token/google/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -64,7 +64,7 @@ export class AuthTokensDomain {
      */
     public createGoogleBasedMobileAuthToken(body: X.CreateGoogleBasedMobileAuthTokenBody): Observable<X.CreateGoogleBasedMobileAuthTokenResponse> {
         return this.client
-            .post<X.CreateGoogleBasedMobileAuthTokenResponse>('/auth/auth_token/google/mobile/', body)
+            .post<X.CreateGoogleBasedMobileAuthTokenResponse>('/auth/auth_token/google/mobile/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -76,7 +76,7 @@ export class AuthTokensDomain {
      */
     public updateAuthToken(): Observable<X.UpdateAuthTokenResponse> {
         return this.client
-            .put<X.UpdateAuthTokenResponse>('/auth/auth_token/', {})
+            .put<X.UpdateAuthTokenResponse>('/auth/auth_token/', {}, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

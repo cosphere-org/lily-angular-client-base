@@ -27,7 +27,7 @@ export class HashtagsDomain {
      * Enables one to list a series of Hashtag instances. It accepts various query parameters such as: - `limit` - `offset` - `first_character`
      */
     public bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -38,7 +38,7 @@ export class HashtagsDomain {
      */
     public createHashtag(body: X.CreateHashtagBody): Observable<X.CreateHashtagResponse> {
         return this.client
-            .post<X.CreateHashtagResponse>('/hashtags/', body)
+            .post<X.CreateHashtagResponse>('/hashtags/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -50,7 +50,7 @@ export class HashtagsDomain {
      */
     public deleteHashtag(hashtagId: any, params: X.DeleteHashtagQuery): Observable<X.DeleteHashtagResponse> {
         return this.client
-            .delete<X.DeleteHashtagResponse>(`/hashtags/${hashtagId}`, { params })
+            .delete<X.DeleteHashtagResponse>(`/hashtags/${hashtagId}`, { params, authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -61,7 +61,7 @@ export class HashtagsDomain {
      * Enables one to list Hashtags Table of Contents made out of Hashtags. Note: Currently this endpoint returns only a flat list of hashtags with the count of Cards with which they're attached to. In the future though one could propose a mechanism which could calculate hierarchy between those hashtags (parent - child relationships) and ordering based on the knowledge grid topology. It accepts various query parameters such as: - `limit` - `offset`
      */
     public readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse> {
-        return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc', { params });
+        return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc', { params, authorizationRequired: true });
     }
 
     /**
@@ -72,7 +72,7 @@ export class HashtagsDomain {
      */
     public updateHashtag(hashtagId: any, body: X.UpdateHashtagBody): Observable<X.UpdateHashtagResponse> {
         return this.client
-            .put<X.UpdateHashtagResponse>(`/hashtags/${hashtagId}`, body)
+            .put<X.UpdateHashtagResponse>(`/hashtags/${hashtagId}`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

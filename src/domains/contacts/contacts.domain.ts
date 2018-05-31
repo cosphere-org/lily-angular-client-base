@@ -28,7 +28,7 @@ export class ContactsDomain {
      */
     public createAnonymousContactAttempt(body: X.CreateAnonymousContactAttemptBody): Observable<X.CreateAnonymousContactAttemptResponse> {
         return this.client
-            .post<X.CreateAnonymousContactAttemptResponse>('/contacts/anonymous/', body)
+            .post<X.CreateAnonymousContactAttemptResponse>('/contacts/anonymous/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -40,7 +40,7 @@ export class ContactsDomain {
      */
     public sendAuthenticatedContactMessage(body: X.SendAuthenticatedContactMessageBody): Observable<X.SendAuthenticatedContactMessageResponse> {
         return this.client
-            .post<X.SendAuthenticatedContactMessageResponse>('/contacts/', body)
+            .post<X.SendAuthenticatedContactMessageResponse>('/contacts/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -52,7 +52,7 @@ export class ContactsDomain {
      */
     public verifyAnonymousContactAttempt(body: X.VerifyAnonymousContactAttemptBody): Observable<X.VerifyAnonymousContactAttemptResponse> {
         return this.client
-            .post<X.VerifyAnonymousContactAttemptResponse>('/contacts/anonymous/verify/', body)
+            .post<X.VerifyAnonymousContactAttemptResponse>('/contacts/anonymous/verify/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

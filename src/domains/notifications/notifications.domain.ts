@@ -28,7 +28,7 @@ export class NotificationsDomain {
      */
     public acknowledgeNotification(notificationId: any): Observable<X.AcknowledgeNotificationResponse> {
         return this.client
-            .put<X.AcknowledgeNotificationResponse>(`/notifications/${notificationId}/acknowledge/`, {})
+            .put<X.AcknowledgeNotificationResponse>(`/notifications/${notificationId}/acknowledge/`, {}, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -39,7 +39,7 @@ export class NotificationsDomain {
      * List Notifications
      */
     public bulkReadNotifications(params: X.BulkReadNotificationsQuery): DataState<X.BulkReadNotificationsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadNotificationsResponseEntity[]>('/notifications/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadNotificationsResponseEntity[]>('/notifications/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
 }

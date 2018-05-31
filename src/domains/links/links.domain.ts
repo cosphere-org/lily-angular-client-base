@@ -28,7 +28,7 @@ export class LinksDomain {
      */
     public deleteLink(fromCardId: any, toCardId: any): Observable<X.DeleteLinkResponse> {
         return this.client
-            .delete<X.DeleteLinkResponse>(`/grid/links/${fromCardId}/${toCardId}`)
+            .delete<X.DeleteLinkResponse>(`/grid/links/${fromCardId}/${toCardId}`, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -40,7 +40,7 @@ export class LinksDomain {
      */
     public readOrCreateLink(body: X.ReadOrCreateLinkBody): Observable<X.ReadOrCreateLinkResponse> {
         return this.client
-            .post<X.ReadOrCreateLinkResponse>('/grid/links/', body)
+            .post<X.ReadOrCreateLinkResponse>('/grid/links/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

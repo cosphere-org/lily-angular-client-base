@@ -28,7 +28,7 @@ export class PaymentsDomain {
      */
     public updatePaymentStatus(body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse> {
         return this.client
-            .post<X.UpdatePaymentStatusResponse>('/payments/(?P<session_id>[\w\-]+)', body)
+            .post<X.UpdatePaymentStatusResponse>('/payments/(?P<session_id>[\w\-]+)', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

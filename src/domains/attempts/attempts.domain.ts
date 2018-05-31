@@ -27,7 +27,7 @@ export class AttemptsDomain {
      * List Attempts for a specific Card given by its Id.
      */
     public bulkReadAttemptsByCards(cardId: any): DataState<X.BulkReadAttemptsByCardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -38,7 +38,7 @@ export class AttemptsDomain {
      */
     public createAttempt(body: X.CreateAttemptBody): Observable<X.CreateAttemptResponse> {
         return this.client
-            .post<X.CreateAttemptResponse>('/recall/attempts/', body)
+            .post<X.CreateAttemptResponse>('/recall/attempts/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -50,7 +50,7 @@ export class AttemptsDomain {
      */
     public updateAttempt(attemptId: any, body: X.UpdateAttemptBody): Observable<X.UpdateAttemptResponse> {
         return this.client
-            .put<X.UpdateAttemptResponse>(`/recall/attempts/${attemptId}`, body)
+            .put<X.UpdateAttemptResponse>(`/recall/attempts/${attemptId}`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

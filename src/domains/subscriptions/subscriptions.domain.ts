@@ -28,7 +28,7 @@ export class SubscriptionsDomain {
      */
     public changeSubscription(body: X.ChangeSubscriptionBody): Observable<X.ChangeSubscriptionResponse> {
         return this.client
-            .put<X.ChangeSubscriptionResponse>('/payments/subscription/', body)
+            .put<X.ChangeSubscriptionResponse>('/payments/subscription/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

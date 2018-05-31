@@ -24,7 +24,7 @@ export class AccountSettingsDomain {
      * Read Account Settings
      */
     public readAccountsetting(): DataState<X.ReadAccountsettingResponse> {
-        return this.client.getDataState<X.ReadAccountsettingResponse>('/account/settings/');
+        return this.client.getDataState<X.ReadAccountsettingResponse>('/account/settings/', { authorizationRequired: true });
     }
 
     /**
@@ -32,7 +32,7 @@ export class AccountSettingsDomain {
      */
     public updateAccountsetting(body: X.UpdateAccountsettingBody): Observable<X.UpdateAccountsettingResponse> {
         return this.client
-            .put<X.UpdateAccountsettingResponse>('/account/settings/', body)
+            .put<X.UpdateAccountsettingResponse>('/account/settings/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

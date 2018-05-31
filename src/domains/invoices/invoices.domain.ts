@@ -27,7 +27,7 @@ export class InvoicesDomain {
      * Enables the the User to list all of the Invoices which were generated for his Donations or Subscription payments.
      */
     public bulkReadInvoices(): DataState<X.BulkReadInvoicesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -37,7 +37,7 @@ export class InvoicesDomain {
      * Calculate debt for a given user by searching for the latest unpaid invoice. It returns payment token which can be used in the PAID_WITH_DEFAULT_PAYMENT_CARD command
      */
     public calculateDebt(): DataState<X.CalculateDebtResponse> {
-        return this.client.getDataState<X.CalculateDebtResponse>('/payments/invoices/debt/');
+        return this.client.getDataState<X.CalculateDebtResponse>('/payments/invoices/debt/', { authorizationRequired: true });
     }
 
 }

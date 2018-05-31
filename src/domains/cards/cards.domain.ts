@@ -28,7 +28,7 @@ export class CardsDomain {
      */
     public bulkDeleteCards(params: X.BulkDeleteCardsQuery): Observable<X.BulkDeleteCardsResponse> {
         return this.client
-            .delete<X.BulkDeleteCardsResponse>('/cards/', { params })
+            .delete<X.BulkDeleteCardsResponse>('/cards/', { params, authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -39,7 +39,7 @@ export class CardsDomain {
      * List subset of Cards depending on various filtering flags.
      */
     public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -50,7 +50,7 @@ export class CardsDomain {
      */
     public createCard(body: X.CreateCardBody): Observable<X.CreateCardResponse> {
         return this.client
-            .post<X.CreateCardResponse>('/cards/', body)
+            .post<X.CreateCardResponse>('/cards/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -61,7 +61,7 @@ export class CardsDomain {
      * Read Card by `id`.
      */
     public readCard(cardId: any): DataState<X.ReadCardResponse> {
-        return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`);
+        return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`, { authorizationRequired: true });
     }
 
     /**
@@ -72,7 +72,7 @@ export class CardsDomain {
      */
     public updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse> {
         return this.client
-            .put<X.UpdateCardResponse>(`/cards/${cardId}`, body)
+            .put<X.UpdateCardResponse>(`/cards/${cardId}`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

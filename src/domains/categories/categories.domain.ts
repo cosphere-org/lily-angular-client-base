@@ -27,7 +27,7 @@ export class CategoriesDomain {
      * List Categories.
      */
     public bulkReadCategories(): DataState<X.BulkReadCategoriesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadCategoriesResponseEntity[]>('/categories/', { responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadCategoriesResponseEntity[]>('/categories/', { responseMap: 'data', authorizationRequired: true });
     }
 
 }

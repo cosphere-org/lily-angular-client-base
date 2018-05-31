@@ -25,7 +25,7 @@ export class FocusRecordsDomain {
      */
     public createFocusrecord(body: X.CreateFocusrecordBody): Observable<X.CreateFocusrecordResponse> {
         return this.client
-            .post<X.CreateFocusrecordResponse>('/focus_records/', body)
+            .post<X.CreateFocusrecordResponse>('/focus_records/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -33,7 +33,7 @@ export class FocusRecordsDomain {
      * Read Focus Record Summary
      */
     public readFocusRecordSummary(): DataState<X.ReadFocusRecordSummaryResponse> {
-        return this.client.getDataState<X.ReadFocusRecordSummaryResponse>('/focus_records/summary/');
+        return this.client.getDataState<X.ReadFocusRecordSummaryResponse>('/focus_records/summary/', { authorizationRequired: true });
     }
 
 }

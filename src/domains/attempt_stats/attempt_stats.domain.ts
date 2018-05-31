@@ -27,7 +27,7 @@ export class AttemptStatsDomain {
      * List Attempt Stats by filtering existing ones.
      */
     public bulkReadAttemptstats(params: X.BulkReadAttemptstatsQuery): DataState<X.BulkReadAttemptstatsResponse> {
-        return this.client.getDataState<X.BulkReadAttemptstatsResponse>('/recall/attempt_stats/', { params });
+        return this.client.getDataState<X.BulkReadAttemptstatsResponse>('/recall/attempt_stats/', { params, authorizationRequired: true });
     }
 
     /**
@@ -38,7 +38,7 @@ export class AttemptStatsDomain {
      */
     public createAttemptstat(body: X.CreateAttemptstatBody): Observable<X.CreateAttemptstatResponse> {
         return this.client
-            .post<X.CreateAttemptstatResponse>('/recall/attempt_stats/', body)
+            .post<X.CreateAttemptstatResponse>('/recall/attempt_stats/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -50,7 +50,7 @@ export class AttemptStatsDomain {
      */
     public createExternalAttemptStat(body: X.CreateExternalAttemptStatBody): Observable<X.CreateExternalAttemptStatResponse> {
         return this.client
-            .post<X.CreateExternalAttemptStatResponse>('/recall/attempt_stats/external/', body)
+            .post<X.CreateExternalAttemptStatResponse>('/recall/attempt_stats/external/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

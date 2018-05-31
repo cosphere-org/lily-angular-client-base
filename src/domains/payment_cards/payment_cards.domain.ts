@@ -28,7 +28,7 @@ export class PaymentCardsDomain {
      */
     public asDefaultMarkPaymentcard(paymentCardId: any): Observable<X.AsDefaultMarkPaymentcardResponse> {
         return this.client
-            .put<X.AsDefaultMarkPaymentcardResponse>(`/payments/payment_cards/${paymentCardId}/mark_as_default/`, {})
+            .put<X.AsDefaultMarkPaymentcardResponse>(`/payments/payment_cards/${paymentCardId}/mark_as_default/`, {}, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -39,7 +39,7 @@ export class PaymentCardsDomain {
      * Enables the the User to list all of the Payment Cards which were added by him / her. Among all returned Payment Cards there must be one and only one which is marked as **default**.
      */
     public bulkReadPaymentcards(): DataState<X.BulkReadPaymentcardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -50,7 +50,7 @@ export class PaymentCardsDomain {
      */
     public createPaymentcard(body: X.CreatePaymentcardBody): Observable<X.CreatePaymentcardResponse> {
         return this.client
-            .post<X.CreatePaymentcardResponse>('/payments/payment_cards/', body)
+            .post<X.CreatePaymentcardResponse>('/payments/payment_cards/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -62,7 +62,7 @@ export class PaymentCardsDomain {
      */
     public deletePaymentcard(paymentCardId: any): Observable<X.DeletePaymentcardResponse> {
         return this.client
-            .delete<X.DeletePaymentcardResponse>(`/payments/payment_cards/${paymentCardId}`)
+            .delete<X.DeletePaymentcardResponse>(`/payments/payment_cards/${paymentCardId}`, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -74,7 +74,7 @@ export class PaymentCardsDomain {
      */
     public payWithDefaultPaymentCard(body: X.PayWithDefaultPaymentCardBody): Observable<X.PayWithDefaultPaymentCardResponse> {
         return this.client
-            .post<X.PayWithDefaultPaymentCardResponse>('/payments/payment_cards/pay_with_default/', body)
+            .post<X.PayWithDefaultPaymentCardResponse>('/payments/payment_cards/pay_with_default/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -85,7 +85,7 @@ export class PaymentCardsDomain {
      * Enables the the User to add new Payment Card, which could be needed in cases when the User would like to replace existing Payment Card because: - it expired - is empty - the User prefers another one to be used from now on
      */
     public renderPaymentCardWidget(): DataState<X.RenderPaymentCardWidgetResponse> {
-        return this.client.getDataState<X.RenderPaymentCardWidgetResponse>('/payments/payment_cards/widget/');
+        return this.client.getDataState<X.RenderPaymentCardWidgetResponse>('/payments/payment_cards/widget/', { authorizationRequired: true });
     }
 
 }

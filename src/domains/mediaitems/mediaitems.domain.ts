@@ -27,7 +27,7 @@ export class MediaitemsDomain {
      * List MediaItems
      */
     public bulkReadMediaitems(params: X.BulkReadMediaitemsQuery): DataState<X.BulkReadMediaitemsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -38,7 +38,7 @@ export class MediaitemsDomain {
      */
     public deleteMediaitem(mediaitemId: any, params: X.DeleteMediaitemQuery): Observable<X.DeleteMediaitemResponse> {
         return this.client
-            .delete<X.DeleteMediaitemResponse>(`/mediaitems/${mediaitemId}`, { params })
+            .delete<X.DeleteMediaitemResponse>(`/mediaitems/${mediaitemId}`, { params, authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -49,7 +49,7 @@ export class MediaitemsDomain {
      * Read MediaItem
      */
     public readMediaitem(mediaitemId: any): DataState<X.ReadMediaitemResponse> {
-        return this.client.getDataState<X.ReadMediaitemResponse>(`/mediaitems/${mediaitemId}`);
+        return this.client.getDataState<X.ReadMediaitemResponse>(`/mediaitems/${mediaitemId}`, { authorizationRequired: true });
     }
 
     /**
@@ -59,7 +59,7 @@ export class MediaitemsDomain {
      * Read MediaItem by Process Id
      */
     public readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
-        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`);
+        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
     }
 
     /**
@@ -70,7 +70,7 @@ export class MediaitemsDomain {
      */
     public readOrCreateMediaitem(body: X.ReadOrCreateMediaitemBody): Observable<X.ReadOrCreateMediaitemResponse> {
         return this.client
-            .post<X.ReadOrCreateMediaitemResponse>('/mediaitems/', body)
+            .post<X.ReadOrCreateMediaitemResponse>('/mediaitems/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -82,7 +82,7 @@ export class MediaitemsDomain {
      */
     public updateMediaitem(mediaitemId: any, body: X.UpdateMediaitemBody): Observable<X.UpdateMediaitemResponse> {
         return this.client
-            .put<X.UpdateMediaitemResponse>(`/mediaitems/${mediaitemId}`, body)
+            .put<X.UpdateMediaitemResponse>(`/mediaitems/${mediaitemId}`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -94,7 +94,7 @@ export class MediaitemsDomain {
      */
     public updateMediaitemRepresentation(mediaitemId: any, body: X.UpdateMediaitemRepresentationBody): Observable<X.UpdateMediaitemRepresentationResponse> {
         return this.client
-            .put<X.UpdateMediaitemRepresentationResponse>(`/mediaitems/${mediaitemId}/representation/`, body)
+            .put<X.UpdateMediaitemRepresentationResponse>(`/mediaitems/${mediaitemId}/representation/`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

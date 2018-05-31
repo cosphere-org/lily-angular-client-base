@@ -27,7 +27,7 @@ export class FragmentsDomain {
      * List Remote Fragments
      */
     public bulkReadFragments(params: X.BulkReadFragmentsQuery): DataState<X.BulkReadFragmentsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -37,7 +37,7 @@ export class FragmentsDomain {
      * List Published Remote Fragments
      */
     public bulkReadPublishedFragments(params: X.BulkReadPublishedFragmentsQuery): DataState<X.BulkReadPublishedFragmentsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'data', authorizationRequired: false });
     }
 
     /**
@@ -48,7 +48,7 @@ export class FragmentsDomain {
      */
     public createFragment(): Observable<X.CreateFragmentResponse> {
         return this.client
-            .post<X.CreateFragmentResponse>('/fragments/', {})
+            .post<X.CreateFragmentResponse>('/fragments/', {}, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -60,7 +60,7 @@ export class FragmentsDomain {
      */
     public deleteFragment(fragmentId: any): Observable<X.DeleteFragmentResponse> {
         return this.client
-            .delete<X.DeleteFragmentResponse>(`/fragments/${fragmentId}`)
+            .delete<X.DeleteFragmentResponse>(`/fragments/${fragmentId}`, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -72,7 +72,7 @@ export class FragmentsDomain {
      */
     public mergeFragment(fragmentId: any): Observable<X.MergeFragmentResponse> {
         return this.client
-            .post<X.MergeFragmentResponse>(`/fragments/${fragmentId}/merge/`, {})
+            .post<X.MergeFragmentResponse>(`/fragments/${fragmentId}/merge/`, {}, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -84,7 +84,7 @@ export class FragmentsDomain {
      */
     public publishFragment(fragmentId: any): Observable<X.PublishFragmentResponse> {
         return this.client
-            .put<X.PublishFragmentResponse>(`/fragments/${fragmentId}/publish/`, {})
+            .put<X.PublishFragmentResponse>(`/fragments/${fragmentId}/publish/`, {}, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -95,7 +95,7 @@ export class FragmentsDomain {
      * Read Remote Fragment
      */
     public readFragment(fragmentId: any): DataState<X.ReadFragmentResponse> {
-        return this.client.getDataState<X.ReadFragmentResponse>(`/fragments/${fragmentId}`);
+        return this.client.getDataState<X.ReadFragmentResponse>(`/fragments/${fragmentId}`, { authorizationRequired: true });
     }
 
     /**
@@ -105,7 +105,7 @@ export class FragmentsDomain {
      * Read Fragment Diff
      */
     public readFragmentDiff(fragmentId: any): DataState<X.ReadFragmentDiffResponse> {
-        return this.client.getDataState<X.ReadFragmentDiffResponse>(`/fragments/${fragmentId}/diff/`);
+        return this.client.getDataState<X.ReadFragmentDiffResponse>(`/fragments/${fragmentId}/diff/`, { authorizationRequired: true });
     }
 
     /**
@@ -115,7 +115,7 @@ export class FragmentsDomain {
      * Read Fragment Sample
      */
     public readFragmentSample(fragmentId: any): DataState<X.ReadFragmentSampleResponse> {
-        return this.client.getDataState<X.ReadFragmentSampleResponse>(`/fragments/${fragmentId}/sample/`);
+        return this.client.getDataState<X.ReadFragmentSampleResponse>(`/fragments/${fragmentId}/sample/`, { authorizationRequired: false });
     }
 
     /**
@@ -126,7 +126,7 @@ export class FragmentsDomain {
      */
     public updateFragment(fragmentId: any, body: X.UpdateFragmentBody): Observable<X.UpdateFragmentResponse> {
         return this.client
-            .put<X.UpdateFragmentResponse>(`/fragments/${fragmentId}`, body)
+            .put<X.UpdateFragmentResponse>(`/fragments/${fragmentId}`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

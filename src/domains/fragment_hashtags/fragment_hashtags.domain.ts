@@ -27,7 +27,7 @@ export class FragmentHashtagsDomain {
      * List Hashtags
      */
     public bulkReadFragmentHashtags(params: X.BulkReadFragmentHashtagsQuery): DataState<X.BulkReadFragmentHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadFragmentHashtagsResponseEntity[]>('/fragments/hashtags/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadFragmentHashtagsResponseEntity[]>('/fragments/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -37,7 +37,7 @@ export class FragmentHashtagsDomain {
      * List Published Hashtags
      */
     public bulkReadPublishedFragmentHashtags(params: X.BulkReadPublishedFragmentHashtagsQuery): DataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]>('/fragments/hashtags/published/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]>('/fragments/hashtags/published/', { params, responseMap: 'data', authorizationRequired: false });
     }
 
 }

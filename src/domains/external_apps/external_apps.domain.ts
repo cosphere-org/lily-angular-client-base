@@ -25,7 +25,7 @@ export class ExternalAppsDomain {
      */
     public createExternalAppAuthToken(body: X.CreateExternalAppAuthTokenBody): Observable<X.CreateExternalAppAuthTokenResponse> {
         return this.client
-            .post<X.CreateExternalAppAuthTokenResponse>('/external/tokens/', body)
+            .post<X.CreateExternalAppAuthTokenResponse>('/external/tokens/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -33,7 +33,7 @@ export class ExternalAppsDomain {
      * Read External App configuration
      */
     public readExternalappconf(params: X.ReadExternalappconfQuery): DataState<X.ReadExternalappconfResponse> {
-        return this.client.getDataState<X.ReadExternalappconfResponse>('/external/apps/', { params });
+        return this.client.getDataState<X.ReadExternalappconfResponse>('/external/apps/', { params, authorizationRequired: true });
     }
 
 }

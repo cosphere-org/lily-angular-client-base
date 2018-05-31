@@ -27,7 +27,7 @@ export class FragmentWordsDomain {
      * List Words
      */
     public bulkReadFragmentWords(params: X.BulkReadFragmentWordsQuery): DataState<X.BulkReadFragmentWordsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -37,7 +37,7 @@ export class FragmentWordsDomain {
      * List Published Words
      */
     public bulkReadPublishedFragmentWords(params: X.BulkReadPublishedFragmentWordsQuery): DataState<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'data', authorizationRequired: false });
     }
 
 }

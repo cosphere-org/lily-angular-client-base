@@ -28,7 +28,7 @@ export class PathsDomain {
      */
     public bulkDeletePaths(params: X.BulkDeletePathsQuery): Observable<X.BulkDeletePathsResponse> {
         return this.client
-            .delete<X.BulkDeletePathsResponse>('/paths/', { params })
+            .delete<X.BulkDeletePathsResponse>('/paths/', { params, authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -39,7 +39,7 @@ export class PathsDomain {
      * List all user's Paths
      */
     public bulkReadPaths(params: X.BulkReadPathsQuery): DataState<X.BulkReadPathsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'data' });
+        return this.client.getDataState<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -50,7 +50,7 @@ export class PathsDomain {
      */
     public createPath(body: X.CreatePathBody): Observable<X.CreatePathResponse> {
         return this.client
-            .post<X.CreatePathResponse>('/paths/', body)
+            .post<X.CreatePathResponse>('/paths/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -61,7 +61,7 @@ export class PathsDomain {
      * Read single Path
      */
     public readPath(pathId: any): DataState<X.ReadPathResponse> {
-        return this.client.getDataState<X.ReadPathResponse>(`/paths/${pathId}`);
+        return this.client.getDataState<X.ReadPathResponse>(`/paths/${pathId}`, { authorizationRequired: true });
     }
 
     /**
@@ -72,7 +72,7 @@ export class PathsDomain {
      */
     public updatePath(pathId: any, body: X.UpdatePathBody): Observable<X.UpdatePathResponse> {
         return this.client
-            .put<X.UpdatePathResponse>(`/paths/${pathId}`, body)
+            .put<X.UpdatePathResponse>(`/paths/${pathId}`, body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

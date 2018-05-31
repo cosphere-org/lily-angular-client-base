@@ -27,7 +27,7 @@ export class DonationsDomain {
      * Since we don't want to overflow user with unnecessary requests for him donating we do it in a smarter way using set of heuristics that together help us to answer the following question: "Is it the best moment to ask for the donation?". Currently we use the following heuristics: - is account old enough? - whether user recently donated - whether we attempted recently to request donation from the user - if the user in a good mood (after doing some successful recalls)
      */
     public checkIfCanAttemptDonation(params: X.CheckIfCanAttemptDonationQuery): DataState<X.CheckIfCanAttemptDonationResponse> {
-        return this.client.getDataState<X.CheckIfCanAttemptDonationResponse>('/payments/donations/can_attempt/', { params });
+        return this.client.getDataState<X.CheckIfCanAttemptDonationResponse>('/payments/donations/can_attempt/', { params, authorizationRequired: true });
     }
 
     /**
@@ -38,7 +38,7 @@ export class DonationsDomain {
      */
     public createAnonymousDonation(body: X.CreateAnonymousDonationBody): Observable<X.CreateAnonymousDonationResponse> {
         return this.client
-            .post<X.CreateAnonymousDonationResponse>('/payments/donations/register_anonymous/', body)
+            .post<X.CreateAnonymousDonationResponse>('/payments/donations/register_anonymous/', body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -50,7 +50,7 @@ export class DonationsDomain {
      */
     public createDonation(body: X.CreateDonationBody): Observable<X.CreateDonationResponse> {
         return this.client
-            .post<X.CreateDonationResponse>('/payments/donations/register/', body)
+            .post<X.CreateDonationResponse>('/payments/donations/register/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -62,7 +62,7 @@ export class DonationsDomain {
      */
     public createDonationattempt(body: X.CreateDonationattemptBody): Observable<X.CreateDonationattemptResponse> {
         return this.client
-            .post<X.CreateDonationattemptResponse>('/payments/donations/attempts/', body)
+            .post<X.CreateDonationattemptResponse>('/payments/donations/attempts/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

@@ -28,7 +28,7 @@ export class RecallDomain {
      */
     public createRecallSession(body: X.CreateRecallSessionBody): Observable<X.CreateRecallSessionResponse> {
         return this.client
-            .post<X.CreateRecallSessionResponse>('/recall/sessions/', body)
+            .post<X.CreateRecallSessionResponse>('/recall/sessions/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 
@@ -39,7 +39,7 @@ export class RecallDomain {
      * Read summary stats for cards and their recall_score for a given User.
      */
     public readRecallSummary(): DataState<X.ReadRecallSummaryResponse> {
-        return this.client.getDataState<X.ReadRecallSummaryResponse>('/recall/summary/');
+        return this.client.getDataState<X.ReadRecallSummaryResponse>('/recall/summary/', { authorizationRequired: true });
     }
 
 }
