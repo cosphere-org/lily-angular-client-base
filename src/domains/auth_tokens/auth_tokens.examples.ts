@@ -8,6 +8,30 @@
  */
 
 /**
+ * Examples for AUTHORIZE_AUTH_TOKEN
+ */
+export const AuthorizeAuthTokenExamples = {
+    "200 (AUTH_TOKEN_AUTHORIZED)": {
+        "content": {
+            "@event": "AUTH_TOKEN_AUTHORIZED",
+            "@type": "empty"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
+    
+    "401 (AUTH_TOKEN_WAS_BROKEN)": {
+        "content": {
+            "@event": "AUTH_TOKEN_WAS_BROKEN",
+            "@type": "error",
+            "user_id": "anonymous"
+        },
+        "content_type": "application/json",
+        "status": 401
+    }
+}
+
+/**
  * Examples for CREATE_AUTH_TOKEN
  */
 export const CreateAuthTokenExamples = {
@@ -47,59 +71,14 @@ export const CreateAuthTokenExamples = {
         "status": 400
     },
     
-    "401 (INVALID_AUTH_TOKEN_DATA_CREDENTIALS_DETECTED)": {
-        "content": {
-            "@event": "INVALID_AUTH_TOKEN_DATA_CREDENTIALS_DETECTED",
-            "@type": "error",
-            "email": "learner@whatever.com",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
     "401 (INVALID_AUTH_TOKEN_DATA_NOT_ACTIVATED_ACCOUNT_DETECTED)": {
         "content": {
             "@event": "INVALID_AUTH_TOKEN_DATA_NOT_ACTIVATED_ACCOUNT_DETECTED",
             "@type": "error",
-            "user_id": 232
+            "user_id": 241
         },
         "content_type": "application/json",
         "status": 401
-    },
-    
-    "401 (INVALID_SIGN_IN_CREDENTIALS_DETECTED)": {
-        "content": {
-            "@event": "INVALID_SIGN_IN_CREDENTIALS_DETECTED",
-            "@type": "error",
-            "email": "jess@whatever.com",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
-    "401 (INVALID_SIGN_IN_NOT_ACTIVATED_ACCOUNT_DETECTED)": {
-        "content": {
-            "@event": "INVALID_SIGN_IN_NOT_ACTIVATED_ACCOUNT_DETECTED",
-            "@type": "error",
-            "user_id": 5
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                ""
-            ],
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }
 
@@ -212,16 +191,6 @@ export const CreateGoogleBasedAuthTokenExamples = {
         "status": 400
     },
     
-    "500 (COULD_NOT_AUTHENTICATE_AGAINST_FACEBOOK)": {
-        "content": {
-            "@event": "COULD_NOT_AUTHENTICATE_AGAINST_FACEBOOK",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 500
-    },
-    
     "500 (COULD_NOT_AUTHENTICATE_AGAINST_GOOGLE)": {
         "content": {
             "@event": "COULD_NOT_AUTHENTICATE_AGAINST_GOOGLE",
@@ -260,16 +229,6 @@ export const CreateGoogleBasedMobileAuthTokenExamples = {
         },
         "content_type": "application/json",
         "status": 400
-    },
-    
-    "500 (COULD_NOT_AUTHENTICATE_AGAINST_FACEBOOK)": {
-        "content": {
-            "@event": "COULD_NOT_AUTHENTICATE_AGAINST_FACEBOOK",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 500
     },
     
     "500 (COULD_NOT_AUTHENTICATE_AGAINST_GOOGLE)": {
@@ -315,18 +274,5 @@ export const UpdateAuthTokenExamples = {
         },
         "content_type": "application/json",
         "status": 403
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'InputAttrs' object has no attribute 'user'"
-            ],
-            "user_id": 547953
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }

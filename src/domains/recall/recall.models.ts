@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/views.py/#lines-369
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/views.py/#lines-361
  */
 
 export interface CreateRecallSessionBody {
@@ -22,7 +22,7 @@ export interface CreateRecallSessionBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/serializers.py/#lines-66
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-66
  */
 
 export interface CreateRecallSessionResponse {
@@ -52,7 +52,7 @@ export interface CreateRecallSessionResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/recall/serializers.py/#lines-75
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-75
  */
 
 export interface ReadRecallSummaryResponse {

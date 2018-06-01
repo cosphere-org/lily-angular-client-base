@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/hashtag/views.py/#lines-29
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/hashtag/views.py/#lines-29
  */
 
 export interface BulkReadFragmentHashtagsQuery {
@@ -18,7 +18,7 @@ export interface BulkReadFragmentHashtagsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/hashtag/serializers.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/hashtag/serializers.py/#lines-33
  */
 
 export interface BulkReadFragmentHashtagsResponseEntity {
@@ -32,7 +32,7 @@ export interface BulkReadFragmentHashtagsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/hashtag/views.py/#lines-29
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/hashtag/views.py/#lines-29
  */
 
 export interface BulkReadPublishedFragmentHashtagsQuery {
@@ -42,7 +42,7 @@ export interface BulkReadPublishedFragmentHashtagsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/hashtag/serializers.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/hashtag/serializers.py/#lines-33
  */
 
 export interface BulkReadPublishedFragmentHashtagsResponseEntity {

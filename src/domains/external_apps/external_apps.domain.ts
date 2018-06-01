@@ -21,11 +21,23 @@ export class ExternalAppsDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Read External App configuration
+     * Authorize a given external app token
+     * -------------
+     *
+     * Can be called by the API Gateway in order to authorize every request using provided token. It must be used only for external app tokens, which are used by the external apps to make calls on behalf of a given user.
+     */
+    public authorizeExternalAppAuthToken(): Observable<X.AuthorizeExternalAppAuthTokenResponse> {
+        return this.client
+            .post<X.AuthorizeExternalAppAuthTokenResponse>('/external/auth_tokens/authorize/', {}, { authorizationRequired: false })
+            .pipe(filter(x => !_.isEmpty(x)));
+    }
+
+    /**
+     * Read External App Configuration
      */
     public createExternalAppAuthToken(body: X.CreateExternalAppAuthTokenBody): Observable<X.CreateExternalAppAuthTokenResponse> {
         return this.client
-            .post<X.CreateExternalAppAuthTokenResponse>('/external/tokens/', body, { authorizationRequired: true })
+            .post<X.CreateExternalAppAuthTokenResponse>('/external/auth_tokens/', body, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

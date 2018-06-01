@@ -18,10 +18,10 @@ export const BulkReadInvoicesExamples = {
             "invoices": [
                 {
                     "@type": "invoice",
-                    "amount": "121",
+                    "amount": "129",
                     "created_timestamp": 1510576260.0,
-                    "currency": "EUR",
-                    "display_amount": "1.21",
+                    "currency": "PLN",
+                    "display_amount": "1.29",
                     "id": 34,
                     "is_extension": false,
                     "paid_till_timestamp": 1511440260.0,
@@ -33,8 +33,8 @@ export const BulkReadInvoicesExamples = {
                         "price": "2990",
                         "product_type": "SUBSCRIPTION_LEARNER_MONTHLY"
                     },
-                    "surplus_amount": "117",
-                    "surplus_currency": "USD",
+                    "surplus_amount": "123",
+                    "surplus_currency": "PLN",
                     "valid_till_timestamp": 1513211460.0
                 }
             ]
@@ -63,49 +63,13 @@ export const CalculateDebtExamples = {
         "status": 200
     },
     
-    "400 (RESPONSE_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "RESPONSE_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "at__commands": {
-                    "method": [
-                        "This field is required."
-                    ],
-                    "name": [
-                        "This field is required."
-                    ],
-                    "uri": [
-                        "This field is required."
-                    ]
-                }
-            },
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
     "404 (NO_DEBT_CALCULATED)": {
         "content": {
             "@event": "NO_DEBT_CALCULATED",
             "@type": "error",
-            "user_id": 450
+            "user_id": 455
         },
         "content_type": "application/json",
         "status": 404
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'body'"
-            ],
-            "user_id": 3
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }

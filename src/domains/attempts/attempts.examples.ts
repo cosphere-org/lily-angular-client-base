@@ -21,7 +21,7 @@ export const BulkReadAttemptsByCardsExamples = {
                     "card_id": 1932,
                     "cells": [
                         {
-                            "html": "Provident quos est unde distinctio suscipit hic.",
+                            "html": "Impedit ad hic iusto.",
                             "id": "56678mefd",
                             "name": "text cell",
                             "style": {
@@ -49,7 +49,7 @@ export const BulkReadAttemptsByCardsExamples = {
                     "card_id": 1932,
                     "cells": [
                         {
-                            "html": "Ad officiis eveniet unde vel explicabo iure fugit.",
+                            "html": "Quam nemo placeat impedit totam laudantium.",
                             "id": "56678mefd",
                             "name": "text cell",
                             "style": {
@@ -77,7 +77,7 @@ export const BulkReadAttemptsByCardsExamples = {
                     "card_id": 1932,
                     "cells": [
                         {
-                            "html": "Ducimus facere sed perspiciatis sed quod vitae voluptates.",
+                            "html": "Dolorum unde dolor quibusdam libero.",
                             "id": "56678mefd",
                             "name": "text cell",
                             "style": {

@@ -162,7 +162,7 @@ export const ReadFragmentExamples = {
             "cards_life_cycles": [
                 "some cards"
             ],
-            "description": "Ipsam minima commodi molestias sit.",
+            "description": "Architecto sequi facere quis saepe.",
             "id": 50,
             "is_author": true,
             "is_learner": null,
@@ -174,7 +174,7 @@ export const ReadFragmentExamples = {
             "paths_life_cycles": [
                 "some paths"
             ],
-            "title": "Ipsam non eum autem aut."
+            "title": "Rerum facilis voluptatibus dicta fugiat culpa maiores."
         },
         "content_type": "application/json",
         "status": 200
@@ -208,13 +208,13 @@ export const ReadFragmentDiffExamples = {
             ],
             "prod_text_representation": {
                 "@type": "fragment_text_representation",
-                "description": "Quae ab unde nobis quod provident eveniet esse.",
-                "title": "Laborum consectetur culpa molestias nihil dolore mollitia odio."
+                "description": "Asperiores nostrum rerum occaecati exercitationem.",
+                "title": "Dolorem aliquam tempora maiores suscipit."
             },
             "stage_text_representation": {
                 "@type": "fragment_text_representation",
-                "description": "Pariatur nisi laborum temporibus aliquid porro officiis.",
-                "title": "Error ad tenetur aut accusamus facilis repudiandae."
+                "description": "Ipsam itaque nulla laborum.",
+                "title": "Voluptates quam voluptate dolore asperiores nesciunt animi."
             },
             "updated_card_ids": [
                 4

@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/payment/views/payment.py/#lines-15
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/payment/views/payment.py/#lines-15
  */
 
 export interface UpdatePaymentStatusBody {
@@ -20,7 +20,7 @@ export interface UpdatePaymentStatusBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface UpdatePaymentStatusResponse {}

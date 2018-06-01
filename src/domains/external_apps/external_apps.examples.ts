@@ -8,6 +8,30 @@
  */
 
 /**
+ * Examples for AUTHORIZE_EXTERNAL_APP_AUTH_TOKEN
+ */
+export const AuthorizeExternalAppAuthTokenExamples = {
+    "200 (EXTERNAL_APP_AUTH_TOKEN_AUTHORIZED)": {
+        "content": {
+            "@event": "EXTERNAL_APP_AUTH_TOKEN_AUTHORIZED",
+            "@type": "empty"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
+    
+    "401 (AUTH_TOKEN_WAS_BROKEN)": {
+        "content": {
+            "@event": "AUTH_TOKEN_WAS_BROKEN",
+            "@type": "error",
+            "user_id": "anonymous"
+        },
+        "content_type": "application/json",
+        "status": 401
+    }
+}
+
+/**
  * Examples for CREATE_EXTERNAL_APP_AUTH_TOKEN
  */
 export const CreateExternalAppAuthTokenExamples = {
@@ -30,7 +54,7 @@ export const CreateExternalAppAuthTokenExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 311
+            "user_id": 315
         },
         "content_type": "application/json",
         "status": 400
@@ -40,7 +64,7 @@ export const CreateExternalAppAuthTokenExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 313
+            "user_id": 317
         },
         "content_type": "application/json",
         "status": 404
@@ -60,7 +84,7 @@ export const CreateExternalAppAuthTokenExamples = {
         "content": {
             "@event": "FOUND_MULTIPLE_INSTANCES_OF_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 312
+            "user_id": 316
         },
         "content_type": "application/json",
         "status": 500
@@ -96,7 +120,7 @@ export const ReadExternalappconfExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 306
+            "user_id": 310
         },
         "content_type": "application/json",
         "status": 400
@@ -106,7 +130,7 @@ export const ReadExternalappconfExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 308
+            "user_id": 312
         },
         "content_type": "application/json",
         "status": 404
@@ -116,7 +140,7 @@ export const ReadExternalappconfExamples = {
         "content": {
             "@event": "FOUND_MULTIPLE_INSTANCES_OF_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 307
+            "user_id": 311
         },
         "content_type": "application/json",
         "status": 500

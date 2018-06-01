@@ -16,7 +16,7 @@ export const CreateFocusrecordExamples = {
             "@event": "FOCUSRECORD_CREATED",
             "@type": "focus_record",
             "amount": 34,
-            "created_timestamp": 1526834939.665719
+            "created_timestamp": 1527837373.498967
         },
         "content_type": "application/json",
         "status": 201
@@ -31,7 +31,7 @@ export const CreateFocusrecordExamples = {
                     "focus record for current time span already exists"
                 ]
             },
-            "user_id": 320
+            "user_id": 326
         },
         "content_type": "application/json",
         "status": 400

@@ -20,7 +20,7 @@ export const BulkReadMediaitemsExamples = {
                     "@type": "mediaitem",
                     "content_host": null,
                     "content_uri": "http://media.service/1.png",
-                    "created_timestamp": 1526835463.993997,
+                    "created_timestamp": 1527800191.96008,
                     "external_data": [
                         {
                             "uri": "http://media.service/1.png"
@@ -30,14 +30,14 @@ export const BulkReadMediaitemsExamples = {
                     "meta": {},
                     "size": null,
                     "thumbnail_uri": null,
-                    "type": "IMAGE",
+                    "type": "VIDEO",
                     "web_representations": []
                 },
                 {
                     "@type": "mediaitem",
                     "content_host": null,
                     "content_uri": "http://media.service/0.png",
-                    "created_timestamp": 1526835463.989803,
+                    "created_timestamp": 1527800191.955899,
                     "external_data": [
                         {
                             "uri": "http://media.service/0.png"
@@ -47,7 +47,7 @@ export const BulkReadMediaitemsExamples = {
                     "meta": {},
                     "size": null,
                     "thumbnail_uri": null,
-                    "type": "VIDEO",
+                    "type": "AUDIO",
                     "web_representations": []
                 }
             ]
@@ -95,24 +95,24 @@ export const ReadMediaitemExamples = {
             "@event": "MEDIAITEM_READ",
             "@type": "mediaitem",
             "content_host": null,
-            "content_uri": "http://www.wolf.net/",
-            "created_timestamp": 1526835464.259818,
+            "content_uri": "http://rice.com/privacy/",
+            "created_timestamp": 1527800192.240298,
             "external_data": [
                 {
                     "etag": null,
                     "extension": ".png",
                     "host": "PNG",
                     "last_modified": null,
-                    "normalized_uri": "http://www.oconnell.com/",
+                    "normalized_uri": "http://ankunding.com/category.html",
                     "params": {},
-                    "uri": "http://breitenberg.biz/categories/tags/login.html"
+                    "uri": "http://www.leannon.com/search/wp-content/wp-content/index.html"
                 }
             ],
             "id": 144,
             "meta": {},
             "size": null,
             "thumbnail_uri": null,
-            "type": "AUDIO",
+            "type": "VIDEO",
             "web_representations": []
         },
         "content_type": "application/json",
@@ -139,24 +139,24 @@ export const ReadMediaitemByProcessIdExamples = {
             "@event": "MEDIAITEM_BY_PROCESS_ID_READ",
             "@type": "mediaitem",
             "content_host": null,
-            "content_uri": "http://www.walker.info/home/",
-            "created_timestamp": 1526835459.096862,
+            "content_uri": "http://www.lakin.info/post.php",
+            "created_timestamp": 1527800186.701704,
             "external_data": [
                 {
                     "etag": null,
                     "extension": ".png",
                     "host": "PNG",
                     "last_modified": null,
-                    "normalized_uri": "http://www.prohaska-volkman.com/faq.php",
+                    "normalized_uri": "http://www.bartell-waelchi.com/tag/home/",
                     "params": {},
-                    "uri": "http://stark.com/"
+                    "uri": "http://schmeler.net/tags/main/categories/register/"
                 }
             ],
             "id": 66,
             "meta": {},
             "size": null,
             "thumbnail_uri": null,
-            "type": "IMAGE",
+            "type": "AUDIO",
             "web_representations": []
         },
         "content_type": "application/json",
@@ -184,13 +184,13 @@ export const ReadOrCreateMediaitemExamples = {
             "@type": "mediaitem",
             "content_host": "PNG",
             "content_uri": "http://media.service/5404930.png",
-            "created_timestamp": 1526835459.154596,
+            "created_timestamp": 1527800186.76659,
             "external_data": [],
             "id": 67,
             "meta": {},
             "size": null,
             "thumbnail_uri": null,
-            "type": "VIDEO",
+            "type": "IMAGE",
             "web_representations": []
         },
         "content_type": "application/json",
@@ -203,7 +203,7 @@ export const ReadOrCreateMediaitemExamples = {
             "@type": "mediaitem",
             "content_host": null,
             "content_uri": null,
-            "created_timestamp": 1526835459.22021,
+            "created_timestamp": 1527800186.836013,
             "external_data": [
                 {
                     "etag": null,
@@ -258,7 +258,7 @@ export const UpdateMediaitemExamples = {
             "@type": "mediaitem",
             "content_host": "PNG",
             "content_uri": "http://media.service/49304930.png",
-            "created_timestamp": 1526835464.390348,
+            "created_timestamp": 1527800192.397892,
             "external_data": [
                 {
                     "etag": null,
@@ -327,8 +327,8 @@ export const UpdateMediaitemRepresentationExamples = {
             "@event": "MEDIAITEM_REPRESENTATION_UPDATED",
             "@type": "mediaitem",
             "content_host": null,
-            "content_uri": "http://gottlieb.biz/privacy/",
-            "created_timestamp": 1526835464.688076,
+            "content_uri": "http://johns-huel.com/login.htm",
+            "created_timestamp": 1527800192.783703,
             "external_data": [
                 {
                     "uri": "http://this.image/1.png"
@@ -338,7 +338,7 @@ export const UpdateMediaitemRepresentationExamples = {
             "meta": {},
             "size": 5690,
             "thumbnail_uri": "http://s3.io/6879.png",
-            "type": "IMAGE",
+            "type": "AUDIO",
             "web_representations": [
                 {
                     "content_type": "video/ogg",

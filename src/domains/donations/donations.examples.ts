@@ -30,23 +30,10 @@ export const CheckIfCanAttemptDonationExamples = {
                     "\"UNKNOWN_TIRIKAM\" is not a valid choice."
                 ]
             },
-            "user_id": 427
+            "user_id": 432
         },
         "content_type": "application/json",
         "status": 400
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'int' object is not subscriptable"
-            ],
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }
 
@@ -59,7 +46,7 @@ export const CreateAnonymousDonationExamples = {
             "@event": "ANONYMOUS_DONATION_CREATED",
             "@type": "payment",
             "amount": "678",
-            "created_timestamp": 1526834945.44707,
+            "created_timestamp": 1527837379.210913,
             "display_amount": "6.78",
             "product": {
                 "@type": "product",
@@ -122,7 +109,7 @@ export const CreateDonationExamples = {
             "@event": "DONATION_CREATED",
             "@type": "payment",
             "amount": "455",
-            "created_timestamp": 1526834945.635866,
+            "created_timestamp": 1527837379.362055,
             "display_amount": "4.55",
             "product": {
                 "@type": "product",
@@ -148,7 +135,7 @@ export const CreateDonationExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 433
+            "user_id": 438
         },
         "content_type": "application/json",
         "status": 400
@@ -158,7 +145,7 @@ export const CreateDonationExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_PRODUCT",
             "@type": "error",
-            "user_id": 434
+            "user_id": 439
         },
         "content_type": "application/json",
         "status": 404
@@ -168,7 +155,7 @@ export const CreateDonationExamples = {
         "content": {
             "@event": "DATABASE_ERROR_OCCURRED",
             "@type": "error",
-            "user_id": 436
+            "user_id": 441
         },
         "content_type": "application/json",
         "status": 500
@@ -194,7 +181,7 @@ export const CreateDonationattemptExamples = {
         "content": {
             "@event": "DONATIONATTEMPT_CREATED",
             "@type": "donation_attempt",
-            "created_timestamp": 1526834945.243061,
+            "created_timestamp": 1527837379.010937,
             "event": "RECALL"
         },
         "content_type": "application/json",
@@ -210,7 +197,7 @@ export const CreateDonationattemptExamples = {
                     "\"WAT!EVER\" is not a valid choice."
                 ]
             },
-            "user_id": 431
+            "user_id": 436
         },
         "content_type": "application/json",
         "status": 400

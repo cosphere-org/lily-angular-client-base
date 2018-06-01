@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/activate_account.py/#lines-91
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/activate_account.py/#lines-91
  */
 
 export interface ActivateAccountBody {
@@ -17,34 +17,13 @@ export interface ActivateAccountBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface ActivateAccountResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/authenticate.py/#lines-15
- */
-
-export interface AuthenticateUserBody {
-    external?: boolean;
-}
-
-/**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/authenticate.py/#lines-18
- */
-
-export interface AuthenticateUserResponse {
-    account_type: string;
-    app_uri?: string;
-    card_author_id?: number;
-    card_id?: number;
-    email?: string;
-    user_id: number;
-}
-
-/**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/account.py/#lines-176
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/account.py/#lines-178
  */
 
 export interface BulkReadAccountsQuery {
@@ -52,7 +31,7 @@ export interface BulkReadAccountsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/serializers.py/#lines-23
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/serializers.py/#lines-23
  */
 
 export enum BulkReadAccountsResponseAtype {
@@ -76,7 +55,7 @@ export interface BulkReadAccountsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/change_password.py/#lines-24
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/change_password.py/#lines-24
  */
 
 export interface ChangePasswordBody {
@@ -85,13 +64,13 @@ export interface ChangePasswordBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface ChangePasswordResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/account.py/#lines-112
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/account.py/#lines-114
  */
 
 export interface CreateAccountBody {
@@ -101,13 +80,13 @@ export interface CreateAccountBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface CreateAccountResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/serializers.py/#lines-8
  */
 
 export enum ReadAccountResponseAtype {
@@ -127,7 +106,7 @@ export interface ReadAccountResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/reset_password.py/#lines-94
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/reset_password.py/#lines-94
  */
 
 export interface ResetPasswordBody {
@@ -138,7 +117,7 @@ export interface ResetPasswordBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface ResetPasswordResponse {
@@ -146,7 +125,7 @@ export interface ResetPasswordResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/activate_account.py/#lines-46
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/activate_account.py/#lines-46
  */
 
 export interface SendAccountActivationEmailBody {
@@ -154,13 +133,13 @@ export interface SendAccountActivationEmailBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface SendAccountActivationEmailResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/reset_password.py/#lines-31
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/reset_password.py/#lines-31
  */
 
 export interface SendResetPasswordEmailBody {
@@ -168,13 +147,13 @@ export interface SendResetPasswordEmailBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface SendResetPasswordEmailResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/views/account.py/#lines-56
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/views/account.py/#lines-58
  */
 
 export interface UpdateAccountBody {
@@ -184,7 +163,7 @@ export interface UpdateAccountBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/account/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/account/serializers.py/#lines-8
  */
 
 export enum UpdateAccountResponseAtype {

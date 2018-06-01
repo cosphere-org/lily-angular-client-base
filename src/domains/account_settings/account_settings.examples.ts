@@ -33,19 +33,6 @@ export const ReadAccountsettingExamples = {
         },
         "content_type": "application/json",
         "status": 404
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'WSGIRequest' object has no attribute 'user_id'"
-            ],
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }
 

@@ -149,7 +149,7 @@ export const ReadPathExamples = {
                 {
                     "@type": "card",
                     "author_id": 7890,
-                    "created_timestamp": 1526835469.511831,
+                    "created_timestamp": 1527800197.913972,
                     "external_app_uri": null,
                     "hashtags": [],
                     "id": 1743,
@@ -158,7 +158,7 @@ export const ReadPathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Ipsum at repudiandae laborum sed quasi dignissimos sapiente eos.",
+                                "html": "Dignissimos qui impedit quas animi fuga quibusdam non tempore.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -182,7 +182,7 @@ export const ReadPathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Praesentium aspernatur accusamus inventore perferendis.",
+                                "html": "Nam vel veritatis accusantium voluptatibus placeat.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -202,12 +202,12 @@ export const ReadPathExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1526835469.50774
+                    "updated_timestamp": 1527800197.909328
                 },
                 {
                     "@type": "card",
                     "author_id": 7890,
-                    "created_timestamp": 1526835469.523163,
+                    "created_timestamp": 1527800197.925828,
                     "external_app_uri": null,
                     "hashtags": [],
                     "id": 1744,
@@ -216,7 +216,7 @@ export const ReadPathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Recusandae accusamus aut maxime eius est aliquid quaerat.",
+                                "html": "Doloremque rerum ad voluptates.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -240,7 +240,7 @@ export const ReadPathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Asperiores laborum in sapiente.",
+                                "html": "Dolor exercitationem accusantium at facilis cum debitis cupiditate ipsa.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -260,7 +260,7 @@ export const ReadPathExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1526835469.51978
+                    "updated_timestamp": 1527800197.922742
                 }
             ],
             "id": 298,
@@ -297,7 +297,7 @@ export const UpdatePathExamples = {
                 {
                     "@type": "card",
                     "author_id": 7890,
-                    "created_timestamp": 1526835469.755221,
+                    "created_timestamp": 1527800198.23433,
                     "external_app_uri": null,
                     "hashtags": [],
                     "id": 1751,
@@ -306,7 +306,7 @@ export const UpdatePathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Consequatur officia ut rem nulla.",
+                                "html": "Commodi sed quidem in.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -330,7 +330,7 @@ export const UpdatePathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Possimus praesentium quis ad tenetur labore.",
+                                "html": "Maiores amet odio ipsa sequi iusto in doloribus.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -350,7 +350,7 @@ export const UpdatePathExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1526835469.75244
+                    "updated_timestamp": 1527800198.229489
                 }
             ],
             "id": 302,

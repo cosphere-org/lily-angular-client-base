@@ -13,10 +13,127 @@
 export const BulkReadAttemptstatsExamples = {
     "200 (ATTEMPTSTATS_BULK_READ)": {
         "content": {
+            "@count": 4,
             "@event": "ATTEMPTSTATS_BULK_READ",
             "@type": "attempt_stats_list",
-            "attempt_stats": [],
-            "count": 3
+            "attempt_stats": [
+                {
+                    "@type": "attempt_stat",
+                    "card_id": 1936,
+                    "created_timestamp": 1486555834.0,
+                    "id": 108,
+                    "states_path": [
+                        {
+                            "reached_via_event": "NEXT_LOADED",
+                            "state": "SOURCE",
+                            "timestamp": 943894
+                        },
+                        {
+                            "reached_via_event": "SHOW_ANSWER",
+                            "state": "TARGET",
+                            "timestamp": 943994
+                        },
+                        {
+                            "reached_via_event": "RECALL_ATTEMPT",
+                            "state": "ATTEMPT",
+                            "timestamp": 944994
+                        },
+                        {
+                            "reached_via_event": "DO_NOT_GET_IT_YET",
+                            "state": "NEXT",
+                            "timestamp": 943994
+                        }
+                    ],
+                    "successful": true
+                },
+                {
+                    "@type": "attempt_stat",
+                    "card_id": 1936,
+                    "created_timestamp": 1486555654.0,
+                    "id": 109,
+                    "states_path": [
+                        {
+                            "reached_via_event": "NEXT_LOADED",
+                            "state": "SOURCE",
+                            "timestamp": 943894
+                        },
+                        {
+                            "reached_via_event": "SHOW_ANSWER",
+                            "state": "TARGET",
+                            "timestamp": 943994
+                        },
+                        {
+                            "reached_via_event": "RECALL_ATTEMPT",
+                            "state": "ATTEMPT",
+                            "timestamp": 944994
+                        },
+                        {
+                            "reached_via_event": "DO_NOT_GET_IT_YET",
+                            "state": "NEXT",
+                            "timestamp": 943994
+                        }
+                    ],
+                    "successful": true
+                },
+                {
+                    "@type": "attempt_stat",
+                    "card_id": 1936,
+                    "created_timestamp": 1486555594.0,
+                    "id": 110,
+                    "states_path": [
+                        {
+                            "reached_via_event": "NEXT_LOADED",
+                            "state": "SOURCE",
+                            "timestamp": 943894
+                        },
+                        {
+                            "reached_via_event": "SHOW_ANSWER",
+                            "state": "TARGET",
+                            "timestamp": 943994
+                        },
+                        {
+                            "reached_via_event": "RECALL_ATTEMPT",
+                            "state": "ATTEMPT",
+                            "timestamp": 944994
+                        },
+                        {
+                            "reached_via_event": "DO_NOT_GET_IT_YET",
+                            "state": "NEXT",
+                            "timestamp": 943994
+                        }
+                    ],
+                    "successful": false
+                },
+                {
+                    "@type": "attempt_stat",
+                    "card_id": 1936,
+                    "created_timestamp": 1486555534.0,
+                    "id": 111,
+                    "states_path": [
+                        {
+                            "reached_via_event": "NEXT_LOADED",
+                            "state": "SOURCE",
+                            "timestamp": 943894
+                        },
+                        {
+                            "reached_via_event": "SHOW_ANSWER",
+                            "state": "TARGET",
+                            "timestamp": 943994
+                        },
+                        {
+                            "reached_via_event": "RECALL_ATTEMPT",
+                            "state": "ATTEMPT",
+                            "timestamp": 944994
+                        },
+                        {
+                            "reached_via_event": "DO_NOT_GET_IT_YET",
+                            "state": "NEXT",
+                            "timestamp": 943994
+                        }
+                    ],
+                    "successful": true
+                }
+            ]
         },
         "content_type": "application/json",
         "status": 200
@@ -31,9 +148,9 @@ export const CreateAttemptstatExamples = {
         "content": {
             "@event": "ATTEMPTSTAT_CREATED",
             "@type": "attempt_stat",
-            "card_id": 1939,
-            "created_timestamp": 1526835474.890859,
-            "id": 116,
+            "card_id": 1938,
+            "created_timestamp": 1527800203.88243,
+            "id": 113,
             "states_path": [
                 {
                     "reached_via_event": "NEXT_LOADED",
@@ -99,9 +216,9 @@ export const CreateExternalAttemptStatExamples = {
         "content": {
             "@event": "EXTERNAL_ATTEMPT_STAT_CREATED",
             "@type": "attempt_stat",
-            "card_id": 1944,
-            "created_timestamp": 1526835475.148646,
-            "id": 121,
+            "card_id": 1943,
+            "created_timestamp": 1527800204.163904,
+            "id": 118,
             "states_path": [
                 {
                     "reached_via_event": null,

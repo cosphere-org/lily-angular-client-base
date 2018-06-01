@@ -19,7 +19,65 @@ export const CreateRecallSessionExamples = {
                 {
                     "@type": "card",
                     "author_id": 90,
-                    "created_timestamp": 1526835476.86909,
+                    "created_timestamp": 1527800206.020716,
+                    "external_app_uri": null,
+                    "hashtags": [],
+                    "id": 2033,
+                    "paths_count": null,
+                    "source": {
+                        "@type": "side",
+                        "cells": [
+                            {
+                                "html": "Magni rerum deleniti sequi dicta nobis autem.",
+                                "id": "56678mefd",
+                                "name": "text cell",
+                                "style": {
+                                    "backgroundColor": "transparent",
+                                    "color": "#fff",
+                                    "fontSize": "150%",
+                                    "height": "auto",
+                                    "left": "30px",
+                                    "textAlign": "left",
+                                    "top": "0px",
+                                    "width": "100px",
+                                    "zIndex": 1
+                                },
+                                "subtype": "PARAGRAPH",
+                                "type": "TEXT"
+                            }
+                        ],
+                        "style": {}
+                    },
+                    "target": {
+                        "@type": "side",
+                        "cells": [
+                            {
+                                "html": "Laudantium consequuntur impedit unde officiis repudiandae officiis quam.",
+                                "id": "56678mefd",
+                                "name": "text cell",
+                                "style": {
+                                    "backgroundColor": "transparent",
+                                    "color": "#fff",
+                                    "fontSize": "150%",
+                                    "height": "auto",
+                                    "left": "30px",
+                                    "textAlign": "left",
+                                    "top": "0px",
+                                    "width": "100px",
+                                    "zIndex": 1
+                                },
+                                "subtype": "PARAGRAPH",
+                                "type": "TEXT"
+                            }
+                        ],
+                        "style": {}
+                    },
+                    "updated_timestamp": 1527800206.016784
+                },
+                {
+                    "@type": "card",
+                    "author_id": 90,
+                    "created_timestamp": 1527800206.033697,
                     "external_app_uri": null,
                     "hashtags": [],
                     "id": 2034,
@@ -28,7 +86,7 @@ export const CreateRecallSessionExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Repellat error voluptatibus aliquam fugiat quas.",
+                                "html": "Quis iste illum ut ea.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -52,7 +110,7 @@ export const CreateRecallSessionExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Necessitatibus fugit magnam corporis maxime sint voluptatem.",
+                                "html": "Nemo dolore tempore laudantium officia ex facilis ad.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -72,65 +130,7 @@ export const CreateRecallSessionExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1526835476.865231
-                },
-                {
-                    "@type": "card",
-                    "author_id": 90,
-                    "created_timestamp": 1526835476.879805,
-                    "external_app_uri": null,
-                    "hashtags": [],
-                    "id": 2035,
-                    "paths_count": null,
-                    "source": {
-                        "@type": "side",
-                        "cells": [
-                            {
-                                "html": "Dolorem corporis doloremque corporis hic.",
-                                "id": "56678mefd",
-                                "name": "text cell",
-                                "style": {
-                                    "backgroundColor": "transparent",
-                                    "color": "#fff",
-                                    "fontSize": "150%",
-                                    "height": "auto",
-                                    "left": "30px",
-                                    "textAlign": "left",
-                                    "top": "0px",
-                                    "width": "100px",
-                                    "zIndex": 1
-                                },
-                                "subtype": "PARAGRAPH",
-                                "type": "TEXT"
-                            }
-                        ],
-                        "style": {}
-                    },
-                    "target": {
-                        "@type": "side",
-                        "cells": [
-                            {
-                                "html": "Alias optio alias ad modi officiis quibusdam libero.",
-                                "id": "56678mefd",
-                                "name": "text cell",
-                                "style": {
-                                    "backgroundColor": "transparent",
-                                    "color": "#fff",
-                                    "fontSize": "150%",
-                                    "height": "auto",
-                                    "left": "30px",
-                                    "textAlign": "left",
-                                    "top": "0px",
-                                    "width": "100px",
-                                    "zIndex": 1
-                                },
-                                "subtype": "PARAGRAPH",
-                                "type": "TEXT"
-                            }
-                        ],
-                        "style": {}
-                    },
-                    "updated_timestamp": 1526835476.876555
+                    "updated_timestamp": 1527800206.029067
                 }
             ],
             "terminate": false

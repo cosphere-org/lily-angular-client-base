@@ -180,8 +180,8 @@ export const ReadGeometryByCardExamples = {
             "id": 1090,
             "is_random": false,
             "recall_score": null,
-            "x": 2283,
-            "y": 4390
+            "x": 7869,
+            "y": 9140
         },
         "content_type": "application/json",
         "status": 200
@@ -211,13 +211,13 @@ export const ReadGraphExamples = {
                     "@type": "link",
                     "source": 1215,
                     "target": 1217,
-                    "value": 0.48
+                    "value": 0.95
                 },
                 {
                     "@type": "link",
                     "source": 1217,
                     "target": 1215,
-                    "value": 0.8
+                    "value": 0.5
                 }
             ],
             "nodes": [

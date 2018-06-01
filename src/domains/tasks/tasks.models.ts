@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/task/views.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/views.py/#lines-33
  */
 
 export enum BulkReadTasksQueryQueueType {
@@ -26,7 +26,7 @@ export interface BulkReadTasksQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/task/serializers.py/#lines-55
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/serializers.py/#lines-55
  */
 
 export enum BulkReadTasksResponseQueueType {
@@ -53,7 +53,7 @@ export interface BulkReadTasksResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/task/views.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/views.py/#lines-33
  */
 
 export enum BulkReadTaskBinsQueryQueueType {
@@ -71,7 +71,7 @@ export interface BulkReadTaskBinsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/task/serializers.py/#lines-71
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/serializers.py/#lines-71
  */
 
 export enum BulkReadTaskBinsResponseQueueType {

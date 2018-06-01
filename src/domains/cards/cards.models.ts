@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-274
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-274
  */
 
 export interface BulkDeleteCardsQuery {
@@ -16,7 +16,7 @@ export interface BulkDeleteCardsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-285
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-285
  */
 
 export interface BulkDeleteCardsResponse {
@@ -27,7 +27,7 @@ export interface BulkDeleteCardsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-221
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-221
  */
 
 export interface BulkReadCardsQuery {
@@ -39,7 +39,7 @@ export interface BulkReadCardsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-69
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-69
  */
 
 export interface BulkReadCardsResponseEntity {
@@ -70,7 +70,7 @@ export interface BulkReadCardsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-179
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-179
  */
 
 export interface CreateCardBody {
@@ -85,7 +85,7 @@ export interface CreateCardBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-21
  */
 
 export interface CreateCardResponse {
@@ -112,7 +112,7 @@ export interface CreateCardResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-21
  */
 
 export interface ReadCardResponse {
@@ -139,7 +139,7 @@ export interface ReadCardResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/views.py/#lines-66
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-66
  */
 
 export interface UpdateCardBody {
@@ -156,7 +156,7 @@ export interface UpdateCardBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/card/serializers.py/#lines-21
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-21
  */
 
 export interface UpdateCardResponse {

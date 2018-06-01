@@ -58,7 +58,7 @@ export const SendAuthenticatedContactMessageExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 296
+            "user_id": 299
         },
         "content_type": "application/json",
         "status": 400
@@ -82,19 +82,6 @@ export const SendAuthenticatedContactMessageExamples = {
         },
         "content_type": "application/json",
         "status": 403
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'InputAttrs' object has no attribute 'user'"
-            ],
-            "user_id": 685965
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }
 

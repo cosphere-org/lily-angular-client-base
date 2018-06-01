@@ -8,13 +8,13 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface DeleteLinkResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/grid/views.py/#lines-47
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/views.py/#lines-47
  */
 
 export interface ReadOrCreateLinkBody {
@@ -23,7 +23,7 @@ export interface ReadOrCreateLinkBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_entity_service/grid/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/serializers.py/#lines-8
  */
 
 export enum ReadOrCreateLinkResponseKind {

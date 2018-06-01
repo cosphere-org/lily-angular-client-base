@@ -58,73 +58,6 @@ export const ActivateAccountExamples = {
 }
 
 /**
- * Examples for AUTHENTICATE_USER
- */
-export const AuthenticateUserExamples = {
-    "200 (USER_AUTHENTICATED)": {
-        "content": {
-            "@event": "USER_AUTHENTICATED",
-            "@type": "token_info",
-            "account_type": "MENTOR",
-            "email": "mentor@whatever.com",
-            "user_id": 240
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
-    
-    "401 (AUTH_TOKEN_WAS_BROKEN)": {
-        "content": {
-            "@event": "AUTH_TOKEN_WAS_BROKEN",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
-    "401 (AUTH_TOKEN_WAS_MISSING_FIELDS)": {
-        "content": {
-            "@event": "AUTH_TOKEN_WAS_MISSING_FIELDS",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
-    "401 (COULD_NOT_FIND_AUTH_TOKEN)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_AUTH_TOKEN",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
-    "401 (INVALID_ACCOUNT_TYPE_USED)": {
-        "content": {
-            "@event": "INVALID_ACCOUNT_TYPE_USED",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 401
-    },
-    
-    "404 (COULD_NOT_FIND_ACCOUNT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_ACCOUNT",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
-}
-
-/**
  * Examples for BULK_READ_ACCOUNTS
  */
 export const BulkReadAccountsExamples = {
@@ -136,21 +69,6 @@ export const BulkReadAccountsExamples = {
         },
         "content_type": "application/json",
         "status": 200
-    },
-    
-    "400 (RESPONSE_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "RESPONSE_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "accounts": [
-                    "This field is required."
-                ]
-            },
-            "user_id": 8
-        },
-        "content_type": "application/json",
-        "status": 400
     }
 }
 
@@ -179,7 +97,7 @@ export const ChangePasswordExamples = {
                     "Ensure this field has at least 8 characters."
                 ]
             },
-            "user_id": 248
+            "user_id": 251
         },
         "content_type": "application/json",
         "status": 400
@@ -193,19 +111,6 @@ export const ChangePasswordExamples = {
         },
         "content_type": "application/json",
         "status": 401
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'InputAttrs' object has no attribute 'user'"
-            ],
-            "user_id": 658965
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }
 
@@ -260,9 +165,9 @@ export const ReadAccountExamples = {
             "@event": "ACCOUNT_READ",
             "@type": "account",
             "atype": "LEARNER",
-            "avatar_uri": "http://www.swift.com/categories/category/",
+            "avatar_uri": "http://huel.com/explore/search/blog/about.html",
             "show_in_ranking": true,
-            "user_id": 210,
+            "user_id": 218,
             "username": "l0@doll.org"
         },
         "content_type": "application/json",
@@ -278,16 +183,6 @@ export const ResetPasswordExamples = {
         "content": {
             "@event": "PASSWORD_RESET",
             "@type": "auth_token",
-            "token": "nie.twoje.dziecko"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
-    
-    "200 (PASSWORD_RESETED)": {
-        "content": {
-            "@event": "PASSWORD_RESETED",
-            "@type": "token",
             "token": "nie.twoje.dziecko"
         },
         "content_type": "application/json",
@@ -378,15 +273,6 @@ export const SendAccountActivationEmailExamples = {
  * Examples for SEND_RESET_PASSWORD_EMAIL
  */
 export const SendResetPasswordEmailExamples = {
-    "200 (RESET_PASSWORD_EMAIL_SENDDED)": {
-        "content": {
-            "@event": "RESET_PASSWORD_EMAIL_SENDDED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
-    
     "200 (RESET_PASSWORD_EMAIL_SENT)": {
         "content": {
             "@event": "RESET_PASSWORD_EMAIL_SENT",
@@ -434,7 +320,7 @@ export const UpdateAccountExamples = {
             "atype": "LEARNER",
             "avatar_uri": "http://some.avatar/photo.png",
             "show_in_ranking": true,
-            "user_id": 214,
+            "user_id": 222,
             "username": "Jacky"
         },
         "content_type": "application/json",

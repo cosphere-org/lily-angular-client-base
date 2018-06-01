@@ -73,7 +73,7 @@ export const ChangeSubscriptionExamples = {
         "content": {
             "@event": "ACCOUNT_CONFIRMED_TO_HAVE_REQUESTED_SUBSCRIPTION",
             "@type": "error",
-            "user_id": 486
+            "user_id": 491
         },
         "content_type": "application/json",
         "status": 400
@@ -88,7 +88,7 @@ export const ChangeSubscriptionExamples = {
                     "\"FREEEEE\" is not a valid choice."
                 ]
             },
-            "user_id": 488
+            "user_id": 493
         },
         "content_type": "application/json",
         "status": 400
@@ -102,18 +102,5 @@ export const ChangeSubscriptionExamples = {
         },
         "content_type": "application/json",
         "status": 401
-    },
-    
-    "500 (GENERIC_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "GENERIC_ERROR_OCCURRED",
-            "@type": "error",
-            "errors": [
-                "'body'"
-            ],
-            "user_id": 2
-        },
-        "content_type": "application/json",
-        "status": 500
     }
 }

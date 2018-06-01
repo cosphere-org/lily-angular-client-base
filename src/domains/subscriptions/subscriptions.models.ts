@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/payment/views/subscription.py/#lines-28
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/payment/views/subscription.py/#lines-28
  */
 
 export enum ChangeSubscriptionBodySubscriptionType {
@@ -24,7 +24,7 @@ export interface ChangeSubscriptionBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/payment/views/subscription.py/#lines-39
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/payment/views/subscription.py/#lines-39
  */
 
 export interface ChangeSubscriptionResponse {

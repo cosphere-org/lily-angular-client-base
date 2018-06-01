@@ -8,7 +8,13 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/external/views.py/#lines-58
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/.venv/src/lily/lily/base/serializers.py/#lines-158
+ */
+
+export interface AuthorizeExternalAppAuthTokenResponse {}
+
+/**
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/external/views.py/#lines-58
  */
 
 export interface CreateExternalAppAuthTokenBody {
@@ -18,7 +24,7 @@ export interface CreateExternalAppAuthTokenBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/external/views.py/#lines-66
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/external/views.py/#lines-66
  */
 
 export interface CreateExternalAppAuthTokenResponse {
@@ -26,7 +32,7 @@ export interface CreateExternalAppAuthTokenResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/external/views.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/external/views.py/#lines-30
  */
 
 export interface ReadExternalappconfQuery {
@@ -34,7 +40,7 @@ export interface ReadExternalappconfQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_auth_service/external/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/external/serializers.py/#lines-8
  */
 
 export interface ReadExternalappconfResponse {

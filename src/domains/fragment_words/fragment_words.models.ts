@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/word/views.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/views.py/#lines-30
  */
 
 export interface BulkReadFragmentWordsQuery {
@@ -18,7 +18,7 @@ export interface BulkReadFragmentWordsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/word/serializers.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/serializers.py/#lines-33
  */
 
 export interface BulkReadFragmentWordsResponseEntity {
@@ -32,7 +32,7 @@ export interface BulkReadFragmentWordsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/word/views.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/views.py/#lines-30
  */
 
 export interface BulkReadPublishedFragmentWordsQuery {
@@ -42,7 +42,7 @@ export interface BulkReadPublishedFragmentWordsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b7770a32394a95b057fb6ccd73a855eef5d41939/cosphere_fragment_service/word/serializers.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/serializers.py/#lines-33
  */
 
 export interface BulkReadPublishedFragmentWordsResponseEntity {

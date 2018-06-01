@@ -21,14 +21,14 @@ export class InternalDomain {
     constructor(private client: ClientService) {}
 
     /**
-     * Change account type of any existing account
+     * Clear all Entries for a given User
      * -------------
      *
-     * Enables one to change account type of any account associated with `user_id`.
+     * Internal view enabling one to clean up all database entries for a specific `user_id`. It must be of the utmost importance that this endpoint would not be available on the production system.
      */
-    public updateAccountTypeAsAdmin(body: X.UpdateAccountTypeAsAdminBody): Observable<X.UpdateAccountTypeAsAdminResponse> {
+    public deleteEntriesForUser(userId: any): Observable<X.DeleteEntriesForUserResponse> {
         return this.client
-            .put<X.UpdateAccountTypeAsAdminResponse>('/internal/change_account_type/', body, { authorizationRequired: true })
+            .delete<X.DeleteEntriesForUserResponse>(`/reset/${userId}`, { authorizationRequired: true })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

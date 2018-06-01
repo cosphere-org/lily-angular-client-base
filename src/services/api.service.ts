@@ -56,10 +56,6 @@ export class APIService {
         return this.accountsDomain.activateAccount(body);
     }
 
-    authenticateUser(body: X.AuthenticateUserBody): Observable<X.AuthenticateUserResponse> {
-        return this.accountsDomain.authenticateUser(body);
-    }
-
     bulkReadAccounts(params: X.BulkReadAccountsQuery): DataState<X.BulkReadAccountsResponseEntity[]> {
         return this.accountsDomain.bulkReadAccounts(params);
     }
@@ -153,6 +149,10 @@ export class APIService {
         }
     
         return this._auth_tokensDomain;
+    }
+
+    authorizeAuthToken(): Observable<X.AuthorizeAuthTokenResponse> {
+        return this.auth_tokensDomain.authorizeAuthToken();
     }
 
     createAuthToken(body: X.CreateAuthTokenBody): Observable<X.CreateAuthTokenResponse> {
@@ -294,6 +294,10 @@ export class APIService {
         }
     
         return this._external_appsDomain;
+    }
+
+    authorizeExternalAppAuthToken(): Observable<X.AuthorizeExternalAppAuthTokenResponse> {
+        return this.external_appsDomain.authorizeExternalAppAuthToken();
     }
 
     createExternalAppAuthToken(body: X.CreateExternalAppAuthTokenBody): Observable<X.CreateExternalAppAuthTokenResponse> {
@@ -495,8 +499,8 @@ export class APIService {
         return this._internalDomain;
     }
 
-    updateAccountTypeAsAdmin(body: X.UpdateAccountTypeAsAdminBody): Observable<X.UpdateAccountTypeAsAdminResponse> {
-        return this.internalDomain.updateAccountTypeAsAdmin(body);
+    deleteEntriesForUser(userId: any): Observable<X.DeleteEntriesForUserResponse> {
+        return this.internalDomain.deleteEntriesForUser(userId);
     }
 
     /**

@@ -33,18 +33,6 @@ export class AccountsDomain {
     }
 
     /**
-     * Authenticate a given token
-     * -------------
-     *
-     * Can be called by the API Gateway in order to authenticate every request using provided token and user's account token
-     */
-    public authenticateUser(body: X.AuthenticateUserBody): Observable<X.AuthenticateUserResponse> {
-        return this.client
-            .post<X.AuthenticateUserResponse>('/auth/authenticate/', body, { authorizationRequired: false })
-            .pipe(filter(x => !_.isEmpty(x)));
-    }
-
-    /**
      * Bulk Read Mentors' Account
      * -------------
      *

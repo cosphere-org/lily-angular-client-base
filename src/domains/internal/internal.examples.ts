@@ -8,40 +8,8 @@
  */
 
 /**
- * Examples for UPDATE_ACCOUNT_TYPE_AS_ADMIN
+ * Examples for DELETE_ENTRIES_FOR_USER
  */
-export const UpdateAccountTypeAsAdminExamples = {
-    "200 (ACCOUNT_TYPE_AS_ADMIN_UPDATED)": {
-        "content": {
-            "@event": "ACCOUNT_TYPE_AS_ADMIN_UPDATED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
+export const DeleteEntriesForUserExamples = {
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "account_type": [
-                    "\"WHATEVER\" is not a valid choice."
-                ]
-            },
-            "user_id": 190
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_USER)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_USER",
-            "@type": "error",
-            "user_id": 190
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
