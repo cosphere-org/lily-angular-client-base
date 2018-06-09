@@ -29,6 +29,10 @@ export class AttemptStatsDomain {
     public bulkReadAttemptstats(params: X.BulkReadAttemptstatsQuery): DataState<X.BulkReadAttemptstatsResponse> {
         return this.client.getDataState<X.BulkReadAttemptstatsResponse>('/recall/attempt_stats/', { params, authorizationRequired: true });
     }
+    
+    public bulkReadAttemptstats2(params: X.BulkReadAttemptstatsQuery): Observable<X.BulkReadAttemptstatsResponse> {
+        return this.client.get<X.BulkReadAttemptstatsResponse>('/recall/attempt_stats/', { params, authorizationRequired: true });
+    }
 
     /**
      * Create Attempt Stat

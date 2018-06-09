@@ -11,329 +11,61 @@
  * Examples for ACTIVATE_ACCOUNT
  */
 export const ActivateAccountExamples = {
-    "200 (ACCOUNT_ACTIVATED)": {
-        "content": {
-            "@event": "ACCOUNT_ACTIVATED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "code": [
-                    "This field is required."
-                ]
-            },
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "400 (NOT_ACCOUNT_ACTIVATION_OPERATION_DETECTED)": {
-        "content": {
-            "@event": "NOT_ACCOUNT_ACTIVATION_OPERATION_DETECTED",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_ACCOUNT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_ACCOUNT",
-            "@type": "error",
-            "email": "jake@whatever.com",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for BULK_READ_ACCOUNTS
  */
 export const BulkReadAccountsExamples = {
-    "200 (ACCOUNTS_BULK_READ)": {
-        "content": {
-            "@event": "ACCOUNTS_BULK_READ",
-            "@type": "accounts_list",
-            "accounts": []
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for CHANGE_PASSWORD
  */
 export const ChangePasswordExamples = {
-    "200 (PASSWORD_CHANGED)": {
-        "content": {
-            "@event": "PASSWORD_CHANGED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "password": [
-                    "Ensure this field has at least 8 characters."
-                ],
-                "password_again": [
-                    "Ensure this field has at least 8 characters."
-                ]
-            },
-            "user_id": 251
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "401 (COULD_NOT_FIND_USER)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_USER",
-            "@type": "error",
-            "user_id": 658965
-        },
-        "content_type": "application/json",
-        "status": 401
-    }
 }
 
 /**
  * Examples for CREATE_ACCOUNT
  */
 export const CreateAccountExamples = {
-    "201 (ACCOUNT_CREATED)": {
-        "content": {
-            "@event": "ACCOUNT_CREATED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 201
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "password": [
-                    "Ensure this field has at least 8 characters."
-                ],
-                "password_again": [
-                    "Ensure this field has at least 8 characters."
-                ]
-            },
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "400 (FOUND_EXISTING_ACCOUNT)": {
-        "content": {
-            "@event": "FOUND_EXISTING_ACCOUNT",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    }
 }
 
 /**
  * Examples for READ_ACCOUNT
  */
 export const ReadAccountExamples = {
-    "200 (ACCOUNT_READ)": {
-        "content": {
-            "@event": "ACCOUNT_READ",
-            "@type": "account",
-            "atype": "LEARNER",
-            "avatar_uri": "http://huel.com/explore/search/blog/about.html",
-            "show_in_ranking": true,
-            "user_id": 218,
-            "username": "l0@doll.org"
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for RESET_PASSWORD
  */
 export const ResetPasswordExamples = {
-    "200 (PASSWORD_RESET)": {
-        "content": {
-            "@event": "PASSWORD_RESET",
-            "@type": "auth_token",
-            "token": "nie.twoje.dziecko"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "password": [
-                    "Ensure this field has at least 8 characters."
-                ],
-                "password_again": [
-                    "Ensure this field has at least 8 characters."
-                ]
-            },
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "400 (NOT_PASSWORD_RESET_OPERATION_DETECTED)": {
-        "content": {
-            "@event": "NOT_PASSWORD_RESET_OPERATION_DETECTED",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_ACCOUNT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_ACCOUNT",
-            "@type": "error",
-            "email": "jake@whatever.com",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for SEND_ACCOUNT_ACTIVATION_EMAIL
  */
 export const SendAccountActivationEmailExamples = {
-    "200 (ACCOUNT_ACTIVATION_EMAIL_SENT)": {
-        "content": {
-            "@event": "ACCOUNT_ACTIVATION_EMAIL_SENT",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "email": [
-                    "This field is required."
-                ]
-            },
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_ACCOUNT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_ACCOUNT",
-            "@type": "error",
-            "email": "unknown@whatever.com",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for SEND_RESET_PASSWORD_EMAIL
  */
 export const SendResetPasswordEmailExamples = {
-    "200 (RESET_PASSWORD_EMAIL_SENT)": {
-        "content": {
-            "@event": "RESET_PASSWORD_EMAIL_SENT",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "email": [
-                    "This field is required."
-                ]
-            },
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_ACCOUNT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_ACCOUNT",
-            "@type": "error",
-            "email": "unknown@whatever.com",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for UPDATE_ACCOUNT
  */
 export const UpdateAccountExamples = {
-    "200 (ACCOUNT_UPDATED)": {
-        "content": {
-            "@event": "ACCOUNT_UPDATED",
-            "@type": "account",
-            "atype": "LEARNER",
-            "avatar_uri": "http://some.avatar/photo.png",
-            "show_in_ranking": true,
-            "user_id": 222,
-            "username": "Jacky"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_ACCOUNT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_ACCOUNT",
-            "@type": "error",
-            "user_id": 6950
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }

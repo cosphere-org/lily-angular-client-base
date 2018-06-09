@@ -29,6 +29,10 @@ export class FragmentsDomain {
     public bulkReadFragments(params: X.BulkReadFragmentsQuery): DataState<X.BulkReadFragmentsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadFragments2(params: X.BulkReadFragmentsQuery): Observable<X.BulkReadFragmentsResponseEntity[]> {
+        return this.client.get<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * List Published Remote Fragments
@@ -38,6 +42,10 @@ export class FragmentsDomain {
      */
     public bulkReadPublishedFragments(params: X.BulkReadPublishedFragmentsQuery): DataState<X.BulkReadPublishedFragmentsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'data', authorizationRequired: false });
+    }
+    
+    public bulkReadPublishedFragments2(params: X.BulkReadPublishedFragmentsQuery): Observable<X.BulkReadPublishedFragmentsResponseEntity[]> {
+        return this.client.get<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'data', authorizationRequired: false });
     }
 
     /**
@@ -97,6 +105,10 @@ export class FragmentsDomain {
     public readFragment(fragmentId: any): DataState<X.ReadFragmentResponse> {
         return this.client.getDataState<X.ReadFragmentResponse>(`/fragments/${fragmentId}`, { authorizationRequired: true });
     }
+    
+    public readFragment2(fragmentId: any): Observable<X.ReadFragmentResponse> {
+        return this.client.get<X.ReadFragmentResponse>(`/fragments/${fragmentId}`, { authorizationRequired: true });
+    }
 
     /**
      * Read Fragment Diff
@@ -107,6 +119,10 @@ export class FragmentsDomain {
     public readFragmentDiff(fragmentId: any): DataState<X.ReadFragmentDiffResponse> {
         return this.client.getDataState<X.ReadFragmentDiffResponse>(`/fragments/${fragmentId}/diff/`, { authorizationRequired: true });
     }
+    
+    public readFragmentDiff2(fragmentId: any): Observable<X.ReadFragmentDiffResponse> {
+        return this.client.get<X.ReadFragmentDiffResponse>(`/fragments/${fragmentId}/diff/`, { authorizationRequired: true });
+    }
 
     /**
      * Read Fragment Sample
@@ -116,6 +132,10 @@ export class FragmentsDomain {
      */
     public readFragmentSample(fragmentId: any): DataState<X.ReadFragmentSampleResponse> {
         return this.client.getDataState<X.ReadFragmentSampleResponse>(`/fragments/${fragmentId}/sample/`, { authorizationRequired: false });
+    }
+    
+    public readFragmentSample2(fragmentId: any): Observable<X.ReadFragmentSampleResponse> {
+        return this.client.get<X.ReadFragmentSampleResponse>(`/fragments/${fragmentId}/sample/`, { authorizationRequired: false });
     }
 
     /**

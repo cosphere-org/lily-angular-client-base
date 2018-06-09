@@ -29,6 +29,10 @@ export class InvoicesDomain {
     public bulkReadInvoices(): DataState<X.BulkReadInvoicesResponseEntity[]> {
         return this.client.getDataState<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadInvoices2(): Observable<X.BulkReadInvoicesResponseEntity[]> {
+        return this.client.get<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Calculate debt for a given user
@@ -38,6 +42,10 @@ export class InvoicesDomain {
      */
     public calculateDebt(): DataState<X.CalculateDebtResponse> {
         return this.client.getDataState<X.CalculateDebtResponse>('/payments/invoices/debt/', { authorizationRequired: true });
+    }
+    
+    public calculateDebt2(): Observable<X.CalculateDebtResponse> {
+        return this.client.get<X.CalculateDebtResponse>('/payments/invoices/debt/', { authorizationRequired: true });
     }
 
 }

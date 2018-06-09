@@ -29,6 +29,10 @@ export class GeometriesDomain {
     public bulkReadGeometries(params: X.BulkReadGeometriesQuery): DataState<X.BulkReadGeometriesResponseEntity[]> {
         return this.client.getDataState<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadGeometries2(params: X.BulkReadGeometriesQuery): Observable<X.BulkReadGeometriesResponseEntity[]> {
+        return this.client.get<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Bulk Update Geometries
@@ -51,6 +55,10 @@ export class GeometriesDomain {
     public readGeometryByCard(cardId: any): DataState<X.ReadGeometryByCardResponse> {
         return this.client.getDataState<X.ReadGeometryByCardResponse>(`/grid/geometries/by_card/${cardId}`, { authorizationRequired: true });
     }
+    
+    public readGeometryByCard2(cardId: any): Observable<X.ReadGeometryByCardResponse> {
+        return this.client.get<X.ReadGeometryByCardResponse>(`/grid/geometries/by_card/${cardId}`, { authorizationRequired: true });
+    }
 
     /**
      * Read Graph
@@ -60,6 +68,10 @@ export class GeometriesDomain {
      */
     public readGraph(params: X.ReadGraphQuery): DataState<X.ReadGraphResponse> {
         return this.client.getDataState<X.ReadGraphResponse>('/grid/graphs/', { params, authorizationRequired: true });
+    }
+    
+    public readGraph2(params: X.ReadGraphQuery): Observable<X.ReadGraphResponse> {
+        return this.client.get<X.ReadGraphResponse>('/grid/graphs/', { params, authorizationRequired: true });
     }
 
 }

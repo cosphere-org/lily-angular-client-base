@@ -41,6 +41,10 @@ export class PathsDomain {
     public bulkReadPaths(params: X.BulkReadPathsQuery): DataState<X.BulkReadPathsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadPaths2(params: X.BulkReadPathsQuery): Observable<X.BulkReadPathsResponseEntity[]> {
+        return this.client.get<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Create Path
@@ -62,6 +66,10 @@ export class PathsDomain {
      */
     public readPath(pathId: any): DataState<X.ReadPathResponse> {
         return this.client.getDataState<X.ReadPathResponse>(`/paths/${pathId}`, { authorizationRequired: true });
+    }
+    
+    public readPath2(pathId: any): Observable<X.ReadPathResponse> {
+        return this.client.get<X.ReadPathResponse>(`/paths/${pathId}`, { authorizationRequired: true });
     }
 
     /**

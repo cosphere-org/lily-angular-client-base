@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/payment/serializers/invoice.py/#lines-53
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/invoice.py/#lines-53
  */
 
 export enum BulkReadInvoicesResponseCurrency {
@@ -48,7 +48,7 @@ export interface BulkReadInvoicesResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/5e4499cd1fda54d0cb40b594c3691f59f7590897/cosphere_auth_service/payment/views/invoice.py/#lines-51
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/invoice.py/#lines-51
  */
 
 export interface CalculateDebtResponse {

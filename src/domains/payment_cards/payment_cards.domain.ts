@@ -41,6 +41,10 @@ export class PaymentCardsDomain {
     public bulkReadPaymentcards(): DataState<X.BulkReadPaymentcardsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadPaymentcards2(): Observable<X.BulkReadPaymentcardsResponseEntity[]> {
+        return this.client.get<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Create a Payment Card
@@ -86,6 +90,10 @@ export class PaymentCardsDomain {
      */
     public renderPaymentCardWidget(): DataState<X.RenderPaymentCardWidgetResponse> {
         return this.client.getDataState<X.RenderPaymentCardWidgetResponse>('/payments/payment_cards/widget/', { authorizationRequired: true });
+    }
+    
+    public renderPaymentCardWidget2(): Observable<X.RenderPaymentCardWidgetResponse> {
+        return this.client.get<X.RenderPaymentCardWidgetResponse>('/payments/payment_cards/widget/', { authorizationRequired: true });
     }
 
 }

@@ -29,6 +29,10 @@ export class HashtagsDomain {
     public bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadHashtags2(params: X.BulkReadHashtagsQuery): Observable<X.BulkReadHashtagsResponseEntity[]> {
+        return this.client.get<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Creating a single Hashtag
@@ -62,6 +66,10 @@ export class HashtagsDomain {
      */
     public readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse> {
         return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc', { params, authorizationRequired: true });
+    }
+    
+    public readHashtagsToc2(params: X.ReadHashtagsTocQuery): Observable<X.ReadHashtagsTocResponse> {
+        return this.client.get<X.ReadHashtagsTocResponse>('/hashtags/toc', { params, authorizationRequired: true });
     }
 
     /**

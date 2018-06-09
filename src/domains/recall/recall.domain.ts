@@ -41,5 +41,9 @@ export class RecallDomain {
     public readRecallSummary(): DataState<X.ReadRecallSummaryResponse> {
         return this.client.getDataState<X.ReadRecallSummaryResponse>('/recall/summary/', { authorizationRequired: true });
     }
+    
+    public readRecallSummary2(): Observable<X.ReadRecallSummaryResponse> {
+        return this.client.get<X.ReadRecallSummaryResponse>('/recall/summary/', { authorizationRequired: true });
+    }
 
 }

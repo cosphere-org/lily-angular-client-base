@@ -29,6 +29,10 @@ export class AttemptsDomain {
     public bulkReadAttemptsByCards(cardId: any): DataState<X.BulkReadAttemptsByCardsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadAttemptsByCards2(cardId: any): Observable<X.BulkReadAttemptsByCardsResponseEntity[]> {
+        return this.client.get<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Create Attempt

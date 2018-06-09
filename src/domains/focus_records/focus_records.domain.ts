@@ -35,5 +35,9 @@ export class FocusRecordsDomain {
     public readFocusRecordSummary(): DataState<X.ReadFocusRecordSummaryResponse> {
         return this.client.getDataState<X.ReadFocusRecordSummaryResponse>('/focus_records/summary/', { authorizationRequired: true });
     }
+    
+    public readFocusRecordSummary2(): Observable<X.ReadFocusRecordSummaryResponse> {
+        return this.client.get<X.ReadFocusRecordSummaryResponse>('/focus_records/summary/', { authorizationRequired: true });
+    }
 
 }

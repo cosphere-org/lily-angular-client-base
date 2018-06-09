@@ -34,6 +34,10 @@ export class APIService {
     readAccountsetting(): DataState<X.ReadAccountsettingResponse> {
         return this.account_settingsDomain.readAccountsetting();
     }
+    
+    readAccountsetting2(): Observable<X.ReadAccountsettingResponse> {
+        return this.account_settingsDomain.readAccountsetting2();
+    }
 
     updateAccountsetting(body: X.UpdateAccountsettingBody): Observable<X.UpdateAccountsettingResponse> {
         return this.account_settingsDomain.updateAccountsetting(body);
@@ -59,6 +63,10 @@ export class APIService {
     bulkReadAccounts(params: X.BulkReadAccountsQuery): DataState<X.BulkReadAccountsResponseEntity[]> {
         return this.accountsDomain.bulkReadAccounts(params);
     }
+    
+    bulkReadAccounts2(params: X.BulkReadAccountsQuery): Observable<X.BulkReadAccountsResponseEntity[]> {
+        return this.accountsDomain.bulkReadAccounts2(params);
+    }
 
     changePassword(body: X.ChangePasswordBody): Observable<X.ChangePasswordResponse> {
         return this.accountsDomain.changePassword(body);
@@ -70,6 +78,10 @@ export class APIService {
 
     readAccount(): DataState<X.ReadAccountResponse> {
         return this.accountsDomain.readAccount();
+    }
+    
+    readAccount2(): Observable<X.ReadAccountResponse> {
+        return this.accountsDomain.readAccount2();
     }
 
     resetPassword(body: X.ResetPasswordBody): Observable<X.ResetPasswordResponse> {
@@ -104,6 +116,10 @@ export class APIService {
     bulkReadAttemptstats(params: X.BulkReadAttemptstatsQuery): DataState<X.BulkReadAttemptstatsResponse> {
         return this.attempt_statsDomain.bulkReadAttemptstats(params);
     }
+    
+    bulkReadAttemptstats2(params: X.BulkReadAttemptstatsQuery): Observable<X.BulkReadAttemptstatsResponse> {
+        return this.attempt_statsDomain.bulkReadAttemptstats2(params);
+    }
 
     createAttemptstat(body: X.CreateAttemptstatBody): Observable<X.CreateAttemptstatResponse> {
         return this.attempt_statsDomain.createAttemptstat(body);
@@ -128,6 +144,10 @@ export class APIService {
 
     bulkReadAttemptsByCards(cardId: any): DataState<X.BulkReadAttemptsByCardsResponseEntity[]> {
         return this.attemptsDomain.bulkReadAttemptsByCards(cardId);
+    }
+    
+    bulkReadAttemptsByCards2(cardId: any): Observable<X.BulkReadAttemptsByCardsResponseEntity[]> {
+        return this.attemptsDomain.bulkReadAttemptsByCards2(cardId);
     }
 
     createAttempt(body: X.CreateAttemptBody): Observable<X.CreateAttemptResponse> {
@@ -199,6 +219,10 @@ export class APIService {
     bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponseEntity[]> {
         return this.cardsDomain.bulkReadCards(params);
     }
+    
+    bulkReadCards2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]> {
+        return this.cardsDomain.bulkReadCards2(params);
+    }
 
     createCard(body: X.CreateCardBody): Observable<X.CreateCardResponse> {
         return this.cardsDomain.createCard(body);
@@ -206,6 +230,10 @@ export class APIService {
 
     readCard(cardId: any): DataState<X.ReadCardResponse> {
         return this.cardsDomain.readCard(cardId);
+    }
+    
+    readCard2(cardId: any): Observable<X.ReadCardResponse> {
+        return this.cardsDomain.readCard2(cardId);
     }
 
     updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse> {
@@ -227,6 +255,10 @@ export class APIService {
 
     bulkReadCategories(): DataState<X.BulkReadCategoriesResponseEntity[]> {
         return this.categoriesDomain.bulkReadCategories();
+    }
+    
+    bulkReadCategories2(): Observable<X.BulkReadCategoriesResponseEntity[]> {
+        return this.categoriesDomain.bulkReadCategories2();
     }
 
     /**
@@ -270,6 +302,10 @@ export class APIService {
     checkIfCanAttemptDonation(params: X.CheckIfCanAttemptDonationQuery): DataState<X.CheckIfCanAttemptDonationResponse> {
         return this.donationsDomain.checkIfCanAttemptDonation(params);
     }
+    
+    checkIfCanAttemptDonation2(params: X.CheckIfCanAttemptDonationQuery): Observable<X.CheckIfCanAttemptDonationResponse> {
+        return this.donationsDomain.checkIfCanAttemptDonation2(params);
+    }
 
     createAnonymousDonation(body: X.CreateAnonymousDonationBody): Observable<X.CreateAnonymousDonationResponse> {
         return this.donationsDomain.createAnonymousDonation(body);
@@ -307,6 +343,10 @@ export class APIService {
     readExternalappconf(params: X.ReadExternalappconfQuery): DataState<X.ReadExternalappconfResponse> {
         return this.external_appsDomain.readExternalappconf(params);
     }
+    
+    readExternalappconf2(params: X.ReadExternalappconfQuery): Observable<X.ReadExternalappconfResponse> {
+        return this.external_appsDomain.readExternalappconf2(params);
+    }
 
     /**
      * Focus Records Management domain
@@ -328,6 +368,10 @@ export class APIService {
     readFocusRecordSummary(): DataState<X.ReadFocusRecordSummaryResponse> {
         return this.focus_recordsDomain.readFocusRecordSummary();
     }
+    
+    readFocusRecordSummary2(): Observable<X.ReadFocusRecordSummaryResponse> {
+        return this.focus_recordsDomain.readFocusRecordSummary2();
+    }
 
     /**
      * Fragment Hashtags Management domain
@@ -345,9 +389,17 @@ export class APIService {
     bulkReadFragmentHashtags(params: X.BulkReadFragmentHashtagsQuery): DataState<X.BulkReadFragmentHashtagsResponseEntity[]> {
         return this.fragment_hashtagsDomain.bulkReadFragmentHashtags(params);
     }
+    
+    bulkReadFragmentHashtags2(params: X.BulkReadFragmentHashtagsQuery): Observable<X.BulkReadFragmentHashtagsResponseEntity[]> {
+        return this.fragment_hashtagsDomain.bulkReadFragmentHashtags2(params);
+    }
 
     bulkReadPublishedFragmentHashtags(params: X.BulkReadPublishedFragmentHashtagsQuery): DataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]> {
         return this.fragment_hashtagsDomain.bulkReadPublishedFragmentHashtags(params);
+    }
+    
+    bulkReadPublishedFragmentHashtags2(params: X.BulkReadPublishedFragmentHashtagsQuery): Observable<X.BulkReadPublishedFragmentHashtagsResponseEntity[]> {
+        return this.fragment_hashtagsDomain.bulkReadPublishedFragmentHashtags2(params);
     }
 
     /**
@@ -366,9 +418,17 @@ export class APIService {
     bulkReadFragmentWords(params: X.BulkReadFragmentWordsQuery): DataState<X.BulkReadFragmentWordsResponseEntity[]> {
         return this.fragment_wordsDomain.bulkReadFragmentWords(params);
     }
+    
+    bulkReadFragmentWords2(params: X.BulkReadFragmentWordsQuery): Observable<X.BulkReadFragmentWordsResponseEntity[]> {
+        return this.fragment_wordsDomain.bulkReadFragmentWords2(params);
+    }
 
     bulkReadPublishedFragmentWords(params: X.BulkReadPublishedFragmentWordsQuery): DataState<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
         return this.fragment_wordsDomain.bulkReadPublishedFragmentWords(params);
+    }
+    
+    bulkReadPublishedFragmentWords2(params: X.BulkReadPublishedFragmentWordsQuery): Observable<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
+        return this.fragment_wordsDomain.bulkReadPublishedFragmentWords2(params);
     }
 
     /**
@@ -387,9 +447,17 @@ export class APIService {
     bulkReadFragments(params: X.BulkReadFragmentsQuery): DataState<X.BulkReadFragmentsResponseEntity[]> {
         return this.fragmentsDomain.bulkReadFragments(params);
     }
+    
+    bulkReadFragments2(params: X.BulkReadFragmentsQuery): Observable<X.BulkReadFragmentsResponseEntity[]> {
+        return this.fragmentsDomain.bulkReadFragments2(params);
+    }
 
     bulkReadPublishedFragments(params: X.BulkReadPublishedFragmentsQuery): DataState<X.BulkReadPublishedFragmentsResponseEntity[]> {
         return this.fragmentsDomain.bulkReadPublishedFragments(params);
+    }
+    
+    bulkReadPublishedFragments2(params: X.BulkReadPublishedFragmentsQuery): Observable<X.BulkReadPublishedFragmentsResponseEntity[]> {
+        return this.fragmentsDomain.bulkReadPublishedFragments2(params);
     }
 
     createFragment(): Observable<X.CreateFragmentResponse> {
@@ -411,13 +479,25 @@ export class APIService {
     readFragment(fragmentId: any): DataState<X.ReadFragmentResponse> {
         return this.fragmentsDomain.readFragment(fragmentId);
     }
+    
+    readFragment2(fragmentId: any): Observable<X.ReadFragmentResponse> {
+        return this.fragmentsDomain.readFragment2(fragmentId);
+    }
 
     readFragmentDiff(fragmentId: any): DataState<X.ReadFragmentDiffResponse> {
         return this.fragmentsDomain.readFragmentDiff(fragmentId);
     }
+    
+    readFragmentDiff2(fragmentId: any): Observable<X.ReadFragmentDiffResponse> {
+        return this.fragmentsDomain.readFragmentDiff2(fragmentId);
+    }
 
     readFragmentSample(fragmentId: any): DataState<X.ReadFragmentSampleResponse> {
         return this.fragmentsDomain.readFragmentSample(fragmentId);
+    }
+    
+    readFragmentSample2(fragmentId: any): Observable<X.ReadFragmentSampleResponse> {
+        return this.fragmentsDomain.readFragmentSample2(fragmentId);
     }
 
     updateFragment(fragmentId: any, body: X.UpdateFragmentBody): Observable<X.UpdateFragmentResponse> {
@@ -440,6 +520,10 @@ export class APIService {
     bulkReadGeometries(params: X.BulkReadGeometriesQuery): DataState<X.BulkReadGeometriesResponseEntity[]> {
         return this.geometriesDomain.bulkReadGeometries(params);
     }
+    
+    bulkReadGeometries2(params: X.BulkReadGeometriesQuery): Observable<X.BulkReadGeometriesResponseEntity[]> {
+        return this.geometriesDomain.bulkReadGeometries2(params);
+    }
 
     bulkUpdateGeometries(body: X.BulkUpdateGeometriesBody): Observable<X.BulkUpdateGeometriesResponse> {
         return this.geometriesDomain.bulkUpdateGeometries(body);
@@ -448,9 +532,17 @@ export class APIService {
     readGeometryByCard(cardId: any): DataState<X.ReadGeometryByCardResponse> {
         return this.geometriesDomain.readGeometryByCard(cardId);
     }
+    
+    readGeometryByCard2(cardId: any): Observable<X.ReadGeometryByCardResponse> {
+        return this.geometriesDomain.readGeometryByCard2(cardId);
+    }
 
     readGraph(params: X.ReadGraphQuery): DataState<X.ReadGraphResponse> {
         return this.geometriesDomain.readGraph(params);
+    }
+    
+    readGraph2(params: X.ReadGraphQuery): Observable<X.ReadGraphResponse> {
+        return this.geometriesDomain.readGraph2(params);
     }
 
     /**
@@ -469,6 +561,10 @@ export class APIService {
     bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponseEntity[]> {
         return this.hashtagsDomain.bulkReadHashtags(params);
     }
+    
+    bulkReadHashtags2(params: X.BulkReadHashtagsQuery): Observable<X.BulkReadHashtagsResponseEntity[]> {
+        return this.hashtagsDomain.bulkReadHashtags2(params);
+    }
 
     createHashtag(body: X.CreateHashtagBody): Observable<X.CreateHashtagResponse> {
         return this.hashtagsDomain.createHashtag(body);
@@ -480,6 +576,10 @@ export class APIService {
 
     readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse> {
         return this.hashtagsDomain.readHashtagsToc(params);
+    }
+    
+    readHashtagsToc2(params: X.ReadHashtagsTocQuery): Observable<X.ReadHashtagsTocResponse> {
+        return this.hashtagsDomain.readHashtagsToc2(params);
     }
 
     updateHashtag(hashtagId: any, body: X.UpdateHashtagBody): Observable<X.UpdateHashtagResponse> {
@@ -519,9 +619,17 @@ export class APIService {
     bulkReadInvoices(): DataState<X.BulkReadInvoicesResponseEntity[]> {
         return this.invoicesDomain.bulkReadInvoices();
     }
+    
+    bulkReadInvoices2(): Observable<X.BulkReadInvoicesResponseEntity[]> {
+        return this.invoicesDomain.bulkReadInvoices2();
+    }
 
     calculateDebt(): DataState<X.CalculateDebtResponse> {
         return this.invoicesDomain.calculateDebt();
+    }
+    
+    calculateDebt2(): Observable<X.CalculateDebtResponse> {
+        return this.invoicesDomain.calculateDebt2();
     }
 
     /**
@@ -561,6 +669,10 @@ export class APIService {
     bulkReadMediaitems(params: X.BulkReadMediaitemsQuery): DataState<X.BulkReadMediaitemsResponseEntity[]> {
         return this.mediaitemsDomain.bulkReadMediaitems(params);
     }
+    
+    bulkReadMediaitems2(params: X.BulkReadMediaitemsQuery): Observable<X.BulkReadMediaitemsResponseEntity[]> {
+        return this.mediaitemsDomain.bulkReadMediaitems2(params);
+    }
 
     deleteMediaitem(mediaitemId: any, params: X.DeleteMediaitemQuery): Observable<X.DeleteMediaitemResponse> {
         return this.mediaitemsDomain.deleteMediaitem(mediaitemId, params);
@@ -569,9 +681,17 @@ export class APIService {
     readMediaitem(mediaitemId: any): DataState<X.ReadMediaitemResponse> {
         return this.mediaitemsDomain.readMediaitem(mediaitemId);
     }
+    
+    readMediaitem2(mediaitemId: any): Observable<X.ReadMediaitemResponse> {
+        return this.mediaitemsDomain.readMediaitem2(mediaitemId);
+    }
 
     readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
         return this.mediaitemsDomain.readMediaitemByProcessId(processId);
+    }
+    
+    readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse> {
+        return this.mediaitemsDomain.readMediaitemByProcessId2(processId);
     }
 
     readOrCreateMediaitem(body: X.ReadOrCreateMediaitemBody): Observable<X.ReadOrCreateMediaitemResponse> {
@@ -606,6 +726,10 @@ export class APIService {
     bulkReadNotifications(params: X.BulkReadNotificationsQuery): DataState<X.BulkReadNotificationsResponseEntity[]> {
         return this.notificationsDomain.bulkReadNotifications(params);
     }
+    
+    bulkReadNotifications2(params: X.BulkReadNotificationsQuery): Observable<X.BulkReadNotificationsResponseEntity[]> {
+        return this.notificationsDomain.bulkReadNotifications2(params);
+    }
 
     /**
      * Paths Management domain
@@ -627,6 +751,10 @@ export class APIService {
     bulkReadPaths(params: X.BulkReadPathsQuery): DataState<X.BulkReadPathsResponseEntity[]> {
         return this.pathsDomain.bulkReadPaths(params);
     }
+    
+    bulkReadPaths2(params: X.BulkReadPathsQuery): Observable<X.BulkReadPathsResponseEntity[]> {
+        return this.pathsDomain.bulkReadPaths2(params);
+    }
 
     createPath(body: X.CreatePathBody): Observable<X.CreatePathResponse> {
         return this.pathsDomain.createPath(body);
@@ -634,6 +762,10 @@ export class APIService {
 
     readPath(pathId: any): DataState<X.ReadPathResponse> {
         return this.pathsDomain.readPath(pathId);
+    }
+    
+    readPath2(pathId: any): Observable<X.ReadPathResponse> {
+        return this.pathsDomain.readPath2(pathId);
     }
 
     updatePath(pathId: any, body: X.UpdatePathBody): Observable<X.UpdatePathResponse> {
@@ -660,6 +792,10 @@ export class APIService {
     bulkReadPaymentcards(): DataState<X.BulkReadPaymentcardsResponseEntity[]> {
         return this.payment_cardsDomain.bulkReadPaymentcards();
     }
+    
+    bulkReadPaymentcards2(): Observable<X.BulkReadPaymentcardsResponseEntity[]> {
+        return this.payment_cardsDomain.bulkReadPaymentcards2();
+    }
 
     createPaymentcard(body: X.CreatePaymentcardBody): Observable<X.CreatePaymentcardResponse> {
         return this.payment_cardsDomain.createPaymentcard(body);
@@ -675,6 +811,10 @@ export class APIService {
 
     renderPaymentCardWidget(): DataState<X.RenderPaymentCardWidgetResponse> {
         return this.payment_cardsDomain.renderPaymentCardWidget();
+    }
+    
+    renderPaymentCardWidget2(): Observable<X.RenderPaymentCardWidgetResponse> {
+        return this.payment_cardsDomain.renderPaymentCardWidget2();
     }
 
     /**
@@ -714,6 +854,10 @@ export class APIService {
     readRecallSummary(): DataState<X.ReadRecallSummaryResponse> {
         return this.recallDomain.readRecallSummary();
     }
+    
+    readRecallSummary2(): Observable<X.ReadRecallSummaryResponse> {
+        return this.recallDomain.readRecallSummary2();
+    }
 
     /**
      * Subscription Management domain
@@ -748,9 +892,17 @@ export class APIService {
     bulkReadTasks(params: X.BulkReadTasksQuery): DataState<X.BulkReadTasksResponseEntity[]> {
         return this.tasksDomain.bulkReadTasks(params);
     }
+    
+    bulkReadTasks2(params: X.BulkReadTasksQuery): Observable<X.BulkReadTasksResponseEntity[]> {
+        return this.tasksDomain.bulkReadTasks2(params);
+    }
 
     bulkReadTaskBins(params: X.BulkReadTaskBinsQuery): DataState<X.BulkReadTaskBinsResponseEntity[]> {
         return this.tasksDomain.bulkReadTaskBins(params);
+    }
+    
+    bulkReadTaskBins2(params: X.BulkReadTaskBinsQuery): Observable<X.BulkReadTaskBinsResponseEntity[]> {
+        return this.tasksDomain.bulkReadTaskBins2(params);
     }
 
     /**
@@ -768,6 +920,10 @@ export class APIService {
 
     bulkReadWords(params: X.BulkReadWordsQuery): DataState<X.BulkReadWordsResponseEntity[]> {
         return this.wordsDomain.bulkReadWords(params);
+    }
+    
+    bulkReadWords2(params: X.BulkReadWordsQuery): Observable<X.BulkReadWordsResponseEntity[]> {
+        return this.wordsDomain.bulkReadWords2(params);
     }
 
 }

@@ -29,6 +29,10 @@ export class FragmentWordsDomain {
     public bulkReadFragmentWords(params: X.BulkReadFragmentWordsQuery): DataState<X.BulkReadFragmentWordsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadFragmentWords2(params: X.BulkReadFragmentWordsQuery): Observable<X.BulkReadFragmentWordsResponseEntity[]> {
+        return this.client.get<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * List Published Words
@@ -38,6 +42,10 @@ export class FragmentWordsDomain {
      */
     public bulkReadPublishedFragmentWords(params: X.BulkReadPublishedFragmentWordsQuery): DataState<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'data', authorizationRequired: false });
+    }
+    
+    public bulkReadPublishedFragmentWords2(params: X.BulkReadPublishedFragmentWordsQuery): Observable<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
+        return this.client.get<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'data', authorizationRequired: false });
     }
 
 }

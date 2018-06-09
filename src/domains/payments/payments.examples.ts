@@ -11,22 +11,5 @@
  * Examples for UPDATE_PAYMENT_STATUS
  */
 export const UpdatePaymentStatusExamples = {
-    "200 (PAYMENT_STATUS_UPDATED)": {
-        "content": {
-            "@event": "PAYMENT_STATUS_UPDATED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (WAS_BROKEN)": {
-        "content": {
-            "@event": "WAS_BROKEN",
-            "@type": "error",
-            "user_id": 12
-        },
-        "content_type": "application/json",
-        "status": 400
-    }
 }

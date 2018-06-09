@@ -29,6 +29,10 @@ export class MediaitemsDomain {
     public bulkReadMediaitems(params: X.BulkReadMediaitemsQuery): DataState<X.BulkReadMediaitemsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadMediaitems2(params: X.BulkReadMediaitemsQuery): Observable<X.BulkReadMediaitemsResponseEntity[]> {
+        return this.client.get<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Remove MediaItem
@@ -51,6 +55,10 @@ export class MediaitemsDomain {
     public readMediaitem(mediaitemId: any): DataState<X.ReadMediaitemResponse> {
         return this.client.getDataState<X.ReadMediaitemResponse>(`/mediaitems/${mediaitemId}`, { authorizationRequired: true });
     }
+    
+    public readMediaitem2(mediaitemId: any): Observable<X.ReadMediaitemResponse> {
+        return this.client.get<X.ReadMediaitemResponse>(`/mediaitems/${mediaitemId}`, { authorizationRequired: true });
+    }
 
     /**
      * Read By Process Id
@@ -60,6 +68,10 @@ export class MediaitemsDomain {
      */
     public readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
         return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
+    }
+    
+    public readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse> {
+        return this.client.get<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
     }
 
     /**

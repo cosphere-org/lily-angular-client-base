@@ -47,5 +47,9 @@ export class ExternalAppsDomain {
     public readExternalappconf(params: X.ReadExternalappconfQuery): DataState<X.ReadExternalappconfResponse> {
         return this.client.getDataState<X.ReadExternalappconfResponse>('/external/apps/', { params, authorizationRequired: true });
     }
+    
+    public readExternalappconf2(params: X.ReadExternalappconfQuery): Observable<X.ReadExternalappconfResponse> {
+        return this.client.get<X.ReadExternalappconfResponse>('/external/apps/', { params, authorizationRequired: true });
+    }
 
 }

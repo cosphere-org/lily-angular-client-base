@@ -11,293 +11,68 @@
  * Examples for BULK_READ_FRAGMENTS
  */
 export const BulkReadFragmentsExamples = {
-    "200 (FRAGMENTS_BULK_READ)": {
-        "content": {
-            "@event": "FRAGMENTS_BULK_READ",
-            "@type": "fragments_list",
-            "fragments": [
-                {
-                    "@type": "fragment",
-                    "description": "there",
-                    "id": 44,
-                    "is_author": true,
-                    "is_learner": null,
-                    "is_premium": false,
-                    "is_published": true,
-                    "title": "hi"
-                }
-            ]
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for BULK_READ_PUBLISHED_FRAGMENTS
  */
 export const BulkReadPublishedFragmentsExamples = {
-    "200 (PUBLISHED_FRAGMENTS_BULK_READ)": {
-        "content": {
-            "@event": "PUBLISHED_FRAGMENTS_BULK_READ",
-            "@type": "public_fragments_list",
-            "fragments": []
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for CREATE_FRAGMENT
  */
 export const CreateFragmentExamples = {
-    "201 (FRAGMENT_CREATED)": {
-        "content": {
-            "@event": "FRAGMENT_CREATED",
-            "@type": "fragment",
-            "description": null,
-            "id": 46,
-            "is_author": null,
-            "is_learner": null,
-            "is_premium": false,
-            "is_published": false,
-            "title": null
-        },
-        "content_type": "application/json",
-        "status": 201
-    }
+    
 }
 
 /**
  * Examples for DELETE_FRAGMENT
  */
 export const DeleteFragmentExamples = {
-    "200 (FRAGMENT_DELETED)": {
-        "content": {
-            "@event": "FRAGMENT_DELETED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (REMOTE_FRAGMENT_HAS_LEARNERS_DETECTED)": {
-        "content": {
-            "@event": "REMOTE_FRAGMENT_HAS_LEARNERS_DETECTED",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for MERGE_FRAGMENT
  */
 export const MergeFragmentExamples = {
-    "200 (FRAGMENT_MERGED)": {
-        "content": {
-            "@event": "FRAGMENT_MERGED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for PUBLISH_FRAGMENT
  */
 export const PublishFragmentExamples = {
-    "200 (FRAGMENT_PUBLISHED)": {
-        "content": {
-            "@event": "FRAGMENT_PUBLISHED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for READ_FRAGMENT
  */
 export const ReadFragmentExamples = {
-    "200 (FRAGMENT_READ)": {
-        "content": {
-            "@event": "FRAGMENT_READ",
-            "@type": "fragment_detail",
-            "cards_life_cycles": [
-                "some cards"
-            ],
-            "description": "Architecto sequi facere quis saepe.",
-            "id": 50,
-            "is_author": true,
-            "is_learner": null,
-            "is_premium": false,
-            "is_published": true,
-            "links_life_cycles": [
-                "some links"
-            ],
-            "paths_life_cycles": [
-                "some paths"
-            ],
-            "title": "Rerum facilis voluptatibus dicta fugiat culpa maiores."
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for READ_FRAGMENT_DIFF
  */
 export const ReadFragmentDiffExamples = {
-    "200 (FRAGMENT_DIFF_READ)": {
-        "content": {
-            "@event": "FRAGMENT_DIFF_READ",
-            "@type": "fragment_diff",
-            "created_card_ids": [
-                11,
-                2
-            ],
-            "created_path_ids": [
-                8
-            ],
-            "prod_text_representation": {
-                "@type": "fragment_text_representation",
-                "description": "Asperiores nostrum rerum occaecati exercitationem.",
-                "title": "Dolorem aliquam tempora maiores suscipit."
-            },
-            "stage_text_representation": {
-                "@type": "fragment_text_representation",
-                "description": "Ipsam itaque nulla laborum.",
-                "title": "Voluptates quam voluptate dolore asperiores nesciunt animi."
-            },
-            "updated_card_ids": [
-                4
-            ],
-            "updated_path_ids": []
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for READ_FRAGMENT_SAMPLE
  */
 export const ReadFragmentSampleExamples = {
-    "200 (FRAGMENT_SAMPLE_READ)": {
-        "content": {
-            "@event": "FRAGMENT_SAMPLE_READ",
-            "@type": "cards_list",
-            "cards": [
-                "some cards"
-            ]
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for UPDATE_FRAGMENT
  */
 export const UpdateFragmentExamples = {
-    "200 (FRAGMENT_UPDATED)": {
-        "content": {
-            "@event": "FRAGMENT_UPDATED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "card_ids": [
-                    "Expected a list of items but got type \"str\"."
-                ]
-            },
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_FRAGMENT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_FRAGMENT",
-            "@type": "error",
-            "user_id": 1
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }

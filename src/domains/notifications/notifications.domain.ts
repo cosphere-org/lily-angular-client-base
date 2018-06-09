@@ -41,5 +41,9 @@ export class NotificationsDomain {
     public bulkReadNotifications(params: X.BulkReadNotificationsQuery): DataState<X.BulkReadNotificationsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadNotificationsResponseEntity[]>('/notifications/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadNotifications2(params: X.BulkReadNotificationsQuery): Observable<X.BulkReadNotificationsResponseEntity[]> {
+        return this.client.get<X.BulkReadNotificationsResponseEntity[]>('/notifications/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
 }

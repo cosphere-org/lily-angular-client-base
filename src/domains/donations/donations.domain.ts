@@ -29,6 +29,10 @@ export class DonationsDomain {
     public checkIfCanAttemptDonation(params: X.CheckIfCanAttemptDonationQuery): DataState<X.CheckIfCanAttemptDonationResponse> {
         return this.client.getDataState<X.CheckIfCanAttemptDonationResponse>('/payments/donations/can_attempt/', { params, authorizationRequired: true });
     }
+    
+    public checkIfCanAttemptDonation2(params: X.CheckIfCanAttemptDonationQuery): Observable<X.CheckIfCanAttemptDonationResponse> {
+        return this.client.get<X.CheckIfCanAttemptDonationResponse>('/payments/donations/can_attempt/', { params, authorizationRequired: true });
+    }
 
     /**
      * Register anonymous donation

@@ -26,6 +26,10 @@ export class AccountSettingsDomain {
     public readAccountsetting(): DataState<X.ReadAccountsettingResponse> {
         return this.client.getDataState<X.ReadAccountsettingResponse>('/account/settings/', { authorizationRequired: true });
     }
+    
+    public readAccountsetting2(): Observable<X.ReadAccountsettingResponse> {
+        return this.client.get<X.ReadAccountsettingResponse>('/account/settings/', { authorizationRequired: true });
+    }
 
     /**
      * Update Account Settings

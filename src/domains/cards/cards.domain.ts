@@ -41,6 +41,10 @@ export class CardsDomain {
     public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadCards2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]> {
+        return this.client.get<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Creating a single Card
@@ -62,6 +66,10 @@ export class CardsDomain {
      */
     public readCard(cardId: any): DataState<X.ReadCardResponse> {
         return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`, { authorizationRequired: true });
+    }
+    
+    public readCard2(cardId: any): Observable<X.ReadCardResponse> {
+        return this.client.get<X.ReadCardResponse>(`/cards/${cardId}`, { authorizationRequired: true });
     }
 
     /**

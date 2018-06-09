@@ -41,6 +41,10 @@ export class AccountsDomain {
     public bulkReadAccounts(params: X.BulkReadAccountsQuery): DataState<X.BulkReadAccountsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadAccounts2(params: X.BulkReadAccountsQuery): Observable<X.BulkReadAccountsResponseEntity[]> {
+        return this.client.get<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
     /**
      * Change Password
@@ -74,6 +78,10 @@ export class AccountsDomain {
      */
     public readAccount(): DataState<X.ReadAccountResponse> {
         return this.client.getDataState<X.ReadAccountResponse>('/auth/accounts/me/', { authorizationRequired: true });
+    }
+    
+    public readAccount2(): Observable<X.ReadAccountResponse> {
+        return this.client.get<X.ReadAccountResponse>('/auth/accounts/me/', { authorizationRequired: true });
     }
 
     /**

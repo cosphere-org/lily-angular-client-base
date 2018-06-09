@@ -11,195 +11,26 @@
  * Examples for CHECK_IF_CAN_ATTEMPT_DONATION
  */
 export const CheckIfCanAttemptDonationExamples = {
-    "200 (IF_CAN_ATTEMPT_DONATION_CHECKED)": {
-        "content": {
-            "@event": "IF_CAN_ATTEMPT_DONATION_CHECKED",
-            "@type": "can_attempt",
-            "can_attempt": true
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (QUERY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "QUERY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "event": [
-                    "\"UNKNOWN_TIRIKAM\" is not a valid choice."
-                ]
-            },
-            "user_id": 432
-        },
-        "content_type": "application/json",
-        "status": 400
-    }
 }
 
 /**
  * Examples for CREATE_ANONYMOUS_DONATION
  */
 export const CreateAnonymousDonationExamples = {
-    "201 (ANONYMOUS_DONATION_CREATED)": {
-        "content": {
-            "@event": "ANONYMOUS_DONATION_CREATED",
-            "@type": "payment",
-            "amount": "678",
-            "created_timestamp": 1527837379.210913,
-            "display_amount": "6.78",
-            "product": {
-                "@type": "product",
-                "currency": "PLN",
-                "display_price": null,
-                "name": "Dotacja CoSphere.org",
-                "price": null,
-                "product_type": "DONATION"
-            },
-            "status": "NEW",
-            "status_ledger": null
-        },
-        "content_type": "application/json",
-        "status": 201
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "email": [
-                    "This field is required."
-                ]
-            },
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_PRODUCT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_PRODUCT",
-            "@type": "error",
-            "user_id": "anonymous"
-        },
-        "content_type": "application/json",
-        "status": 404
-    },
-    
-    "500 (SOME_ERROR)": {
-        "content": {
-            "@event": "SOME_ERROR",
-            "@type": "error",
-            "some": "error",
-            "user_id": null
-        },
-        "content_type": "application/json",
-        "status": 500
-    }
 }
 
 /**
  * Examples for CREATE_DONATION
  */
 export const CreateDonationExamples = {
-    "201 (DONATION_CREATED)": {
-        "content": {
-            "@event": "DONATION_CREATED",
-            "@type": "payment",
-            "amount": "455",
-            "created_timestamp": 1527837379.362055,
-            "display_amount": "4.55",
-            "product": {
-                "@type": "product",
-                "currency": "PLN",
-                "display_price": null,
-                "name": "Dotacja CoSphere.org",
-                "price": null,
-                "product_type": "DONATION"
-            },
-            "status": "NEW",
-            "status_ledger": null
-        },
-        "content_type": "application/json",
-        "status": 201
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "amount": [
-                    "This field is required."
-                ]
-            },
-            "user_id": 438
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_PRODUCT)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_PRODUCT",
-            "@type": "error",
-            "user_id": 439
-        },
-        "content_type": "application/json",
-        "status": 404
-    },
-    
-    "500 (DATABASE_ERROR_OCCURRED)": {
-        "content": {
-            "@event": "DATABASE_ERROR_OCCURRED",
-            "@type": "error",
-            "user_id": 441
-        },
-        "content_type": "application/json",
-        "status": 500
-    },
-    
-    "500 (SOME_ERROR)": {
-        "content": {
-            "@event": "SOME_ERROR",
-            "@type": "error",
-            "some": "error",
-            "user_id": null
-        },
-        "content_type": "application/json",
-        "status": 500
-    }
 }
 
 /**
  * Examples for CREATE_DONATIONATTEMPT
  */
 export const CreateDonationattemptExamples = {
-    "201 (DONATIONATTEMPT_CREATED)": {
-        "content": {
-            "@event": "DONATIONATTEMPT_CREATED",
-            "@type": "donation_attempt",
-            "created_timestamp": 1527837379.010937,
-            "event": "RECALL"
-        },
-        "content_type": "application/json",
-        "status": 201
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "event": [
-                    "\"WAT!EVER\" is not a valid choice."
-                ]
-            },
-            "user_id": 436
-        },
-        "content_type": "application/json",
-        "status": 400
-    }
 }

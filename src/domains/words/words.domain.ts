@@ -29,5 +29,9 @@ export class WordsDomain {
     public bulkReadWords(params: X.BulkReadWordsQuery): DataState<X.BulkReadWordsResponseEntity[]> {
         return this.client.getDataState<X.BulkReadWordsResponseEntity[]>('/words/', { params, responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadWords2(params: X.BulkReadWordsQuery): Observable<X.BulkReadWordsResponseEntity[]> {
+        return this.client.get<X.BulkReadWordsResponseEntity[]>('/words/', { params, responseMap: 'data', authorizationRequired: true });
+    }
 
 }

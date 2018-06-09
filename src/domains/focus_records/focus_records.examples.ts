@@ -11,75 +11,12 @@
  * Examples for CREATE_FOCUSRECORD
  */
 export const CreateFocusrecordExamples = {
-    "201 (FOCUSRECORD_CREATED)": {
-        "content": {
-            "@event": "FOCUSRECORD_CREATED",
-            "@type": "focus_record",
-            "amount": 34,
-            "created_timestamp": 1527837373.498967
-        },
-        "content_type": "application/json",
-        "status": 201
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "non_field_errors": [
-                    "focus record for current time span already exists"
-                ]
-            },
-            "user_id": 326
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_USER)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_USER",
-            "@type": "error",
-            "user_id": 547953
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for READ_FOCUS_RECORD_SUMMARY
  */
 export const ReadFocusRecordSummaryExamples = {
-    "200 (FOCUS_RECORD_SUMMARY_READ)": {
-        "content": {
-            "@event": "FOCUS_RECORD_SUMMARY_READ",
-            "@type": "focus_records_summary",
-            "average": 23.0,
-            "ranking_absolute_top": null,
-            "ranking_relative_above": null,
-            "ranking_relative_below": null,
-            "time_series": [
-                {
-                    "@type": "focus_record_ts_entry",
-                    "date": "2017-11-24",
-                    "value": 23
-                }
-            ],
-            "total": 23.0
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "404 (COULD_NOT_FIND_USER)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_USER",
-            "@type": "error",
-            "user_id": 584968
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }

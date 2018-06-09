@@ -11,42 +11,12 @@
  * Examples for BULK_READ_FRAGMENT_HASHTAGS
  */
 export const BulkReadFragmentHashtagsExamples = {
-    "200 (FRAGMENT_HASHTAGS_BULK_READ)": {
-        "content": {
-            "@event": "FRAGMENT_HASHTAGS_BULK_READ",
-            "@type": "hashtags_list",
-            "hashtags": [
-                {
-                    "@type": "hashtag",
-                    "count": 1,
-                    "id": 45,
-                    "text": "#recorDS"
-                }
-            ]
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for BULK_READ_PUBLISHED_FRAGMENT_HASHTAGS
  */
 export const BulkReadPublishedFragmentHashtagsExamples = {
-    "200 (PUBLISHED_FRAGMENT_HASHTAGS_BULK_READ)": {
-        "content": {
-            "@event": "PUBLISHED_FRAGMENT_HASHTAGS_BULK_READ",
-            "@type": "hashtags_list",
-            "hashtags": [
-                {
-                    "@type": "hashtag",
-                    "count": 1,
-                    "id": 56,
-                    "text": "#recorDS"
-                }
-            ]
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }

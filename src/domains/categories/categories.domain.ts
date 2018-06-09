@@ -29,5 +29,9 @@ export class CategoriesDomain {
     public bulkReadCategories(): DataState<X.BulkReadCategoriesResponseEntity[]> {
         return this.client.getDataState<X.BulkReadCategoriesResponseEntity[]>('/categories/', { responseMap: 'data', authorizationRequired: true });
     }
+    
+    public bulkReadCategories2(): Observable<X.BulkReadCategoriesResponseEntity[]> {
+        return this.client.get<X.BulkReadCategoriesResponseEntity[]>('/categories/', { responseMap: 'data', authorizationRequired: true });
+    }
 
 }
