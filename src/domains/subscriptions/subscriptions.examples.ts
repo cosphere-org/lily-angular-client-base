@@ -11,5 +11,96 @@
  * Examples for CHANGE_SUBSCRIPTION
  */
 export const ChangeSubscriptionExamples = {
+    "200 (SUBSCRIPTION_CHANGED_ACCOUNT_DOWNGRADED)": {
+        "content": {
+            "@event": "SUBSCRIPTION_CHANGED_ACCOUNT_DOWNGRADED",
+            "@process": [],
+            "@type": "subscription_change_process"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "200 (SUBSCRIPTION_CHANGED_ACCOUNT_MARKED_FOR_DOWNGRADE)": {
+        "content": {
+            "@event": "SUBSCRIPTION_CHANGED_ACCOUNT_MARKED_FOR_DOWNGRADE",
+            "@process": [],
+            "@type": "subscription_change_process"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
+    
+    "200 (SUBSCRIPTION_CHANGED_UPGRADED)": {
+        "content": {
+            "@event": "SUBSCRIPTION_CHANGED_UPGRADED",
+            "@process": [
+                "REFRESH_TOKEN"
+            ],
+            "@type": "subscription_change_process"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
+    
+    "200 (SUBSCRIPTION_CHANGE_INITIATED_ADD_PAYMENT_CARD_AND_PAY)": {
+        "content": {
+            "@event": "SUBSCRIPTION_CHANGE_INITIATED_ADD_PAYMENT_CARD_AND_PAY",
+            "@process": [
+                "RENDER_PAYMENT_CARD_WIDGET",
+                "CREATE_PAYMENT_CARD",
+                "PAY_WITH_DEFAULT_PAYMENT_CARD"
+            ],
+            "@type": "subscription_change_process"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
+    
+    "200 (SUBSCRIPTION_CHANGE_INITIATED_PAY)": {
+        "content": {
+            "@event": "SUBSCRIPTION_CHANGE_INITIATED_PAY",
+            "@process": [
+                "PAY_WITH_DEFAULT_PAYMENT_CARD"
+            ],
+            "@type": "subscription_change_process"
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
+    
+    "400 (ACCOUNT_CONFIRMED_TO_HAVE_REQUESTED_SUBSCRIPTION)": {
+        "content": {
+            "@event": "ACCOUNT_CONFIRMED_TO_HAVE_REQUESTED_SUBSCRIPTION",
+            "@type": "error",
+            "user_id": 494
+        },
+        "content_type": "application/json",
+        "status": 400
+    },
+    
+    "400 (BODY_DID_NOT_VALIDATE)": {
+        "content": {
+            "@event": "BODY_DID_NOT_VALIDATE",
+            "@type": "error",
+            "errors": {
+                "subscription_type": [
+                    "\"FREEEEE\" is not a valid choice."
+                ]
+            },
+            "user_id": 496
+        },
+        "content_type": "application/json",
+        "status": 400
+    },
+    
+    "401 (COULD_NOT_FIND_USER)": {
+        "content": {
+            "@event": "COULD_NOT_FIND_USER",
+            "@type": "error",
+            "user_id": 58495849
+        },
+        "content_type": "application/json",
+        "status": 401
+    }
 }

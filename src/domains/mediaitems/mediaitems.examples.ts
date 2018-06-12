@@ -11,47 +11,342 @@
  * Examples for BULK_READ_MEDIAITEMS
  */
 export const BulkReadMediaitemsExamples = {
+    "200 (MEDIAITEMS_BULK_READ)": {
+        "content": {
+            "@event": "MEDIAITEMS_BULK_READ",
+            "@type": "mediaitems_list",
+            "mediaitems": [
+                {
+                    "@type": "mediaitem",
+                    "content_host": null,
+                    "content_uri": "http://media.service/1.png",
+                    "created_timestamp": 1528833154.582096,
+                    "external_data": [
+                        {
+                            "uri": "http://media.service/1.png"
+                        }
+                    ],
+                    "id": 140,
+                    "meta": {},
+                    "size": null,
+                    "thumbnail_uri": null,
+                    "type": "AUDIO",
+                    "web_representations": []
+                },
+                {
+                    "@type": "mediaitem",
+                    "content_host": null,
+                    "content_uri": "http://media.service/0.png",
+                    "created_timestamp": 1528833154.577958,
+                    "external_data": [
+                        {
+                            "uri": "http://media.service/0.png"
+                        }
+                    ],
+                    "id": 139,
+                    "meta": {},
+                    "size": null,
+                    "thumbnail_uri": null,
+                    "type": "IMAGE",
+                    "web_representations": []
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "400 (QUERY_DID_NOT_VALIDATE)": {
+        "content": {
+            "@event": "QUERY_DID_NOT_VALIDATE",
+            "@type": "error",
+            "errors": {
+                "offset": [
+                    "A valid integer is required."
+                ]
+            },
+            "user_id": 89
+        },
+        "content_type": "application/json",
+        "status": 400
+    }
 }
 
 /**
  * Examples for DELETE_MEDIAITEM
  */
 export const DeleteMediaitemExamples = {
-    
+    "200 (MEDIAITEM_DELETED)": {
+        "content": {
+            "@event": "MEDIAITEM_DELETED",
+            "@type": "empty"
+        },
+        "content_type": "application/json",
+        "status": 200
+    }
 }
 
 /**
  * Examples for READ_MEDIAITEM
  */
 export const ReadMediaitemExamples = {
+    "200 (MEDIAITEM_READ)": {
+        "content": {
+            "@event": "MEDIAITEM_READ",
+            "@type": "mediaitem",
+            "content_host": null,
+            "content_uri": "http://www.langworth.info/wp-content/tag/about.html",
+            "created_timestamp": 1528833154.817967,
+            "external_data": [
+                {
+                    "etag": null,
+                    "extension": ".png",
+                    "host": "PNG",
+                    "last_modified": null,
+                    "normalized_uri": "http://www.watsica.biz/register.asp",
+                    "params": {},
+                    "uri": "http://heller.com/faq.html"
+                }
+            ],
+            "id": 144,
+            "meta": {},
+            "size": null,
+            "thumbnail_uri": null,
+            "type": "VIDEO",
+            "web_representations": []
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "404 (COULD_NOT_FIND_MEDIAITEM)": {
+        "content": {
+            "@event": "COULD_NOT_FIND_MEDIAITEM",
+            "@type": "error",
+            "user_id": 690
+        },
+        "content_type": "application/json",
+        "status": 404
+    }
 }
 
 /**
  * Examples for READ_MEDIAITEM_BY_PROCESS_ID
  */
 export const ReadMediaitemByProcessIdExamples = {
+    "200 (MEDIAITEM_BY_PROCESS_ID_READ)": {
+        "content": {
+            "@event": "MEDIAITEM_BY_PROCESS_ID_READ",
+            "@type": "mediaitem",
+            "content_host": null,
+            "content_uri": "http://stroman.com/",
+            "created_timestamp": 1528833145.815075,
+            "external_data": [
+                {
+                    "etag": null,
+                    "extension": ".png",
+                    "host": "PNG",
+                    "last_modified": null,
+                    "normalized_uri": "http://swaniawski-eichmann.net/wp-content/wp-content/explore/home/",
+                    "params": {},
+                    "uri": "http://howe.info/main.htm"
+                }
+            ],
+            "id": 66,
+            "meta": {},
+            "size": null,
+            "thumbnail_uri": null,
+            "type": "IMAGE",
+            "web_representations": []
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "404 (COULD_NOT_FIND_MEDIAITEM)": {
+        "content": {
+            "@event": "COULD_NOT_FIND_MEDIAITEM",
+            "@type": "error",
+            "user_id": 690
+        },
+        "content_type": "application/json",
+        "status": 404
+    }
 }
 
 /**
  * Examples for READ_OR_CREATE_MEDIAITEM
  */
 export const ReadOrCreateMediaitemExamples = {
+    "200 (MEDIAITEM_READ)": {
+        "content": {
+            "@event": "MEDIAITEM_READ",
+            "@type": "mediaitem",
+            "content_host": "PNG",
+            "content_uri": "http://media.service/5404930.png",
+            "created_timestamp": 1528833145.868264,
+            "external_data": [],
+            "id": 67,
+            "meta": {},
+            "size": null,
+            "thumbnail_uri": null,
+            "type": "AUDIO",
+            "web_representations": []
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "201 (MEDIAITEM_CREATED)": {
+        "content": {
+            "@event": "MEDIAITEM_CREATED",
+            "@type": "mediaitem",
+            "content_host": null,
+            "content_uri": null,
+            "created_timestamp": 1528833145.999329,
+            "external_data": [
+                {
+                    "etag": null,
+                    "extension": ".png",
+                    "host": "WEBSITE",
+                    "last_modified": null,
+                    "normalized_uri": "http://media.service/5404930.png",
+                    "params": {},
+                    "uri": "http://some.image/1.png"
+                }
+            ],
+            "id": 68,
+            "meta": {},
+            "size": null,
+            "thumbnail_uri": null,
+            "type": "IMAGE",
+            "web_representations": []
+        },
+        "content_type": "application/json",
+        "status": 201
+    },
+    
+    "400 (BODY_DID_NOT_VALIDATE)": {
+        "content": {
+            "@event": "BODY_DID_NOT_VALIDATE",
+            "@type": "error",
+            "errors": {
+                "external_data": {
+                    "error": "9089 is not of type 'string', 'null'",
+                    "path": [
+                        "items",
+                        "properties",
+                        "etag",
+                        "type"
+                    ]
+                }
+            },
+            "user_id": 690
+        },
+        "content_type": "application/json",
+        "status": 400
+    }
 }
 
 /**
  * Examples for UPDATE_MEDIAITEM
  */
 export const UpdateMediaitemExamples = {
+    "200 (MEDIAITEM_UPDATED)": {
+        "content": {
+            "@event": "MEDIAITEM_UPDATED",
+            "@type": "mediaitem",
+            "content_host": "PNG",
+            "content_uri": "http://media.service/49304930.png",
+            "created_timestamp": 1528833154.98552,
+            "external_data": [
+                {
+                    "etag": null,
+                    "extension": ".png",
+                    "host": "WEBSITE",
+                    "last_modified": null,
+                    "normalized_uri": "http://some_website/5404930.png",
+                    "params": {},
+                    "uri": "http://some_website/5404930.png"
+                }
+            ],
+            "id": 147,
+            "meta": {},
+            "size": null,
+            "thumbnail_uri": null,
+            "type": "IMAGE",
+            "web_representations": []
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "400 (ATTEMPT_TO_OVERWRITE_CONTENT_URI_DETECTED)": {
+        "content": {
+            "@event": "ATTEMPT_TO_OVERWRITE_CONTENT_URI_DETECTED",
+            "@type": "error",
+            "mediaitem_id": 148,
+            "user_id": null
+        },
+        "content_type": "application/json",
+        "status": 400
+    },
+    
+    "400 (BODY_DID_NOT_VALIDATE)": {
+        "content": {
+            "@event": "BODY_DID_NOT_VALIDATE",
+            "@type": "error",
+            "errors": {
+                "external_data": [
+                    "This field is required."
+                ]
+            },
+            "user_id": 690
+        },
+        "content_type": "application/json",
+        "status": 400
+    },
+    
+    "404 (COULD_NOT_FIND_MEDIAITEM)": {
+        "content": {
+            "@event": "COULD_NOT_FIND_MEDIAITEM",
+            "@type": "error",
+            "user_id": 690
+        },
+        "content_type": "application/json",
+        "status": 404
+    }
 }
 
 /**
  * Examples for UPDATE_MEDIAITEM_REPRESENTATION
  */
 export const UpdateMediaitemRepresentationExamples = {
-    
+    "200 (MEDIAITEM_REPRESENTATION_UPDATED)": {
+        "content": {
+            "@event": "MEDIAITEM_REPRESENTATION_UPDATED",
+            "@type": "mediaitem",
+            "content_host": null,
+            "content_uri": "http://sporer.info/tag/explore/register.htm",
+            "created_timestamp": 1528833155.260244,
+            "external_data": [
+                {
+                    "uri": "http://this.image/1.png"
+                }
+            ],
+            "id": 153,
+            "meta": {},
+            "size": 5690,
+            "thumbnail_uri": "http://s3.io/6879.png",
+            "type": "AUDIO",
+            "web_representations": [
+                {
+                    "content_type": "video/ogg",
+                    "uri": "http://s3.io/891.ogg"
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    }
 }

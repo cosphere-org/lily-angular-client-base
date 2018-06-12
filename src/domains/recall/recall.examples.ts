@@ -11,12 +11,173 @@
  * Examples for CREATE_RECALL_SESSION
  */
 export const CreateRecallSessionExamples = {
-    
+    "201 (RECALL_SESSION_CREATED)": {
+        "content": {
+            "@event": "RECALL_SESSION_CREATED",
+            "@type": "recall_session",
+            "cards": [
+                {
+                    "@type": "card",
+                    "author_id": 90,
+                    "created_timestamp": 1528833166.104431,
+                    "external_app_uri": null,
+                    "hashtags": [],
+                    "id": 2033,
+                    "paths_count": null,
+                    "source": {
+                        "@type": "side",
+                        "cells": [
+                            {
+                                "html": "Mollitia officiis ducimus esse.",
+                                "id": "56678mefd",
+                                "name": "text cell",
+                                "style": {
+                                    "backgroundColor": "transparent",
+                                    "color": "#fff",
+                                    "fontSize": "150%",
+                                    "height": "auto",
+                                    "left": "30px",
+                                    "textAlign": "left",
+                                    "top": "0px",
+                                    "width": "100px",
+                                    "zIndex": 1
+                                },
+                                "subtype": "PARAGRAPH",
+                                "type": "TEXT"
+                            }
+                        ],
+                        "style": {}
+                    },
+                    "target": {
+                        "@type": "side",
+                        "cells": [
+                            {
+                                "html": "Doloribus inventore sunt quaerat ratione distinctio.",
+                                "id": "56678mefd",
+                                "name": "text cell",
+                                "style": {
+                                    "backgroundColor": "transparent",
+                                    "color": "#fff",
+                                    "fontSize": "150%",
+                                    "height": "auto",
+                                    "left": "30px",
+                                    "textAlign": "left",
+                                    "top": "0px",
+                                    "width": "100px",
+                                    "zIndex": 1
+                                },
+                                "subtype": "PARAGRAPH",
+                                "type": "TEXT"
+                            }
+                        ],
+                        "style": {}
+                    },
+                    "updated_timestamp": 1528833166.101325
+                },
+                {
+                    "@type": "card",
+                    "author_id": 90,
+                    "created_timestamp": 1528833166.115475,
+                    "external_app_uri": null,
+                    "hashtags": [],
+                    "id": 2034,
+                    "paths_count": null,
+                    "source": {
+                        "@type": "side",
+                        "cells": [
+                            {
+                                "html": "Tempora magni error necessitatibus impedit ipsam illum aut.",
+                                "id": "56678mefd",
+                                "name": "text cell",
+                                "style": {
+                                    "backgroundColor": "transparent",
+                                    "color": "#fff",
+                                    "fontSize": "150%",
+                                    "height": "auto",
+                                    "left": "30px",
+                                    "textAlign": "left",
+                                    "top": "0px",
+                                    "width": "100px",
+                                    "zIndex": 1
+                                },
+                                "subtype": "PARAGRAPH",
+                                "type": "TEXT"
+                            }
+                        ],
+                        "style": {}
+                    },
+                    "target": {
+                        "@type": "side",
+                        "cells": [
+                            {
+                                "html": "Perferendis sunt necessitatibus accusamus molestias aut aliquid omnis.",
+                                "id": "56678mefd",
+                                "name": "text cell",
+                                "style": {
+                                    "backgroundColor": "transparent",
+                                    "color": "#fff",
+                                    "fontSize": "150%",
+                                    "height": "auto",
+                                    "left": "30px",
+                                    "textAlign": "left",
+                                    "top": "0px",
+                                    "width": "100px",
+                                    "zIndex": 1
+                                },
+                                "subtype": "PARAGRAPH",
+                                "type": "TEXT"
+                            }
+                        ],
+                        "style": {}
+                    },
+                    "updated_timestamp": 1528833166.111119
+                }
+            ],
+            "terminate": false
+        },
+        "content_type": "application/json",
+        "status": 201
+    }
 }
 
 /**
  * Examples for READ_RECALL_SUMMARY
  */
 export const ReadRecallSummaryExamples = {
-    
+    "200 (RECALL_SUMMARY_READ)": {
+        "content": {
+            "@event": "RECALL_SUMMARY_READ",
+            "@type": "summary",
+            "summary": [
+                {
+                    "@type": "summary_entry",
+                    "count": 1,
+                    "score": 1.0
+                },
+                {
+                    "@type": "summary_entry",
+                    "count": 3,
+                    "score": 2.0
+                },
+                {
+                    "@type": "summary_entry",
+                    "count": 4,
+                    "score": 3.0
+                },
+                {
+                    "@type": "summary_entry",
+                    "count": 4,
+                    "score": 5.0
+                },
+                {
+                    "@type": "summary_entry",
+                    "count": 2,
+                    "score": null
+                }
+            ],
+            "total": 14
+        },
+        "content_type": "application/json",
+        "status": 200
+    }
 }

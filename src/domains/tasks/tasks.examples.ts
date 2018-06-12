@@ -11,12 +11,120 @@
  * Examples for BULK_READ_TASKS
  */
 export const BulkReadTasksExamples = {
+    "200 (TASKS_BULK_READ)": {
+        "content": {
+            "@event": "TASKS_BULK_READ",
+            "@type": "tasks_list",
+            "tasks": [
+                {
+                    "@type": "task",
+                    "archived": false,
+                    "content": {
+                        "cells": [
+                            {
+                                "html": "hi there"
+                            }
+                        ]
+                    },
+                    "created_timestamp": 1528833166.767997,
+                    "done_date": null,
+                    "done_timestamp": null,
+                    "id": 65,
+                    "order_number": 54.0,
+                    "queue_type": "HP",
+                    "total_time": 748
+                },
+                {
+                    "@type": "task",
+                    "archived": false,
+                    "content": {
+                        "cells": [
+                            {
+                                "html": "hi there"
+                            }
+                        ]
+                    },
+                    "created_timestamp": 1528833166.768447,
+                    "done_date": null,
+                    "done_timestamp": null,
+                    "id": 66,
+                    "order_number": 34.0,
+                    "queue_type": "HP",
+                    "total_time": 45
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "400 (QUERY_DID_NOT_VALIDATE)": {
+        "content": {
+            "@event": "QUERY_DID_NOT_VALIDATE",
+            "@type": "error",
+            "errors": {
+                "offset": [
+                    "A valid integer is required."
+                ]
+            },
+            "user_id": 11
+        },
+        "content_type": "application/json",
+        "status": 400
+    }
 }
 
 /**
  * Examples for BULK_READ_TASK_BINS
  */
 export const BulkReadTaskBinsExamples = {
+    "200 (TASK_BINS_BULK_READ)": {
+        "content": {
+            "@event": "TASK_BINS_BULK_READ",
+            "@type": "tasks_bins_list",
+            "tasks_bins": [
+                {
+                    "@type": "tasks_bin",
+                    "done_date": "2013-01-03",
+                    "tasks": [
+                        {
+                            "@type": "task",
+                            "archived": false,
+                            "content": {
+                                "cells": [
+                                    {
+                                        "html": "hi there"
+                                    }
+                                ]
+                            },
+                            "created_timestamp": 1528833166.669722,
+                            "done_date": "2013-01-03",
+                            "done_timestamp": 1357195500.0,
+                            "id": 61,
+                            "order_number": 619.0,
+                            "queue_type": "DN",
+                            "total_time": 453
+                        }
+                    ]
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "400 (QUERY_DID_NOT_VALIDATE)": {
+        "content": {
+            "@event": "QUERY_DID_NOT_VALIDATE",
+            "@type": "error",
+            "errors": {
+                "offset": [
+                    "A valid integer is required."
+                ]
+            },
+            "user_id": 11
+        },
+        "content_type": "application/json",
+        "status": 400
+    }
 }

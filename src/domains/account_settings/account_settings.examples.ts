@@ -11,12 +11,56 @@
  * Examples for READ_ACCOUNTSETTING
  */
 export const ReadAccountsettingExamples = {
+    "200 (ACCOUNTSETTING_READ)": {
+        "content": {
+            "@event": "ACCOUNTSETTING_READ",
+            "@type": "account_setting",
+            "help_freq": 259200,
+            "help_view_last_seen": {},
+            "lang": "it",
+            "recaller_breaker_value": 5,
+            "recaller_timer_value": 11
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "404 (COULD_NOT_FIND_USER)": {
+        "content": {
+            "@event": "COULD_NOT_FIND_USER",
+            "@type": "error",
+            "user_id": 547953
+        },
+        "content_type": "application/json",
+        "status": 404
+    }
 }
 
 /**
  * Examples for UPDATE_ACCOUNTSETTING
  */
 export const UpdateAccountsettingExamples = {
+    "200 (ACCOUNTSETTING_UPDATED)": {
+        "content": {
+            "@event": "ACCOUNTSETTING_UPDATED",
+            "@type": "account_setting",
+            "help_freq": 259200,
+            "help_view_last_seen": {},
+            "lang": "fr",
+            "recaller_breaker_value": 3,
+            "recaller_timer_value": 13
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "404 (COULD_NOT_FIND_USER)": {
+        "content": {
+            "@event": "COULD_NOT_FIND_USER",
+            "@type": "error",
+            "user_id": 547953
+        },
+        "content_type": "application/json",
+        "status": 404
+    }
 }

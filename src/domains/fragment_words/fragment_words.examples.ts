@@ -11,12 +11,42 @@
  * Examples for BULK_READ_FRAGMENT_WORDS
  */
 export const BulkReadFragmentWordsExamples = {
-    
+    "200 (FRAGMENT_WORDS_BULK_READ)": {
+        "content": {
+            "@event": "FRAGMENT_WORDS_BULK_READ",
+            "@type": "words_list",
+            "words": [
+                {
+                    "@type": "word",
+                    "count": 1,
+                    "id": 134,
+                    "text": "records"
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    }
 }
 
 /**
  * Examples for BULK_READ_PUBLISHED_FRAGMENT_WORDS
  */
 export const BulkReadPublishedFragmentWordsExamples = {
-    
+    "200 (PUBLISHED_FRAGMENT_WORDS_BULK_READ)": {
+        "content": {
+            "@event": "PUBLISHED_FRAGMENT_WORDS_BULK_READ",
+            "@type": "words_list",
+            "words": [
+                {
+                    "@type": "word",
+                    "count": 1,
+                    "id": 145,
+                    "text": "records"
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    }
 }

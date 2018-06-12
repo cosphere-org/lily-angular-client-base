@@ -11,12 +11,65 @@
  * Examples for BULK_READ_INVOICES
  */
 export const BulkReadInvoicesExamples = {
-    
+    "200 (INVOICES_BULK_READ)": {
+        "content": {
+            "@event": "INVOICES_BULK_READ",
+            "@type": "invoices_list",
+            "invoices": [
+                {
+                    "@type": "invoice",
+                    "amount": "161",
+                    "created_timestamp": 1510576260.0,
+                    "currency": "GBP",
+                    "display_amount": "1.61",
+                    "id": 34,
+                    "is_extension": false,
+                    "paid_till_timestamp": 1511440260.0,
+                    "product": {
+                        "@type": "product",
+                        "currency": "PLN",
+                        "display_price": "29.90",
+                        "name": "Miesi\u0119czna Subskrypcja Learner w CoSphere.org",
+                        "price": "2990",
+                        "product_type": "SUBSCRIPTION_LEARNER_MONTHLY"
+                    },
+                    "surplus_amount": "189",
+                    "surplus_currency": "EUR",
+                    "valid_till_timestamp": 1513211460.0
+                }
+            ]
+        },
+        "content_type": "application/json",
+        "status": 200
+    }
 }
 
 /**
  * Examples for CALCULATE_DEBT
  */
 export const CalculateDebtExamples = {
+    "200 (DEBT_CALCULATED)": {
+        "content": {
+            "@commands": {
+                "PAY_WITH_DEFAULT_PAYMENT_CARD": {}
+            },
+            "@event": "DEBT_CALCULATED",
+            "@type": "debt",
+            "currency": "EUR",
+            "display_owes": "2.11",
+            "owes": 211
+        },
+        "content_type": "application/json",
+        "status": 200
+    },
     
+    "404 (NO_DEBT_CALCULATED)": {
+        "content": {
+            "@event": "NO_DEBT_CALCULATED",
+            "@type": "error",
+            "user_id": 458
+        },
+        "content_type": "application/json",
+        "status": 404
+    }
 }
