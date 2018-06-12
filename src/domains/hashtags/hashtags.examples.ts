@@ -11,179 +11,33 @@
  * Examples for BULK_READ_HASHTAGS
  */
 export const BulkReadHashtagsExamples = {
-    "200 (HASHTAGS_BULK_READ)": {
-        "content": {
-            "@event": "HASHTAGS_BULK_READ",
-            "@type": "hashtags_list",
-            "hashtags": []
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for CREATE_HASHTAG
  */
 export const CreateHashtagExamples = {
-    "201 (HASHTAG_CREATED)": {
-        "content": {
-            "@event": "HASHTAG_CREATED",
-            "@type": "hashtag",
-            "count": null,
-            "id": 216,
-            "normalized_text": "#hiall",
-            "text": "#HiAll"
-        },
-        "content_type": "application/json",
-        "status": 201
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "card_ids": [
-                    "This field is required."
-                ]
-            },
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "400 (INVALID_HASHTAG_DETECTED)": {
-        "content": {
-            "@event": "INVALID_HASHTAG_DETECTED",
-            "@type": "error",
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_CARD)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_CARD",
-            "@type": "error",
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for DELETE_HASHTAG
  */
 export const DeleteHashtagExamples = {
-    "200 (HASHTAG_DELETED)": {
-        "content": {
-            "@event": "HASHTAG_DELETED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (QUERY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "QUERY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "card_ids": [
-                    "must be provided"
-                ]
-            },
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_CARD)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_CARD",
-            "@type": "error",
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 404
-    },
-    
-    "404 (COULD_NOT_FIND_HASHTAG)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_HASHTAG",
-            "@type": "error",
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }
 
 /**
  * Examples for READ_HASHTAGS_TOC
  */
 export const ReadHashtagsTocExamples = {
-    "200 (HASHTAGS_TOC_READ)": {
-        "content": {
-            "@event": "HASHTAGS_TOC_READ",
-            "@type": "hashtags_list",
-            "hashtags": []
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }
 
 /**
  * Examples for UPDATE_HASHTAG
  */
 export const UpdateHashtagExamples = {
-    "200 (HASHTAG_UPDATED)": {
-        "content": {
-            "@event": "HASHTAG_UPDATED",
-            "@type": "empty"
-        },
-        "content_type": "application/json",
-        "status": 200
-    },
     
-    "400 (BODY_DID_NOT_VALIDATE)": {
-        "content": {
-            "@event": "BODY_DID_NOT_VALIDATE",
-            "@type": "error",
-            "errors": {
-                "card_ids": [
-                    "This field is required."
-                ]
-            },
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 400
-    },
-    
-    "404 (COULD_NOT_FIND_CARD)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_CARD",
-            "@type": "error",
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 404
-    },
-    
-    "404 (COULD_NOT_FIND_HASHTAG)": {
-        "content": {
-            "@event": "COULD_NOT_FIND_HASHTAG",
-            "@type": "error",
-            "user_id": 891
-        },
-        "content_type": "application/json",
-        "status": 404
-    }
 }

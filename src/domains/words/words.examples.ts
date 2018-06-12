@@ -11,22 +11,5 @@
  * Examples for BULK_READ_WORDS
  */
 export const BulkReadWordsExamples = {
-    "200 (WORDS_BULK_READ)": {
-        "content": {
-            "@event": "WORDS_BULK_READ",
-            "@type": "words_list",
-            "words": [
-                {
-                    "@type": "word",
-                    "text": "hey"
-                },
-                {
-                    "@type": "word",
-                    "text": "hi"
-                }
-            ]
-        },
-        "content_type": "application/json",
-        "status": 200
-    }
+    
 }

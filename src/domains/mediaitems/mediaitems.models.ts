@@ -49,7 +49,7 @@ export interface DeleteMediaitemQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface DeleteMediaitemResponse {}
