@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"AuthorizeExternalAppAuthTokenResponse":{"__symbolic":"interface"},"CreateExternalAppAuthTokenBody":{"__symbolic":"interface"},"CreateExternalAppAuthTokenResponse":{"__symbolic":"interface"},"ReadExternalappconfQuery":{"__symbolic":"interface"},"ReadExternalappconfResponse":{"__symbolic":"interface"}}}]

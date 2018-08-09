@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"DeleteLinkResponse":{"__symbolic":"interface"},"ReadOrCreateLinkBody":{"__symbolic":"interface"},"ReadOrCreateLinkResponseKind":{"CARD":"CARD","FRAGMENT":"FRAGMENT","HASHTAG":"HASHTAG","PATH":"PATH","TERM":"TERM"},"ReadOrCreateLinkResponse":{"__symbolic":"interface"}}}]

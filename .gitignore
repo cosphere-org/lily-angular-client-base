@@ -1,9 +1,45 @@
-node_modules
-js
-lib
-lib-esm
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-.tmp
-.vscode
+# compiled output
+/tmp
 
-package-lock.json
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+#language files
+/src/public/assets/i18n/*
+
+# karma
+/karma_html
+/karma_html/*
+
+# tslint
+/logs/*.xml
+/logs/karma/*
+
+/package-lock.json
