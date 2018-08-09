@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import {
   HttpClient,
   HttpParams,
@@ -9,10 +9,12 @@ import { BehaviorSubject, Subject, Observable, throwError } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
 import * as _ from 'underscore';
 
-import { ConfigService } from './config.service';
+import { Config } from './config.service';
 import { Options, State, DataState, RequestState } from './client.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ClientService {
   /**
    * State for all GET payloads
@@ -29,12 +31,12 @@ export class ClientService {
    * was invoked not earlier then `cacheTime` mins ago.
    * Only successful responses are cached (2xx)
    */
-  private readonly cacheTime = 1000 * 60 * 5; // 5 mins
+  private readonly cacheTime = 1000 * 60 * 60; // 60 mins
 
-  constructor(private configService: ConfigService, private http: HttpClient) {
-    this.baseUrl = this.configService.config.baseUrl;
+  constructor(@Inject('config') private config: Config, private http: HttpClient) {
+    this.baseUrl = this.config.baseUrl;
     this.authToken =
-      this.configService.config.authToken || this.defaultAuthToken;
+      this.config.authToken || this.defaultAuthToken;
   }
 
   get<T>(endpoint: string, options?: Options): Observable<T> {
@@ -70,7 +72,8 @@ export class ClientService {
   }
 
   getDataState<T>(endpoint: string, options?: Options): DataState<T> {
-    this.initState(endpoint);
+    const key = options && options.params ? `${endpoint}_${JSON.stringify(options.params)}` : endpoint;
+    this.initState(key, options);
 
     let cache = true;
     let params: HttpParams | { [param: string]: string | string[] };
@@ -84,17 +87,17 @@ export class ClientService {
     }
 
     // Get the endpoint state
-    const state = this.state.get(endpoint);
+    const state = this.state.get(key);
 
     // Do not allow invoke the same GET request while one is pending
-    if (state.requestState.pending && !_.isEmpty(params)) {
+    if (state.requestState.pending /*&& !_.isEmpty(params)*/) {
       return state.dataState;
     }
 
     const currentTime = +new Date();
     if (
       currentTime - state.requestState.cachedAt > this.cacheTime ||
-      !_.isEmpty(params) ||
+      // !_.isEmpty(params) ||
       !cache
     ) {
       state.requestState.pending = true;
@@ -112,7 +115,7 @@ export class ClientService {
           },
           err => {
             state.dataState.isData$.next(false);
-            state.dataState.data$.error({});
+            state.dataState.data$.error(null);
             state.dataState.loading$.next(false);
             state.requestState.pending = false;
           }
@@ -124,13 +127,13 @@ export class ClientService {
     return state.dataState;
   }
 
-  private initState(endpoint: string): void {
-    if (!this.state.has(endpoint)) {
-      this.state.set(endpoint, {
+  private initState(key: string, options?: Options): void {
+    if (!this.state.has(key)) {
+      this.state.set(key, {
         dataState: {
           loading$: new BehaviorSubject(true),
           isData$: new BehaviorSubject(false),
-          data$: new BehaviorSubject({})
+          data$: new BehaviorSubject(null)
         },
         requestState: {
           cachedAt: 0,
@@ -138,7 +141,7 @@ export class ClientService {
         }
       });
     } else {
-      this.state.get(endpoint).dataState.loading$.next(true);
+      this.state.get(key).dataState.loading$.next(true);
     }
   }
 
@@ -154,7 +157,11 @@ export class ClientService {
       : true;
     const etag = (options && options.etag) || undefined;
 
-    let httpOptions = {
+    let httpOptions: {
+      params?: HttpParams | { [param: string]: string | string[] };
+      headers?: HttpHeaders | { [header: string]: string | string[] };
+      reportProgress?: boolean;
+    } = {
       headers: this.getHeaders(authorizationRequired, etag)
     };
 
@@ -167,11 +174,11 @@ export class ClientService {
     }
 
     if (_.has(options, 'params')) {
-      Object.assign(httpOptions, options.params);
+      httpOptions.params = options.params;
     }
 
     if (_.has(options, 'reportProgress')) {
-      Object.assign(httpOptions, options.reportProgress);
+      httpOptions.reportProgress = options.reportProgress;
     }
 
     return httpOptions;

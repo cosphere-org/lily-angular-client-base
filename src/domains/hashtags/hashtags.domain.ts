@@ -27,11 +27,11 @@ export class HashtagsDomain {
      * Enables one to list a series of Hashtag instances. It accepts various query parameters such as: - `limit` - `offset` - `first_character`
      */
     public bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'hashtags', authorizationRequired: true });
     }
     
     public bulkReadHashtags2(params: X.BulkReadHashtagsQuery): Observable<X.BulkReadHashtagsResponseEntity[]> {
-        return this.client.get<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'hashtags', authorizationRequired: true });
     }
 
     /**

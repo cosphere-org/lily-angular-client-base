@@ -27,11 +27,11 @@ export class AttemptsDomain {
      * List Attempts for a specific Card given by its Id.
      */
     public bulkReadAttemptsByCards(cardId: any): DataState<X.BulkReadAttemptsByCardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'attempts', authorizationRequired: true });
     }
     
     public bulkReadAttemptsByCards2(cardId: any): Observable<X.BulkReadAttemptsByCardsResponseEntity[]> {
-        return this.client.get<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadAttemptsByCardsResponseEntity[]>(`/recall/attempts/by_card/${cardId}`, { responseMap: 'attempts', authorizationRequired: true });
     }
 
     /**

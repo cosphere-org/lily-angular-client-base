@@ -19,7 +19,7 @@ export interface BulkReadAttemptsByCardsResponseEntity {
 }
 
 export interface BulkReadAttemptsByCardsResponse {
-    data: BulkReadAttemptsByCardsResponseEntity[];
+    attempts: BulkReadAttemptsByCardsResponseEntity[];
 }
 
 /**

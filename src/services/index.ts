@@ -1,3 +1,3 @@
-export * from './api.service';
-export * from './client.service';
-export * from './config.service';
+export { APIService } from './api.service';
+export { ClientService } from './client.service';
+export { Config } from './config.service';

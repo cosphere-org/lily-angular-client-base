@@ -5,7 +5,7 @@ export interface Config {
   authToken?: string;
 }
 
-@Injectable()
-export class ConfigService {
-  constructor(public config: Config) {}
-}
+// @Injectable()
+// export class ConfigService {
+//   constructor(public config: Config) {}
+// }

@@ -29,7 +29,7 @@ export class ExternalAppsDomain {
     public authorizeExternalAppAuthToken(): Observable<X.AuthorizeExternalAppAuthTokenResponse> {
         return this.client
             .post<X.AuthorizeExternalAppAuthTokenResponse>('/external/auth_tokens/authorize/', {}, { authorizationRequired: false })
-            .pipe(filter(x => !_.isEmpty(x)));
+            // .pipe(filter(x => !_.isEmpty(x)));
     }
 
     /**

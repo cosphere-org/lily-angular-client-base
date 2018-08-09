@@ -37,59 +37,71 @@ import { TasksDomain } from './domains/tasks/index';
 import { WordsDomain } from './domains/words/index';
 
 /** Services */
-import {
-  APIService,
-  ClientService,
-  ConfigService,
-  Config
-} from './services/index';
+// import {
+//   APIService,
+//   ClientService,
+//   // ConfigService,
+//   Config
+// } from './services/index';
+
+import { ClientService } from './services/client.service';
+import { APIService } from './services/api.service';
+import { Config } from './services/config.service';
+
+
+// export function configFactory(config: Config) {
+//   return new ConfigService(config);
+// }
 
 @NgModule({
-  imports: [HttpClientModule]
+  imports: [HttpClientModule],
+  providers: [
+    ClientService,
+
+    // Domains
+    AccountSettingsDomain,
+    AccountsDomain,
+    AttemptStatsDomain,
+    AttemptsDomain,
+    AuthTokensDomain,
+    CardsDomain,
+    CategoriesDomain,
+    ContactsDomain,
+    DonationsDomain,
+    ExternalAppsDomain,
+    FocusRecordsDomain,
+    FragmentHashtagsDomain,
+    FragmentWordsDomain,
+    FragmentsDomain,
+    GeometriesDomain,
+    HashtagsDomain,
+    InternalDomain,
+    InvoicesDomain,
+    LinksDomain,
+    MediaitemsDomain,
+    NotificationsDomain,
+    PathsDomain,
+    PaymentCardsDomain,
+    PaymentsDomain,
+    RecallDomain,
+    SubscriptionsDomain,
+    TasksDomain,
+    WordsDomain,
+
+    // Facade
+    APIService,
+  ]
 })
 export class ClientModule {
     static forRoot(config: Config): ModuleWithProviders {
         return {
             ngModule: ClientModule,
             providers: [
-                {
-                    provide: ConfigService,
-                    useFactory: () => new ConfigService(config)
-                },
-                ClientService,
-
-                // Domains
-                AccountSettingsDomain,
-                AccountsDomain,
-                AttemptStatsDomain,
-                AttemptsDomain,
-                AuthTokensDomain,
-                CardsDomain,
-                CategoriesDomain,
-                ContactsDomain,
-                DonationsDomain,
-                ExternalAppsDomain,
-                FocusRecordsDomain,
-                FragmentHashtagsDomain,
-                FragmentWordsDomain,
-                FragmentsDomain,
-                GeometriesDomain,
-                HashtagsDomain,
-                InternalDomain,
-                InvoicesDomain,
-                LinksDomain,
-                MediaitemsDomain,
-                NotificationsDomain,
-                PathsDomain,
-                PaymentCardsDomain,
-                PaymentsDomain,
-                RecallDomain,
-                SubscriptionsDomain,
-                TasksDomain,
-                WordsDomain,
-
-                // Facade
-                APIService,
+                // {
+                //     provide: ConfigService,
+                //     useFactory: configFactory(config)
+                // },,
+                {provide: 'config', useValue: config}
             ]
         };
     }

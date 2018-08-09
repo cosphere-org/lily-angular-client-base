@@ -32,7 +32,7 @@ export interface BulkReadGeometriesResponseEntity {
 }
 
 export interface BulkReadGeometriesResponse {
-    data: BulkReadGeometriesResponseEntity[];
+    geometries: BulkReadGeometriesResponseEntity[];
 }
 
 /**

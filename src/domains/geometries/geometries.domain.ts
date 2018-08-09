@@ -27,11 +27,11 @@ export class GeometriesDomain {
      * List Geometries.
      */
     public bulkReadGeometries(params: X.BulkReadGeometriesQuery): DataState<X.BulkReadGeometriesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'geometries', authorizationRequired: true });
     }
     
     public bulkReadGeometries2(params: X.BulkReadGeometriesQuery): Observable<X.BulkReadGeometriesResponseEntity[]> {
-        return this.client.get<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadGeometriesResponseEntity[]>('/grid/geometries/', { params, responseMap: 'geometries', authorizationRequired: true });
     }
 
     /**

@@ -232,8 +232,12 @@ export class APIService {
         return this.cardsDomain.readCard(cardId);
     }
     
-    readCard2(cardId: any): Observable<X.ReadCardResponse> {
-        return this.cardsDomain.readCard2(cardId);
+    readCard2(cardId: any, params?: any): Observable<X.ReadCardResponse> {
+        return this.cardsDomain.readCard2(cardId, params);
+    }
+
+    bulkReadGeometriesOnly2(params: any): Observable<any> {
+        return this.cardsDomain.bulkReadGeometriesOnly2(params);
     }
 
     updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse> {

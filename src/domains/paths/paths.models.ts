@@ -68,7 +68,7 @@ export interface BulkReadPathsResponseEntity {
         updated_timestamp: number;
     }[];
     id?: number;
-    ordered_card_ids?: Object;
+    ordered_card_ids?: number[];
 }
 
 export interface BulkReadPathsResponse {
