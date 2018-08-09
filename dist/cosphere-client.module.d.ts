@@ -4,6 +4,6 @@
   */
 import { ModuleWithProviders } from '@angular/core';
 import { Config } from './services/config.service';
-export declare class ClientModule {
+export declare class CoSphereClientModule {
     static forRoot(config: Config): ModuleWithProviders;
 }

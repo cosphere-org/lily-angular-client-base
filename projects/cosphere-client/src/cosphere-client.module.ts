@@ -37,21 +37,9 @@ import { TasksDomain } from './domains/tasks/index';
 import { WordsDomain } from './domains/words/index';
 
 /** Services */
-// import {
-//   APIService,
-//   ClientService,
-//   // ConfigService,
-//   Config
-// } from './services/index';
-
 import { ClientService } from './services/client.service';
 import { APIService } from './services/api.service';
 import { Config } from './services/config.service';
-
-
-// export function configFactory(config: Config) {
-//   return new ConfigService(config);
-// }
 
 @NgModule({
   imports: [HttpClientModule],
@@ -92,15 +80,11 @@ import { Config } from './services/config.service';
     APIService,
   ]
 })
-export class ClientModule {
+export class CoSphereClientModule {
     static forRoot(config: Config): ModuleWithProviders {
         return {
-            ngModule: ClientModule,
+            ngModule: CoSphereClientModule,
             providers: [
-                // {
-                //     provide: ConfigService,
-                //     useFactory: configFactory(config)
-                // },,
                 {provide: 'config', useValue: config}
             ]
         };
