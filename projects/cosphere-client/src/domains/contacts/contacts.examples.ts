@@ -58,7 +58,7 @@ export const SendAuthenticatedContactMessageExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 302
+            "user_id": 306
         },
         "content_type": "application/json",
         "status": 400

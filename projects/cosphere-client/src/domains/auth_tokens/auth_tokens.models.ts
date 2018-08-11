@@ -8,13 +8,13 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface AuthorizeAuthTokenResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/views/auth_token.py/#lines-26
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/views/auth_token.py/#lines-26
  */
 
 export interface CreateAuthTokenBody {
@@ -23,7 +23,7 @@ export interface CreateAuthTokenBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface CreateAuthTokenResponse {
@@ -31,7 +31,7 @@ export interface CreateAuthTokenResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/views/facebook.py/#lines-22
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/views/facebook.py/#lines-22
  */
 
 export interface CreateFacebookBasedAuthTokenBody {
@@ -39,7 +39,7 @@ export interface CreateFacebookBasedAuthTokenBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface CreateFacebookBasedAuthTokenResponse {
@@ -47,7 +47,7 @@ export interface CreateFacebookBasedAuthTokenResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/views/facebook.py/#lines-22
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/views/facebook.py/#lines-22
  */
 
 export interface CreateFacebookBasedMobileAuthTokenBody {
@@ -56,7 +56,7 @@ export interface CreateFacebookBasedMobileAuthTokenBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface CreateFacebookBasedMobileAuthTokenResponse {
@@ -64,7 +64,7 @@ export interface CreateFacebookBasedMobileAuthTokenResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/views/google.py/#lines-22
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/views/google.py/#lines-22
  */
 
 export interface CreateGoogleBasedAuthTokenBody {
@@ -72,7 +72,7 @@ export interface CreateGoogleBasedAuthTokenBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface CreateGoogleBasedAuthTokenResponse {
@@ -80,7 +80,7 @@ export interface CreateGoogleBasedAuthTokenResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/views/google.py/#lines-22
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/views/google.py/#lines-22
  */
 
 export interface CreateGoogleBasedMobileAuthTokenBody {
@@ -89,7 +89,7 @@ export interface CreateGoogleBasedMobileAuthTokenBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface CreateGoogleBasedMobileAuthTokenResponse {
@@ -97,7 +97,7 @@ export interface CreateGoogleBasedMobileAuthTokenResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account/serializers.py/#lines-30
  */
 
 export interface UpdateAuthTokenResponse {

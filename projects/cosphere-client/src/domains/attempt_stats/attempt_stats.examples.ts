@@ -19,7 +19,7 @@ export const BulkReadAttemptstatsExamples = {
             "attempt_stats": [
                 {
                     "@type": "attempt_stat",
-                    "card_id": 1936,
+                    "card_id": 1940,
                     "created_timestamp": 1486555834.0,
                     "id": 108,
                     "states_path": [
@@ -48,7 +48,7 @@ export const BulkReadAttemptstatsExamples = {
                 },
                 {
                     "@type": "attempt_stat",
-                    "card_id": 1936,
+                    "card_id": 1940,
                     "created_timestamp": 1486555654.0,
                     "id": 109,
                     "states_path": [
@@ -77,7 +77,7 @@ export const BulkReadAttemptstatsExamples = {
                 },
                 {
                     "@type": "attempt_stat",
-                    "card_id": 1936,
+                    "card_id": 1940,
                     "created_timestamp": 1486555594.0,
                     "id": 110,
                     "states_path": [
@@ -106,7 +106,7 @@ export const BulkReadAttemptstatsExamples = {
                 },
                 {
                     "@type": "attempt_stat",
-                    "card_id": 1936,
+                    "card_id": 1940,
                     "created_timestamp": 1486555534.0,
                     "id": 111,
                     "states_path": [
@@ -148,8 +148,8 @@ export const CreateAttemptstatExamples = {
         "content": {
             "@event": "ATTEMPTSTAT_CREATED",
             "@type": "attempt_stat",
-            "card_id": 1938,
-            "created_timestamp": 1528833164.322228,
+            "card_id": 1942,
+            "created_timestamp": 1533830396.639411,
             "id": 113,
             "states_path": [
                 {
@@ -216,8 +216,8 @@ export const CreateExternalAttemptStatExamples = {
         "content": {
             "@event": "EXTERNAL_ATTEMPT_STAT_CREATED",
             "@type": "attempt_stat",
-            "card_id": 1943,
-            "created_timestamp": 1528833164.553605,
+            "card_id": 1947,
+            "created_timestamp": 1533830397.07195,
             "id": 118,
             "states_path": [
                 {

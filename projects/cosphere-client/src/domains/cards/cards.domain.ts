@@ -39,15 +39,11 @@ export class CardsDomain {
      * List subset of Cards depending on various filtering flags.
      */
     public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'cards', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
     }
     
     public bulkReadCards2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]> {
-        return this.client.get<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'cards', authorizationRequired: true });
-    }
-    
-    public bulkReadGeometriesOnly2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]> {
-        return this.client.get<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'cards', authorizationRequired: true });
+        return this.client.get<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -72,8 +68,8 @@ export class CardsDomain {
         return this.client.getDataState<X.ReadCardResponse>(`/cards/${cardId}`, { authorizationRequired: true });
     }
     
-    public readCard2(cardId: any, params?: any): Observable<X.ReadCardResponse> {
-        return this.client.get<X.ReadCardResponse>(`/cards/${cardId}`, { params, authorizationRequired: true });
+    public readCard2(cardId: any): Observable<X.ReadCardResponse> {
+        return this.client.get<X.ReadCardResponse>(`/cards/${cardId}`, { authorizationRequired: true });
     }
 
     /**

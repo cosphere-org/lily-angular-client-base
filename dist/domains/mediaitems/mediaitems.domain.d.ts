@@ -34,8 +34,8 @@ export declare class MediaitemsDomain {
      *
      * Read MediaItem by Process Id
      */
-    readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse>;
-    readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse>;
+    readMediaitemByProcessId(): DataState<X.ReadMediaitemByProcessIdResponse>;
+    readMediaitemByProcessId2(): Observable<X.ReadMediaitemByProcessIdResponse>;
     /**
      * Read or Create MediaItem
      * -------------

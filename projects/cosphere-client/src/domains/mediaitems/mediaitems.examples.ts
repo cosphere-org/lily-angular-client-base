@@ -20,7 +20,7 @@ export const BulkReadMediaitemsExamples = {
                     "@type": "mediaitem",
                     "content_host": null,
                     "content_uri": "http://media.service/1.png",
-                    "created_timestamp": 1528833154.582096,
+                    "created_timestamp": 1533830383.189233,
                     "external_data": [
                         {
                             "uri": "http://media.service/1.png"
@@ -30,14 +30,14 @@ export const BulkReadMediaitemsExamples = {
                     "meta": {},
                     "size": null,
                     "thumbnail_uri": null,
-                    "type": "AUDIO",
+                    "type": "IMAGE",
                     "web_representations": []
                 },
                 {
                     "@type": "mediaitem",
                     "content_host": null,
                     "content_uri": "http://media.service/0.png",
-                    "created_timestamp": 1528833154.577958,
+                    "created_timestamp": 1533830383.184706,
                     "external_data": [
                         {
                             "uri": "http://media.service/0.png"
@@ -47,7 +47,7 @@ export const BulkReadMediaitemsExamples = {
                     "meta": {},
                     "size": null,
                     "thumbnail_uri": null,
-                    "type": "IMAGE",
+                    "type": "AUDIO",
                     "web_representations": []
                 }
             ]
@@ -95,24 +95,24 @@ export const ReadMediaitemExamples = {
             "@event": "MEDIAITEM_READ",
             "@type": "mediaitem",
             "content_host": null,
-            "content_uri": "http://www.langworth.info/wp-content/tag/about.html",
-            "created_timestamp": 1528833154.817967,
+            "content_uri": "http://www.dibbert-jacobi.net/",
+            "created_timestamp": 1533830383.681241,
             "external_data": [
                 {
                     "etag": null,
                     "extension": ".png",
                     "host": "PNG",
                     "last_modified": null,
-                    "normalized_uri": "http://www.watsica.biz/register.asp",
+                    "normalized_uri": "http://yost.info/tag/register/",
                     "params": {},
-                    "uri": "http://heller.com/faq.html"
+                    "uri": "http://okeefe.com/faq/"
                 }
             ],
             "id": 144,
             "meta": {},
             "size": null,
             "thumbnail_uri": null,
-            "type": "VIDEO",
+            "type": "IMAGE",
             "web_representations": []
         },
         "content_type": "application/json",
@@ -139,17 +139,17 @@ export const ReadMediaitemByProcessIdExamples = {
             "@event": "MEDIAITEM_BY_PROCESS_ID_READ",
             "@type": "mediaitem",
             "content_host": null,
-            "content_uri": "http://stroman.com/",
-            "created_timestamp": 1528833145.815075,
+            "content_uri": "http://wilderman-boyle.com/categories/posts/terms.jsp",
+            "created_timestamp": 1533830378.680253,
             "external_data": [
                 {
                     "etag": null,
                     "extension": ".png",
                     "host": "PNG",
                     "last_modified": null,
-                    "normalized_uri": "http://swaniawski-eichmann.net/wp-content/wp-content/explore/home/",
+                    "normalized_uri": "http://www.lynch.com/blog/list/categories/search.asp",
                     "params": {},
-                    "uri": "http://howe.info/main.htm"
+                    "uri": "http://www.schmeler.com/"
                 }
             ],
             "id": 66,
@@ -184,13 +184,13 @@ export const ReadOrCreateMediaitemExamples = {
             "@type": "mediaitem",
             "content_host": "PNG",
             "content_uri": "http://media.service/5404930.png",
-            "created_timestamp": 1528833145.868264,
+            "created_timestamp": 1533830378.780595,
             "external_data": [],
             "id": 67,
             "meta": {},
             "size": null,
             "thumbnail_uri": null,
-            "type": "AUDIO",
+            "type": "VIDEO",
             "web_representations": []
         },
         "content_type": "application/json",
@@ -203,7 +203,7 @@ export const ReadOrCreateMediaitemExamples = {
             "@type": "mediaitem",
             "content_host": null,
             "content_uri": null,
-            "created_timestamp": 1528833145.999329,
+            "created_timestamp": 1533830378.874005,
             "external_data": [
                 {
                     "etag": null,
@@ -258,7 +258,7 @@ export const UpdateMediaitemExamples = {
             "@type": "mediaitem",
             "content_host": "PNG",
             "content_uri": "http://media.service/49304930.png",
-            "created_timestamp": 1528833154.98552,
+            "created_timestamp": 1533830383.904598,
             "external_data": [
                 {
                     "etag": null,
@@ -327,8 +327,8 @@ export const UpdateMediaitemRepresentationExamples = {
             "@event": "MEDIAITEM_REPRESENTATION_UPDATED",
             "@type": "mediaitem",
             "content_host": null,
-            "content_uri": "http://sporer.info/tag/explore/register.htm",
-            "created_timestamp": 1528833155.260244,
+            "content_uri": "http://www.hagenes.net/index/",
+            "created_timestamp": 1533830384.430311,
             "external_data": [
                 {
                     "uri": "http://this.image/1.png"
@@ -338,7 +338,7 @@ export const UpdateMediaitemRepresentationExamples = {
             "meta": {},
             "size": 5690,
             "thumbnail_uri": "http://s3.io/6879.png",
-            "type": "AUDIO",
+            "type": "IMAGE",
             "web_representations": [
                 {
                     "content_type": "video/ogg",

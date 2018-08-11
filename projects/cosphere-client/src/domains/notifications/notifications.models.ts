@@ -8,13 +8,13 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface AcknowledgeNotificationResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/notification/views.py/#lines-77
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/notification/views.py/#lines-77
  */
 
 export interface BulkReadNotificationsQuery {
@@ -26,7 +26,7 @@ export interface BulkReadNotificationsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/notification/serializers.py/#lines-46
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/notification/serializers.py/#lines-46
  */
 
 export enum BulkReadNotificationsResponseKind {
@@ -43,5 +43,5 @@ export interface BulkReadNotificationsResponseEntity {
 }
 
 export interface BulkReadNotificationsResponse {
-    data: BulkReadNotificationsResponseEntity[];
+    notifications: BulkReadNotificationsResponseEntity[];
 }

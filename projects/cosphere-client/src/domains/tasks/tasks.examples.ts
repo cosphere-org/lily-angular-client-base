@@ -26,13 +26,13 @@ export const BulkReadTasksExamples = {
                             }
                         ]
                     },
-                    "created_timestamp": 1528833166.767997,
+                    "created_timestamp": 1533830400.069289,
                     "done_date": null,
                     "done_timestamp": null,
                     "id": 65,
                     "order_number": 54.0,
                     "queue_type": "HP",
-                    "total_time": 748
+                    "total_time": 332
                 },
                 {
                     "@type": "task",
@@ -44,13 +44,13 @@ export const BulkReadTasksExamples = {
                             }
                         ]
                     },
-                    "created_timestamp": 1528833166.768447,
+                    "created_timestamp": 1533830400.069779,
                     "done_date": null,
                     "done_timestamp": null,
                     "id": 66,
                     "order_number": 34.0,
                     "queue_type": "HP",
-                    "total_time": 45
+                    "total_time": 414
                 }
             ]
         },
@@ -97,11 +97,11 @@ export const BulkReadTaskBinsExamples = {
                                     }
                                 ]
                             },
-                            "created_timestamp": 1528833166.669722,
+                            "created_timestamp": 1533830399.884455,
                             "done_date": "2013-01-03",
                             "done_timestamp": 1357195500.0,
                             "id": 61,
-                            "order_number": 619.0,
+                            "order_number": 83.0,
                             "queue_type": "DN",
                             "total_time": 453
                         }

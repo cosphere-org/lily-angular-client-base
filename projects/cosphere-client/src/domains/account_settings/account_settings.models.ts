@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account_setting/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account_setting/serializers.py/#lines-8
  */
 
 export interface ReadAccountsettingResponse {
@@ -20,7 +20,7 @@ export interface ReadAccountsettingResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account_setting/views.py/#lines-17
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account_setting/views.py/#lines-17
  */
 
 export interface UpdateAccountsettingBody {
@@ -32,7 +32,7 @@ export interface UpdateAccountsettingBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/account_setting/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/account_setting/serializers.py/#lines-8
  */
 
 export interface UpdateAccountsettingResponse {

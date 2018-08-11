@@ -6,7 +6,7 @@
  * Donations Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/donation.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/donation.py/#lines-30
  */
 export declare enum CheckIfCanAttemptDonationQueryEvent {
     CLOSE = "CLOSE",
@@ -17,20 +17,20 @@ export interface CheckIfCanAttemptDonationQuery {
     event: CheckIfCanAttemptDonationQueryEvent;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/donation.py/#lines-34
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/donation.py/#lines-34
  */
 export interface CheckIfCanAttemptDonationResponse {
     can_attempt: boolean;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/donation.py/#lines-184
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/donation.py/#lines-184
  */
 export interface CreateAnonymousDonationBody {
     amount: number;
     email: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/payment.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/serializers/payment.py/#lines-9
  */
 export declare enum CreateAnonymousDonationResponseCurrency {
     PLN = "PLN",
@@ -64,13 +64,13 @@ export interface CreateAnonymousDonationResponse {
     status_ledger?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/donation.py/#lines-184
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/donation.py/#lines-184
  */
 export interface CreateDonationBody {
     amount: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/payment.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/serializers/payment.py/#lines-9
  */
 export declare enum CreateDonationResponseCurrency {
     PLN = "PLN",
@@ -104,7 +104,7 @@ export interface CreateDonationResponse {
     status_ledger?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/donation.py/#lines-184
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/donation.py/#lines-184
  */
 export declare enum CreateDonationattemptBodyEvent {
     CLOSE = "CLOSE",
@@ -115,7 +115,7 @@ export interface CreateDonationattemptBody {
     event: CreateDonationattemptBodyEvent;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/donation.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/serializers/donation.py/#lines-8
  */
 export declare enum CreateDonationattemptResponseEvent {
     CLOSE = "CLOSE",

@@ -6,7 +6,7 @@
  * Categories Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/category/serializers.py/#lines-27
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/category/serializers.py/#lines-27
  */
 export declare enum BulkReadCategoriesResponseText {
     FORGOTTEN = "FORGOTTEN",
@@ -21,5 +21,5 @@ export interface BulkReadCategoriesResponseEntity {
     text: BulkReadCategoriesResponseText;
 }
 export interface BulkReadCategoriesResponse {
-    data: BulkReadCategoriesResponseEntity[];
+    categories: BulkReadCategoriesResponseEntity[];
 }

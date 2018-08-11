@@ -162,7 +162,7 @@ export const ReadFragmentExamples = {
             "cards_life_cycles": [
                 "some cards"
             ],
-            "description": "Nam porro repudiandae debitis.",
+            "description": "Repellendus quos mollitia consectetur atque dignissimos repudiandae.",
             "id": 50,
             "is_author": true,
             "is_learner": null,
@@ -174,7 +174,7 @@ export const ReadFragmentExamples = {
             "paths_life_cycles": [
                 "some paths"
             ],
-            "title": "Repellendus tempora reiciendis deserunt autem veritatis."
+            "title": "Consectetur maiores impedit esse aspernatur."
         },
         "content_type": "application/json",
         "status": 200
@@ -208,13 +208,13 @@ export const ReadFragmentDiffExamples = {
             ],
             "prod_text_representation": {
                 "@type": "fragment_text_representation",
-                "description": "Fuga architecto debitis delectus beatae impedit porro.",
-                "title": "Tenetur repudiandae placeat sapiente."
+                "description": "Eius quae aut repellat autem.",
+                "title": "Nihil dolorum non odio unde et laborum fugit."
             },
             "stage_text_representation": {
                 "@type": "fragment_text_representation",
-                "description": "Ea quaerat possimus temporibus consequuntur vitae sunt quibusdam nobis.",
-                "title": "Molestias quisquam adipisci consequatur dolorum quas ratione."
+                "description": "Minima laboriosam officiis blanditiis dolores fuga nesciunt unde doloribus.",
+                "title": "Est id exercitationem dolorem aut aut beatae."
             },
             "updated_card_ids": [
                 4

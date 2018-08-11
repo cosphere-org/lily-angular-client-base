@@ -6,13 +6,13 @@
  * Cards Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-274
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/views.py/#lines-274
  */
 export interface BulkDeleteCardsQuery {
     ids: number[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-285
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/views.py/#lines-285
  */
 export interface BulkDeleteCardsResponse {
     summary: {
@@ -21,18 +21,17 @@ export interface BulkDeleteCardsResponse {
     }[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-221
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/views.py/#lines-221
  */
 export interface BulkReadCardsQuery {
     category_id?: number;
-    ids?: number[];
+    ids: number[];
     limit?: number;
     offset?: number;
     query?: string;
-    ids_only?: boolean;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-69
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/serializers.py/#lines-69
  */
 export interface BulkReadCardsResponseEntity {
     author_id?: any;
@@ -60,7 +59,7 @@ export interface BulkReadCardsResponse {
     cards: BulkReadCardsResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-179
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/views.py/#lines-179
  */
 export interface CreateCardBody {
     source: {
@@ -73,7 +72,7 @@ export interface CreateCardBody {
     };
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-21
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/serializers.py/#lines-21
  */
 export interface CreateCardResponse {
     author_id?: any;
@@ -98,7 +97,7 @@ export interface CreateCardResponse {
     updated_timestamp: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-21
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/serializers.py/#lines-21
  */
 export interface ReadCardResponse {
     author_id?: any;
@@ -123,7 +122,7 @@ export interface ReadCardResponse {
     updated_timestamp: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/views.py/#lines-66
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/views.py/#lines-66
  */
 export interface UpdateCardBody {
     external_app_uri?: string;
@@ -138,7 +137,7 @@ export interface UpdateCardBody {
     terms: string[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/card/serializers.py/#lines-21
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/card/serializers.py/#lines-21
  */
 export interface UpdateCardResponse {
     author_id?: any;

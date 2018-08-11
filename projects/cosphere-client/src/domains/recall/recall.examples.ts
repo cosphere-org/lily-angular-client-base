@@ -19,16 +19,16 @@ export const CreateRecallSessionExamples = {
                 {
                     "@type": "card",
                     "author_id": 90,
-                    "created_timestamp": 1528833166.104431,
+                    "created_timestamp": 1533830399.124872,
                     "external_app_uri": null,
                     "hashtags": [],
-                    "id": 2033,
+                    "id": 2037,
                     "paths_count": null,
                     "source": {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Mollitia officiis ducimus esse.",
+                                "html": "Qui dicta optio nihil cupiditate.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -52,7 +52,7 @@ export const CreateRecallSessionExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Doloribus inventore sunt quaerat ratione distinctio.",
+                                "html": "Numquam quasi beatae sint distinctio commodi.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -72,21 +72,21 @@ export const CreateRecallSessionExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1528833166.101325
+                    "updated_timestamp": 1533830399.121314
                 },
                 {
                     "@type": "card",
                     "author_id": 90,
-                    "created_timestamp": 1528833166.115475,
+                    "created_timestamp": 1533830399.140673,
                     "external_app_uri": null,
                     "hashtags": [],
-                    "id": 2034,
+                    "id": 2038,
                     "paths_count": null,
                     "source": {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Tempora magni error necessitatibus impedit ipsam illum aut.",
+                                "html": "Consequuntur minima at omnis exercitationem.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -110,7 +110,7 @@ export const CreateRecallSessionExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Perferendis sunt necessitatibus accusamus molestias aut aliquid omnis.",
+                                "html": "Aut hic quam enim consectetur in.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -130,7 +130,7 @@ export const CreateRecallSessionExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1528833166.111119
+                    "updated_timestamp": 1533830399.136133
                 }
             ],
             "terminate": false

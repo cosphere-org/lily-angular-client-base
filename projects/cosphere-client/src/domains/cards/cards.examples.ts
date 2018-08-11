@@ -60,7 +60,7 @@ export const BulkReadCardsExamples = {
                 {
                     "@type": "card",
                     "author_id": 11,
-                    "created_timestamp": 1528833080.218115,
+                    "created_timestamp": 1533830312.210827,
                     "external_app_uri": null,
                     "hashtags": [],
                     "id": 46,
@@ -113,7 +113,7 @@ export const BulkReadCardsExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1528833080.215527
+                    "updated_timestamp": 1533830312.208725
                 }
             ]
         },
@@ -146,7 +146,7 @@ export const CreateCardExamples = {
             "@event": "CARD_CREATED",
             "@type": "card",
             "author_id": 891,
-            "created_timestamp": 1528833079.826792,
+            "created_timestamp": 1533830311.525321,
             "external_app_uri": null,
             "hashtags": [],
             "id": 35,
@@ -201,7 +201,7 @@ export const CreateCardExamples = {
                 ],
                 "style": {}
             },
-            "updated_timestamp": 1528833079.824267
+            "updated_timestamp": 1533830311.522282
         },
         "content_type": "application/json",
         "status": 201
@@ -235,7 +235,7 @@ export const ReadCardExamples = {
             "@event": "CARD_READ",
             "@type": "card",
             "author_id": 9067,
-            "created_timestamp": 1528833078.443715,
+            "created_timestamp": 1533830309.980847,
             "external_app_uri": null,
             "hashtags": [],
             "id": 7,
@@ -244,7 +244,7 @@ export const ReadCardExamples = {
                 "@type": "side",
                 "cells": [
                     {
-                        "html": "Vel iusto corporis nam quaerat occaecati aliquam saepe.",
+                        "html": "Molestias cum nesciunt dolores eveniet consequatur laboriosam.",
                         "id": "56678mefd",
                         "name": "text cell",
                         "style": {
@@ -268,7 +268,7 @@ export const ReadCardExamples = {
                 "@type": "side",
                 "cells": [
                     {
-                        "html": "Laborum accusamus voluptates debitis dignissimos eligendi.",
+                        "html": "Ut corrupti deleniti quibusdam optio qui animi.",
                         "id": "56678mefd",
                         "name": "text cell",
                         "style": {
@@ -288,7 +288,7 @@ export const ReadCardExamples = {
                 ],
                 "style": {}
             },
-            "updated_timestamp": 1528833078.437735
+            "updated_timestamp": 1533830309.976735
         },
         "content_type": "application/json",
         "status": 200
@@ -314,7 +314,7 @@ export const UpdateCardExamples = {
             "@event": "CARD_UPDATED",
             "@type": "card",
             "author_id": 891,
-            "created_timestamp": 1528833079.054681,
+            "created_timestamp": 1533830310.723692,
             "external_app_uri": null,
             "hashtags": [],
             "id": 14,
@@ -387,7 +387,7 @@ export const UpdateCardExamples = {
                     "backgroundColor": "red"
                 }
             },
-            "updated_timestamp": 1528833079.103805
+            "updated_timestamp": 1533830310.784191
         },
         "content_type": "application/json",
         "status": 200

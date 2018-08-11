@@ -66,12 +66,12 @@ export class MediaitemsDomain {
      *
      * Read MediaItem by Process Id
      */
-    public readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
-        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
+    public readMediaitemByProcessId(): DataState<X.ReadMediaitemByProcessIdResponse> {
+        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>('/mediaitems/by_process/(?P<process_id>[\w+\=]+)', { authorizationRequired: true });
     }
     
-    public readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse> {
-        return this.client.get<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
+    public readMediaitemByProcessId2(): Observable<X.ReadMediaitemByProcessIdResponse> {
+        return this.client.get<X.ReadMediaitemByProcessIdResponse>('/mediaitems/by_process/(?P<process_id>[\w+\=]+)', { authorizationRequired: true });
     }
 
     /**

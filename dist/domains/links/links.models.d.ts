@@ -6,19 +6,19 @@
  * Links Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 export interface DeleteLinkResponse {
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/views.py/#lines-47
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/views.py/#lines-48
  */
 export interface ReadOrCreateLinkBody {
     from_card_id: number;
     to_card_id: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/serializers.py/#lines-8
  */
 export declare enum ReadOrCreateLinkResponseKind {
     CARD = "CARD",

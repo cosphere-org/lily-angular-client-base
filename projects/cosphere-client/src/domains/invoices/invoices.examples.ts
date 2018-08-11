@@ -18,10 +18,10 @@ export const BulkReadInvoicesExamples = {
             "invoices": [
                 {
                     "@type": "invoice",
-                    "amount": "161",
+                    "amount": "154",
                     "created_timestamp": 1510576260.0,
-                    "currency": "GBP",
-                    "display_amount": "1.61",
+                    "currency": "USD",
+                    "display_amount": "1.54",
                     "id": 34,
                     "is_extension": false,
                     "paid_till_timestamp": 1511440260.0,
@@ -33,7 +33,7 @@ export const BulkReadInvoicesExamples = {
                         "price": "2990",
                         "product_type": "SUBSCRIPTION_LEARNER_MONTHLY"
                     },
-                    "surplus_amount": "189",
+                    "surplus_amount": "185",
                     "surplus_currency": "EUR",
                     "valid_till_timestamp": 1513211460.0
                 }
@@ -67,7 +67,7 @@ export const CalculateDebtExamples = {
         "content": {
             "@event": "NO_DEBT_CALCULATED",
             "@type": "error",
-            "user_id": 458
+            "user_id": 462
         },
         "content_type": "application/json",
         "status": 404

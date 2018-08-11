@@ -6,7 +6,7 @@
  * Attempt Stats Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/views.py/#lines-231
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/views.py/#lines-231
  */
 export interface BulkReadAttemptstatsQuery {
     created_timestamp__gte?: number;
@@ -15,7 +15,7 @@ export interface BulkReadAttemptstatsQuery {
     order_by?: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-57
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/serializers.py/#lines-57
  */
 export interface BulkReadAttemptstatsResponse {
     at__count: number;
@@ -28,7 +28,7 @@ export interface BulkReadAttemptstatsResponse {
     }[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/views.py/#lines-188
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/views.py/#lines-188
  */
 export interface CreateAttemptstatBody {
     attempt_id?: number;
@@ -36,7 +36,7 @@ export interface CreateAttemptstatBody {
     states_path: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-36
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/serializers.py/#lines-36
  */
 export interface CreateAttemptstatResponse {
     card_id?: any;
@@ -46,13 +46,13 @@ export interface CreateAttemptstatResponse {
     successful?: boolean;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/views.py/#lines-281
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/views.py/#lines-281
  */
 export interface CreateExternalAttemptStatBody {
     states_path: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-36
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/serializers.py/#lines-36
  */
 export interface CreateExternalAttemptStatResponse {
     card_id?: any;

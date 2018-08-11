@@ -149,16 +149,16 @@ export const ReadPathExamples = {
                 {
                     "@type": "card",
                     "author_id": 7890,
-                    "created_timestamp": 1528833159.546103,
+                    "created_timestamp": 1533830390.097624,
                     "external_app_uri": null,
                     "hashtags": [],
-                    "id": 1743,
+                    "id": 1747,
                     "paths_count": null,
                     "source": {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Totam porro nesciunt quas totam.",
+                                "html": "Non ratione laudantium suscipit nesciunt minus architecto dolore.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -182,7 +182,7 @@ export const ReadPathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Similique consequuntur eveniet provident.",
+                                "html": "Sapiente nam perspiciatis non ullam ratione vero.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -202,21 +202,21 @@ export const ReadPathExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1528833159.542007
+                    "updated_timestamp": 1533830390.092545
                 },
                 {
                     "@type": "card",
                     "author_id": 7890,
-                    "created_timestamp": 1528833159.556542,
+                    "created_timestamp": 1533830390.110225,
                     "external_app_uri": null,
                     "hashtags": [],
-                    "id": 1744,
+                    "id": 1748,
                     "paths_count": null,
                     "source": {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Corporis aperiam expedita perferendis ullam nostrum expedita nihil.",
+                                "html": "Dolor in aliquid commodi.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -240,7 +240,7 @@ export const ReadPathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Velit mollitia cupiditate laboriosam voluptatem.",
+                                "html": "Voluptate delectus nihil esse consequatur eum occaecati tempora.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -260,13 +260,13 @@ export const ReadPathExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1528833159.553387
+                    "updated_timestamp": 1533830390.107196
                 }
             ],
             "id": 298,
             "ordered_card_ids": [
-                1743,
-                1744
+                1747,
+                1748
             ]
         },
         "content_type": "application/json",
@@ -297,16 +297,16 @@ export const UpdatePathExamples = {
                 {
                     "@type": "card",
                     "author_id": 7890,
-                    "created_timestamp": 1528833159.758992,
+                    "created_timestamp": 1533830390.448557,
                     "external_app_uri": null,
                     "hashtags": [],
-                    "id": 1751,
+                    "id": 1755,
                     "paths_count": null,
                     "source": {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Necessitatibus optio quisquam vel debitis natus fugiat.",
+                                "html": "Rem incidunt beatae voluptatibus vitae.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -330,7 +330,7 @@ export const UpdatePathExamples = {
                         "@type": "side",
                         "cells": [
                             {
-                                "html": "Quod blanditiis nam omnis pariatur maxime.",
+                                "html": "Ratione perferendis ipsum saepe similique quo ipsam consequatur.",
                                 "id": "56678mefd",
                                 "name": "text cell",
                                 "style": {
@@ -350,12 +350,12 @@ export const UpdatePathExamples = {
                         ],
                         "style": {}
                     },
-                    "updated_timestamp": 1528833159.755668
+                    "updated_timestamp": 1533830390.44472
                 }
             ],
             "id": 302,
             "ordered_card_ids": [
-                1751
+                1755
             ]
         },
         "content_type": "application/json",

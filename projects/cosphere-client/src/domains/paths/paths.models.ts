@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/views.py/#lines-161
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/views.py/#lines-160
  */
 
 export interface BulkDeletePathsQuery {
@@ -16,7 +16,7 @@ export interface BulkDeletePathsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/views.py/#lines-172
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/views.py/#lines-171
  */
 
 export interface BulkDeletePathsResponse {
@@ -27,7 +27,7 @@ export interface BulkDeletePathsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/views.py/#lines-103
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/views.py/#lines-106
  */
 
 export interface BulkReadPathsQuery {
@@ -40,7 +40,7 @@ export interface BulkReadPathsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/serializers.py/#lines-42
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/serializers.py/#lines-42
  */
 
 export interface BulkReadPathsResponseEntity {
@@ -68,15 +68,15 @@ export interface BulkReadPathsResponseEntity {
         updated_timestamp: number;
     }[];
     id?: number;
-    ordered_card_ids?: number[];
+    ordered_card_ids?: Object;
 }
 
 export interface BulkReadPathsResponse {
-    data: BulkReadPathsResponseEntity[];
+    paths: BulkReadPathsResponseEntity[];
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/views.py/#lines-61
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/views.py/#lines-61
  */
 
 export interface CreatePathBody {
@@ -84,7 +84,7 @@ export interface CreatePathBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/serializers.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/serializers.py/#lines-9
  */
 
 export interface CreatePathResponse {
@@ -116,7 +116,7 @@ export interface CreatePathResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/serializers.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/serializers.py/#lines-9
  */
 
 export interface ReadPathResponse {
@@ -148,7 +148,7 @@ export interface ReadPathResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/views.py/#lines-61
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/views.py/#lines-61
  */
 
 export interface UpdatePathBody {
@@ -156,7 +156,7 @@ export interface UpdatePathBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/path/serializers.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/path/serializers.py/#lines-9
  */
 
 export interface UpdatePathResponse {

@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/focus/views.py/#lines-28
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/focus/views.py/#lines-28
  */
 
 export interface CreateFocusrecordBody {
@@ -16,7 +16,7 @@ export interface CreateFocusrecordBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/focus/serializers.py/#lines-101
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/focus/serializers.py/#lines-101
  */
 
 export interface CreateFocusrecordResponse {
@@ -25,7 +25,7 @@ export interface CreateFocusrecordResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/focus/serializers.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/focus/serializers.py/#lines-30
  */
 
 export interface ReadFocusRecordSummaryResponse {

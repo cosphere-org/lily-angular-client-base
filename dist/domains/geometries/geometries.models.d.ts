@@ -6,7 +6,7 @@
  * Geometries Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/views.py/#lines-149
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/views.py/#lines-150
  */
 export interface BulkReadGeometriesQuery {
     height?: number;
@@ -15,7 +15,7 @@ export interface BulkReadGeometriesQuery {
     y?: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/serializers.py/#lines-55
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/serializers.py/#lines-55
  */
 export interface BulkReadGeometriesResponseEntity {
     card_id?: any;
@@ -29,13 +29,13 @@ export interface BulkReadGeometriesResponse {
     geometries: BulkReadGeometriesResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/views.py/#lines-188
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/views.py/#lines-190
  */
 export interface BulkUpdateGeometriesBody {
     data: Object[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/serializers.py/#lines-55
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/serializers.py/#lines-55
  */
 export interface BulkUpdateGeometriesResponse {
     geometries: {
@@ -48,7 +48,7 @@ export interface BulkUpdateGeometriesResponse {
     }[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/serializers.py/#lines-39
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/serializers.py/#lines-39
  */
 export interface ReadGeometryByCardResponse {
     card_id?: any;
@@ -59,13 +59,13 @@ export interface ReadGeometryByCardResponse {
     y?: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/views.py/#lines-149
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/views.py/#lines-150
  */
 export interface ReadGraphQuery {
     card_ids: number[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/grid/serializers.py/#lines-62
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/grid/serializers.py/#lines-62
  */
 export interface ReadGraphResponse {
     links: {

@@ -75,7 +75,7 @@ export const CreateAuthTokenExamples = {
         "content": {
             "@event": "INVALID_AUTH_TOKEN_DATA_NOT_ACTIVATED_ACCOUNT_DETECTED",
             "@type": "error",
-            "user_id": 244
+            "user_id": 248
         },
         "content_type": "application/json",
         "status": 401

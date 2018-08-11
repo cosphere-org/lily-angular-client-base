@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-29
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/serializers.py/#lines-29
  */
 
 export interface BulkReadAttemptsByCardsResponseEntity {
@@ -23,7 +23,7 @@ export interface BulkReadAttemptsByCardsResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/views.py/#lines-88
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/views.py/#lines-88
  */
 
 export interface CreateAttemptBody {
@@ -33,7 +33,7 @@ export interface CreateAttemptBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/serializers.py/#lines-9
  */
 
 export interface CreateAttemptResponse {
@@ -44,7 +44,7 @@ export interface CreateAttemptResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/views.py/#lines-60
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/views.py/#lines-60
  */
 
 export interface UpdateAttemptBody {
@@ -53,7 +53,7 @@ export interface UpdateAttemptBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/recall/serializers.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/recall/serializers.py/#lines-9
  */
 
 export interface UpdateAttemptResponse {

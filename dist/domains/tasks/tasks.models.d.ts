@@ -6,7 +6,7 @@
  * Tasks Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/views.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/task/views.py/#lines-33
  */
 export declare enum BulkReadTasksQueryQueueType {
     DN = "DN",
@@ -21,7 +21,7 @@ export interface BulkReadTasksQuery {
     queue_type?: BulkReadTasksQueryQueueType;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/serializers.py/#lines-55
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/task/serializers.py/#lines-55
  */
 export declare enum BulkReadTasksResponseQueueType {
     DN = "DN",
@@ -41,10 +41,10 @@ export interface BulkReadTasksResponseEntity {
     total_time?: number;
 }
 export interface BulkReadTasksResponse {
-    data: BulkReadTasksResponseEntity[];
+    tasks: BulkReadTasksResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/views.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/task/views.py/#lines-33
  */
 export declare enum BulkReadTaskBinsQueryQueueType {
     DN = "DN",
@@ -59,7 +59,7 @@ export interface BulkReadTaskBinsQuery {
     queue_type?: BulkReadTaskBinsQueryQueueType;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/task/serializers.py/#lines-71
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/task/serializers.py/#lines-71
  */
 export declare enum BulkReadTaskBinsResponseQueueType {
     DN = "DN",
@@ -82,5 +82,5 @@ export interface BulkReadTaskBinsResponseEntity {
     }[];
 }
 export interface BulkReadTaskBinsResponse {
-    data: BulkReadTaskBinsResponseEntity[];
+    tasks_bins: BulkReadTaskBinsResponseEntity[];
 }

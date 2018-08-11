@@ -39,11 +39,11 @@ export class PathsDomain {
      * List all user's Paths
      */
     public bulkReadPaths(params: X.BulkReadPathsQuery): DataState<X.BulkReadPathsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'paths', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'data', authorizationRequired: true });
     }
     
     public bulkReadPaths2(params: X.BulkReadPathsQuery): Observable<X.BulkReadPathsResponseEntity[]> {
-        return this.client.get<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'paths', authorizationRequired: true });
+        return this.client.get<X.BulkReadPathsResponseEntity[]>('/paths/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**

@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/views/crud.py/#lines-78
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/views/crud.py/#lines-77
  */
 
 export interface BulkReadFragmentsQuery {
@@ -21,7 +21,7 @@ export interface BulkReadFragmentsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-108
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-108
  */
 
 export interface BulkReadFragmentsResponseEntity {
@@ -35,11 +35,11 @@ export interface BulkReadFragmentsResponseEntity {
 }
 
 export interface BulkReadFragmentsResponse {
-    data: BulkReadFragmentsResponseEntity[];
+    fragments: BulkReadFragmentsResponseEntity[];
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/views/public.py/#lines-26
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/views/public.py/#lines-26
  */
 
 export interface BulkReadPublishedFragmentsQuery {
@@ -49,7 +49,7 @@ export interface BulkReadPublishedFragmentsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-43
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-43
  */
 
 export interface BulkReadPublishedFragmentsResponseEntity {
@@ -60,11 +60,11 @@ export interface BulkReadPublishedFragmentsResponseEntity {
 }
 
 export interface BulkReadPublishedFragmentsResponse {
-    data: BulkReadPublishedFragmentsResponseEntity[];
+    fragments: BulkReadPublishedFragmentsResponseEntity[];
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-50
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-50
  */
 
 export interface CreateFragmentResponse {
@@ -78,25 +78,25 @@ export interface CreateFragmentResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface DeleteFragmentResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface MergeFragmentResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface PublishFragmentResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-127
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-127
  */
 
 export interface ReadFragmentResponse {
@@ -113,7 +113,7 @@ export interface ReadFragmentResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-150
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-150
  */
 
 export interface ReadFragmentDiffResponse {
@@ -132,7 +132,7 @@ export interface ReadFragmentDiffResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-175
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-175
  */
 
 export interface ReadFragmentSampleResponse {
@@ -140,7 +140,7 @@ export interface ReadFragmentSampleResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/views/crud.py/#lines-199
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/views/crud.py/#lines-198
  */
 
 export interface UpdateFragmentBody {
@@ -152,7 +152,7 @@ export interface UpdateFragmentBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface UpdateFragmentResponse {}

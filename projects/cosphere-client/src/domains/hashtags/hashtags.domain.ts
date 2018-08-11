@@ -27,11 +27,11 @@ export class HashtagsDomain {
      * Enables one to list a series of Hashtag instances. It accepts various query parameters such as: - `limit` - `offset` - `first_character`
      */
     public bulkReadHashtags(params: X.BulkReadHashtagsQuery): DataState<X.BulkReadHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'hashtags', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
     }
     
     public bulkReadHashtags2(params: X.BulkReadHashtagsQuery): Observable<X.BulkReadHashtagsResponseEntity[]> {
-        return this.client.get<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'hashtags', authorizationRequired: true });
+        return this.client.get<X.BulkReadHashtagsResponseEntity[]>('/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
     }
 
     /**
@@ -65,11 +65,11 @@ export class HashtagsDomain {
      * Enables one to list Hashtags Table of Contents made out of Hashtags. Note: Currently this endpoint returns only a flat list of hashtags with the count of Cards with which they're attached to. In the future though one could propose a mechanism which could calculate hierarchy between those hashtags (parent - child relationships) and ordering based on the knowledge grid topology. It accepts various query parameters such as: - `limit` - `offset`
      */
     public readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse> {
-        return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc', { params, authorizationRequired: true });
+        return this.client.getDataState<X.ReadHashtagsTocResponse>('/hashtags/toc/', { params, authorizationRequired: true });
     }
     
     public readHashtagsToc2(params: X.ReadHashtagsTocQuery): Observable<X.ReadHashtagsTocResponse> {
-        return this.client.get<X.ReadHashtagsTocResponse>('/hashtags/toc', { params, authorizationRequired: true });
+        return this.client.get<X.ReadHashtagsTocResponse>('/hashtags/toc/', { params, authorizationRequired: true });
     }
 
     /**

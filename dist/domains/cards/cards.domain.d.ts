@@ -20,7 +20,6 @@ export declare class CardsDomain {
      */
     bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponseEntity[]>;
     bulkReadCards2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]>;
-    bulkReadGeometriesOnly2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]>;
     /**
      * Creating a single Card
      * -------------
@@ -35,7 +34,7 @@ export declare class CardsDomain {
      * Read Card by `id`.
      */
     readCard(cardId: any): DataState<X.ReadCardResponse>;
-    readCard2(cardId: any, params?: any): Observable<X.ReadCardResponse>;
+    readCard2(cardId: any): Observable<X.ReadCardResponse>;
     /**
      * Creating a single Card
      * -------------

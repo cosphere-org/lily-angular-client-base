@@ -6,7 +6,7 @@
  * Fragment Words Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/views.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/word/views.py/#lines-30
  */
 export interface BulkReadFragmentWordsQuery {
     first_character?: string;
@@ -14,7 +14,7 @@ export interface BulkReadFragmentWordsQuery {
     offset?: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/serializers.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/word/serializers.py/#lines-33
  */
 export interface BulkReadFragmentWordsResponseEntity {
     count: number;
@@ -22,10 +22,10 @@ export interface BulkReadFragmentWordsResponseEntity {
     text: string;
 }
 export interface BulkReadFragmentWordsResponse {
-    data: BulkReadFragmentWordsResponseEntity[];
+    words: BulkReadFragmentWordsResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/views.py/#lines-30
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/word/views.py/#lines-30
  */
 export interface BulkReadPublishedFragmentWordsQuery {
     first_character?: string;
@@ -33,7 +33,7 @@ export interface BulkReadPublishedFragmentWordsQuery {
     offset?: number;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/word/serializers.py/#lines-33
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/word/serializers.py/#lines-33
  */
 export interface BulkReadPublishedFragmentWordsResponseEntity {
     count: number;
@@ -41,5 +41,5 @@ export interface BulkReadPublishedFragmentWordsResponseEntity {
     text: string;
 }
 export interface BulkReadPublishedFragmentWordsResponse {
-    data: BulkReadPublishedFragmentWordsResponseEntity[];
+    words: BulkReadPublishedFragmentWordsResponseEntity[];
 }

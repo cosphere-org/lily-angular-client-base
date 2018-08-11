@@ -18,10 +18,10 @@ export const BulkReadAttemptsByCardsExamples = {
             "attempts": [
                 {
                     "@type": "attempt",
-                    "card_id": 1932,
+                    "card_id": 1936,
                     "cells": [
                         {
-                            "html": "Quos exercitationem ullam eligendi labore numquam.",
+                            "html": "Dolorem nisi at reprehenderit laudantium pariatur beatae.",
                             "id": "56678mefd",
                             "name": "text cell",
                             "style": {
@@ -46,10 +46,10 @@ export const BulkReadAttemptsByCardsExamples = {
                 },
                 {
                     "@type": "attempt",
-                    "card_id": 1932,
+                    "card_id": 1936,
                     "cells": [
                         {
-                            "html": "Dolore ipsum sint dolore neque facilis necessitatibus.",
+                            "html": "Magni totam dolore neque incidunt nisi.",
                             "id": "56678mefd",
                             "name": "text cell",
                             "style": {
@@ -74,10 +74,10 @@ export const BulkReadAttemptsByCardsExamples = {
                 },
                 {
                     "@type": "attempt",
-                    "card_id": 1932,
+                    "card_id": 1936,
                     "cells": [
                         {
-                            "html": "Hic repudiandae modi atque magnam sequi hic.",
+                            "html": "Voluptate fugiat perferendis itaque sed.",
                             "id": "56678mefd",
                             "name": "text cell",
                             "style": {
@@ -115,7 +115,7 @@ export const CreateAttemptExamples = {
         "content": {
             "@event": "ATTEMPT_CREATED",
             "@type": "attempt",
-            "card_id": 1921,
+            "card_id": 1925,
             "cells": [
                 {
                     "html": "some attempt cells",
@@ -179,7 +179,7 @@ export const UpdateAttemptExamples = {
         "content": {
             "@event": "ATTEMPT_UPDATED",
             "@type": "attempt",
-            "card_id": 1926,
+            "card_id": 1930,
             "cells": [
                 {
                     "html": "2!",

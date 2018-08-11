@@ -8,13 +8,13 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface AsDefaultMarkPaymentcardResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/payment_card.py/#lines-75
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/serializers/payment_card.py/#lines-75
  */
 
 export enum BulkReadPaymentcardsResponseCurrency {
@@ -62,11 +62,11 @@ export interface BulkReadPaymentcardsResponseEntity {
 }
 
 export interface BulkReadPaymentcardsResponse {
-    data: BulkReadPaymentcardsResponseEntity[];
+    payment_cards: BulkReadPaymentcardsResponseEntity[];
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/payment_card.py/#lines-52
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/payment_card.py/#lines-52
  */
 
 export interface CreatePaymentcardBody {
@@ -78,7 +78,7 @@ export interface CreatePaymentcardBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/payment_card.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/serializers/payment_card.py/#lines-9
  */
 
 export enum CreatePaymentcardResponseCurrency {
@@ -126,13 +126,13 @@ export interface CreatePaymentcardResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface DeletePaymentcardResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/views/payment_card.py/#lines-204
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/views/payment_card.py/#lines-204
  */
 
 export interface PayWithDefaultPaymentCardBody {
@@ -140,7 +140,7 @@ export interface PayWithDefaultPaymentCardBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/serializers/payment.py/#lines-9
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/serializers/payment.py/#lines-9
  */
 
 export enum PayWithDefaultPaymentCardResponseCurrency {
@@ -179,7 +179,7 @@ export interface PayWithDefaultPaymentCardResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-auth-service/src/09d74e1c1f6871739268cd74315b4f114592af2c/cosphere_auth_service/payment/models/payu.py/#lines-313
+ * https://bitbucket.org/goodai/cosphere-auth-service/src/69bb55b04713846fc3aa1a1c300a8a9ed207b2d3/cosphere_auth_service/payment/models/payu.py/#lines-313
  */
 
 export interface RenderPaymentCardWidgetResponse {

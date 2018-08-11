@@ -200,6 +200,59 @@ export class APIService {
     }
 
     /**
+     * Bricks Management domain
+     */
+    private _bricksDomain: X.BricksDomain;
+    
+    public get bricksDomain(): X.BricksDomain {
+        if (!this._bricksDomain) {
+            this._bricksDomain = this.injector.get(X.BricksDomain);
+        }
+    
+        return this._bricksDomain;
+    }
+
+    bulkReadGameattempts(gameId: any): DataState<X.BulkReadGameattemptsResponseEntity[]> {
+        return this.bricksDomain.bulkReadGameattempts(gameId);
+    }
+    
+    bulkReadGameattempts2(gameId: any): Observable<X.BulkReadGameattemptsResponseEntity[]> {
+        return this.bricksDomain.bulkReadGameattempts2(gameId);
+    }
+
+    bulkReadGames(): DataState<X.BulkReadGamesResponseEntity[]> {
+        return this.bricksDomain.bulkReadGames();
+    }
+    
+    bulkReadGames2(): Observable<X.BulkReadGamesResponseEntity[]> {
+        return this.bricksDomain.bulkReadGames2();
+    }
+
+    createGame(body: X.CreateGameBody): Observable<X.CreateGameResponse> {
+        return this.bricksDomain.createGame(body);
+    }
+
+    createGameattempt(gameId: any, body: X.CreateGameattemptBody): Observable<X.CreateGameattemptResponse> {
+        return this.bricksDomain.createGameattempt(gameId, body);
+    }
+
+    deleteGame(gameId: any): Observable<X.DeleteGameResponse> {
+        return this.bricksDomain.deleteGame(gameId);
+    }
+
+    readGame(gameId: any): DataState<X.ReadGameResponse> {
+        return this.bricksDomain.readGame(gameId);
+    }
+    
+    readGame2(gameId: any): Observable<X.ReadGameResponse> {
+        return this.bricksDomain.readGame2(gameId);
+    }
+
+    updateGame(gameId: any, body: X.UpdateGameBody): Observable<X.UpdateGameResponse> {
+        return this.bricksDomain.updateGame(gameId, body);
+    }
+
+    /**
      * Cards Management domain
      */
     private _cardsDomain: X.CardsDomain;
@@ -232,12 +285,8 @@ export class APIService {
         return this.cardsDomain.readCard(cardId);
     }
     
-    readCard2(cardId: any, params?: any): Observable<X.ReadCardResponse> {
-        return this.cardsDomain.readCard2(cardId, params);
-    }
-
-    bulkReadGeometriesOnly2(params: any): Observable<any> {
-        return this.cardsDomain.bulkReadGeometriesOnly2(params);
+    readCard2(cardId: any): Observable<X.ReadCardResponse> {
+        return this.cardsDomain.readCard2(cardId);
     }
 
     updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse> {
@@ -550,6 +599,43 @@ export class APIService {
     }
 
     /**
+     * Gossip Commands Management domain
+     */
+    private _gossipDomain: X.GossipDomain;
+    
+    public get gossipDomain(): X.GossipDomain {
+        if (!this._gossipDomain) {
+            this._gossipDomain = this.injector.get(X.GossipDomain);
+        }
+    
+        return this._gossipDomain;
+    }
+
+    bulkReadSpeechLanguages(): DataState<X.BulkReadSpeechLanguagesResponseEntity[]> {
+        return this.gossipDomain.bulkReadSpeechLanguages();
+    }
+    
+    bulkReadSpeechLanguages2(): Observable<X.BulkReadSpeechLanguagesResponseEntity[]> {
+        return this.gossipDomain.bulkReadSpeechLanguages2();
+    }
+
+    bulkReadTextLanguages(): DataState<X.BulkReadTextLanguagesResponseEntity[]> {
+        return this.gossipDomain.bulkReadTextLanguages();
+    }
+    
+    bulkReadTextLanguages2(): Observable<X.BulkReadTextLanguagesResponseEntity[]> {
+        return this.gossipDomain.bulkReadTextLanguages2();
+    }
+
+    detectSpeechLanguages(body: X.DetectSpeechLanguagesBody): Observable<X.DetectSpeechLanguagesResponse> {
+        return this.gossipDomain.detectSpeechLanguages(body);
+    }
+
+    detectTextLanguages(body: X.DetectTextLanguagesBody): Observable<X.DetectTextLanguagesResponse> {
+        return this.gossipDomain.detectTextLanguages(body);
+    }
+
+    /**
      * Hashtags Management domain
      */
     private _hashtagsDomain: X.HashtagsDomain;
@@ -588,23 +674,6 @@ export class APIService {
 
     updateHashtag(hashtagId: any, body: X.UpdateHashtagBody): Observable<X.UpdateHashtagResponse> {
         return this.hashtagsDomain.updateHashtag(hashtagId, body);
-    }
-
-    /**
-     * Internal Management domain
-     */
-    private _internalDomain: X.InternalDomain;
-    
-    public get internalDomain(): X.InternalDomain {
-        if (!this._internalDomain) {
-            this._internalDomain = this.injector.get(X.InternalDomain);
-        }
-    
-        return this._internalDomain;
-    }
-
-    deleteEntriesForUser(userId: any): Observable<X.DeleteEntriesForUserResponse> {
-        return this.internalDomain.deleteEntriesForUser(userId);
     }
 
     /**
@@ -690,12 +759,12 @@ export class APIService {
         return this.mediaitemsDomain.readMediaitem2(mediaitemId);
     }
 
-    readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
-        return this.mediaitemsDomain.readMediaitemByProcessId(processId);
+    readMediaitemByProcessId(): DataState<X.ReadMediaitemByProcessIdResponse> {
+        return this.mediaitemsDomain.readMediaitemByProcessId();
     }
     
-    readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse> {
-        return this.mediaitemsDomain.readMediaitemByProcessId2(processId);
+    readMediaitemByProcessId2(): Observable<X.ReadMediaitemByProcessIdResponse> {
+        return this.mediaitemsDomain.readMediaitemByProcessId2();
     }
 
     readOrCreateMediaitem(body: X.ReadOrCreateMediaitemBody): Observable<X.ReadOrCreateMediaitemResponse> {
@@ -733,6 +802,27 @@ export class APIService {
     
     bulkReadNotifications2(params: X.BulkReadNotificationsQuery): Observable<X.BulkReadNotificationsResponseEntity[]> {
         return this.notificationsDomain.bulkReadNotifications2(params);
+    }
+
+    /**
+     * Nouns Management domain
+     */
+    private _nounsDomain: X.NounsDomain;
+    
+    public get nounsDomain(): X.NounsDomain {
+        if (!this._nounsDomain) {
+            this._nounsDomain = this.injector.get(X.NounsDomain);
+        }
+    
+        return this._nounsDomain;
+    }
+
+    bulkReadIcons(params: X.BulkReadIconsQuery): DataState<X.BulkReadIconsResponseEntity[]> {
+        return this.nounsDomain.bulkReadIcons(params);
+    }
+    
+    bulkReadIcons2(params: X.BulkReadIconsQuery): Observable<X.BulkReadIconsResponseEntity[]> {
+        return this.nounsDomain.bulkReadIcons2(params);
     }
 
     /**
@@ -836,6 +926,120 @@ export class APIService {
 
     updatePaymentStatus(body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse> {
         return this.paymentsDomain.updatePaymentStatus(body);
+    }
+
+    /**
+     * Processes Management domain
+     */
+    private _processesDomain: X.ProcessesDomain;
+    
+    public get processesDomain(): X.ProcessesDomain {
+        if (!this._processesDomain) {
+            this._processesDomain = this.injector.get(X.ProcessesDomain);
+        }
+    
+        return this._processesDomain;
+    }
+
+    createDeletionProcess(body: X.CreateDeletionProcessBody): Observable<X.CreateDeletionProcessResponse> {
+        return this.processesDomain.createDeletionProcess(body);
+    }
+
+    createDownloadProcess(body: X.CreateDownloadProcessBody): Observable<X.CreateDownloadProcessResponse> {
+        return this.processesDomain.createDownloadProcess(body);
+    }
+
+    createMediaLock(body: X.CreateMediaLockBody): Observable<X.CreateMediaLockResponse> {
+        return this.processesDomain.createMediaLock(body);
+    }
+
+    createUploadProcess(body: X.CreateUploadProcessBody): Observable<X.CreateUploadProcessResponse> {
+        return this.processesDomain.createUploadProcess(body);
+    }
+
+    readInvariants(params: X.ReadInvariantsQuery): DataState<X.ReadInvariantsResponse> {
+        return this.processesDomain.readInvariants(params);
+    }
+    
+    readInvariants2(params: X.ReadInvariantsQuery): Observable<X.ReadInvariantsResponse> {
+        return this.processesDomain.readInvariants2(params);
+    }
+
+    readProcessState(params: X.ReadProcessStateQuery): DataState<X.ReadProcessStateResponse> {
+        return this.processesDomain.readProcessState(params);
+    }
+    
+    readProcessState2(params: X.ReadProcessStateQuery): Observable<X.ReadProcessStateResponse> {
+        return this.processesDomain.readProcessState2(params);
+    }
+
+    signProcess(params: X.SignProcessQuery): DataState<X.SignProcessResponse> {
+        return this.processesDomain.signProcess(params);
+    }
+    
+    signProcess2(params: X.SignProcessQuery): Observable<X.SignProcessResponse> {
+        return this.processesDomain.signProcess2(params);
+    }
+
+    watchConversionStatus(waiterId: any, params: X.WatchConversionStatusQuery): DataState<X.WatchConversionStatusResponse> {
+        return this.processesDomain.watchConversionStatus(waiterId, params);
+    }
+    
+    watchConversionStatus2(waiterId: any, params: X.WatchConversionStatusQuery): Observable<X.WatchConversionStatusResponse> {
+        return this.processesDomain.watchConversionStatus2(waiterId, params);
+    }
+
+    /**
+     * Quizzer Entities Management domain
+     */
+    private _quizzerDomain: X.QuizzerDomain;
+    
+    public get quizzerDomain(): X.QuizzerDomain {
+        if (!this._quizzerDomain) {
+            this._quizzerDomain = this.injector.get(X.QuizzerDomain);
+        }
+    
+        return this._quizzerDomain;
+    }
+
+    bulkReadQuizattempts(quizId: any): DataState<X.BulkReadQuizattemptsResponseEntity[]> {
+        return this.quizzerDomain.bulkReadQuizattempts(quizId);
+    }
+    
+    bulkReadQuizattempts2(quizId: any): Observable<X.BulkReadQuizattemptsResponseEntity[]> {
+        return this.quizzerDomain.bulkReadQuizattempts2(quizId);
+    }
+
+    bulkReadQuizzes(): DataState<X.BulkReadQuizzesResponseEntity[]> {
+        return this.quizzerDomain.bulkReadQuizzes();
+    }
+    
+    bulkReadQuizzes2(): Observable<X.BulkReadQuizzesResponseEntity[]> {
+        return this.quizzerDomain.bulkReadQuizzes2();
+    }
+
+    createQuiz(body: X.CreateQuizBody): Observable<X.CreateQuizResponse> {
+        return this.quizzerDomain.createQuiz(body);
+    }
+
+    createQuizattempt(quizId: any, body: X.CreateQuizattemptBody): Observable<X.CreateQuizattemptResponse> {
+        return this.quizzerDomain.createQuizattempt(quizId, body);
+    }
+
+    deleteQuiz(quizId: any): Observable<X.DeleteQuizResponse> {
+        return this.quizzerDomain.deleteQuiz(quizId);
+    }
+
+    readQuiz(quizId: any): DataState<X.ReadQuizResponse> {
+        return this.quizzerDomain.readQuiz(quizId);
+    }
+    
+    readQuiz2(quizId: any): Observable<X.ReadQuizResponse> {
+        return this.quizzerDomain.readQuiz2(quizId);
+    }
+
+    updateQuiz(quizId: any, body: X.UpdateQuizBody): Observable<X.UpdateQuizResponse> {
+        return this.quizzerDomain.updateQuiz(quizId, body);
     }
 
     /**

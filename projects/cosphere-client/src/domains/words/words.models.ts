@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/word/views.py/#lines-31
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/word/views.py/#lines-31
  */
 
 export interface BulkReadWordsQuery {
@@ -18,7 +18,7 @@ export interface BulkReadWordsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/word/serializers.py/#lines-19
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/word/serializers.py/#lines-19
  */
 
 export interface BulkReadWordsResponseEntity {
@@ -26,5 +26,5 @@ export interface BulkReadWordsResponseEntity {
 }
 
 export interface BulkReadWordsResponse {
-    data: BulkReadWordsResponseEntity[];
+    words: BulkReadWordsResponseEntity[];
 }

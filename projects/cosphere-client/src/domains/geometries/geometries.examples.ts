@@ -18,8 +18,8 @@ export const BulkReadGeometriesExamples = {
             "geometries": [
                 {
                     "@type": "geometry",
-                    "card_id": 1200,
-                    "id": 1199,
+                    "card_id": 1204,
+                    "id": 1206,
                     "is_random": true,
                     "recall_score": 0.2,
                     "x": 0,
@@ -27,8 +27,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1201,
-                    "id": 1200,
+                    "card_id": 1205,
+                    "id": 1207,
                     "is_random": true,
                     "recall_score": 0.4,
                     "x": 10,
@@ -36,8 +36,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1202,
-                    "id": 1201,
+                    "card_id": 1206,
+                    "id": 1208,
                     "is_random": true,
                     "recall_score": 0.1,
                     "x": -5,
@@ -45,8 +45,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1203,
-                    "id": 1202,
+                    "card_id": 1207,
+                    "id": 1209,
                     "is_random": true,
                     "recall_score": 0.8,
                     "x": 14,
@@ -54,8 +54,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1204,
-                    "id": 1203,
+                    "card_id": 1208,
+                    "id": 1210,
                     "is_random": false,
                     "recall_score": 0.9,
                     "x": -22,
@@ -63,8 +63,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1205,
-                    "id": 1204,
+                    "card_id": 1209,
+                    "id": 1211,
                     "is_random": false,
                     "recall_score": 1.0,
                     "x": -42,
@@ -72,8 +72,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1206,
-                    "id": 1205,
+                    "card_id": 1210,
+                    "id": 1212,
                     "is_random": false,
                     "recall_score": 0.3,
                     "x": 31,
@@ -81,8 +81,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1207,
-                    "id": 1206,
+                    "card_id": 1211,
+                    "id": 1213,
                     "is_random": false,
                     "recall_score": 0.4,
                     "x": -30,
@@ -90,8 +90,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1208,
-                    "id": 1207,
+                    "card_id": 1212,
+                    "id": 1214,
                     "is_random": true,
                     "recall_score": 0.1,
                     "x": 23,
@@ -99,8 +99,8 @@ export const BulkReadGeometriesExamples = {
                 },
                 {
                     "@type": "geometry",
-                    "card_id": 1209,
-                    "id": 1208,
+                    "card_id": 1213,
+                    "id": 1215,
                     "is_random": true,
                     "recall_score": 0.8,
                     "x": 67,
@@ -139,8 +139,8 @@ export const BulkUpdateGeometriesExamples = {
             "geometries": [
                 {
                     "@type": "geometry",
-                    "card_id": 1119,
-                    "id": 1118,
+                    "card_id": 1123,
+                    "id": 1125,
                     "is_random": false,
                     "recall_score": null,
                     "x": 0,
@@ -176,12 +176,12 @@ export const ReadGeometryByCardExamples = {
         "content": {
             "@event": "GEOMETRY_BY_CARD_READ",
             "@type": "geometry",
-            "card_id": 1091,
-            "id": 1090,
+            "card_id": 1095,
+            "id": 1097,
             "is_random": false,
             "recall_score": null,
-            "x": 2294,
-            "y": 1868
+            "x": 3115,
+            "y": 9597
         },
         "content_type": "application/json",
         "status": 200
@@ -209,27 +209,27 @@ export const ReadGraphExamples = {
             "links": [
                 {
                     "@type": "link",
-                    "source": 1215,
-                    "target": 1217,
-                    "value": 0.0
+                    "source": 1219,
+                    "target": 1221,
+                    "value": 0.46
                 },
                 {
                     "@type": "link",
-                    "source": 1217,
-                    "target": 1215,
-                    "value": 0.83
+                    "source": 1221,
+                    "target": 1219,
+                    "value": 0.68
                 }
             ],
             "nodes": [
                 {
                     "@type": "node",
-                    "id": 1215,
+                    "id": 1219,
                     "x": 3.0,
                     "y": 4.0
                 },
                 {
                     "@type": "node",
-                    "id": 1217,
+                    "id": 1221,
                     "x": 5.0,
                     "y": 78.0
                 }

@@ -73,7 +73,7 @@ export const ChangeSubscriptionExamples = {
         "content": {
             "@event": "ACCOUNT_CONFIRMED_TO_HAVE_REQUESTED_SUBSCRIPTION",
             "@type": "error",
-            "user_id": 494
+            "user_id": 498
         },
         "content_type": "application/json",
         "status": 400
@@ -88,7 +88,7 @@ export const ChangeSubscriptionExamples = {
                     "\"FREEEEE\" is not a valid choice."
                 ]
             },
-            "user_id": 496
+            "user_id": 500
         },
         "content_type": "application/json",
         "status": 400

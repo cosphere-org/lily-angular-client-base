@@ -19,7 +19,7 @@ export const BulkReadFragmentWordsExamples = {
                 {
                     "@type": "word",
                     "count": 1,
-                    "id": 134,
+                    "id": 130,
                     "text": "records"
                 }
             ]
@@ -41,7 +41,7 @@ export const BulkReadPublishedFragmentWordsExamples = {
                 {
                     "@type": "word",
                     "count": 1,
-                    "id": 145,
+                    "id": 141,
                     "text": "records"
                 }
             ]

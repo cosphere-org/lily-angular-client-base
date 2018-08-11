@@ -54,7 +54,7 @@ export const CreateExternalAppAuthTokenExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 318
+            "user_id": 322
         },
         "content_type": "application/json",
         "status": 400
@@ -64,7 +64,7 @@ export const CreateExternalAppAuthTokenExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 320
+            "user_id": 324
         },
         "content_type": "application/json",
         "status": 404
@@ -84,7 +84,7 @@ export const CreateExternalAppAuthTokenExamples = {
         "content": {
             "@event": "FOUND_MULTIPLE_INSTANCES_OF_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 319
+            "user_id": 323
         },
         "content_type": "application/json",
         "status": 500
@@ -120,7 +120,7 @@ export const ReadExternalappconfExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 313
+            "user_id": 317
         },
         "content_type": "application/json",
         "status": 400
@@ -130,7 +130,7 @@ export const ReadExternalappconfExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 315
+            "user_id": 319
         },
         "content_type": "application/json",
         "status": 404
@@ -140,7 +140,7 @@ export const ReadExternalappconfExamples = {
         "content": {
             "@event": "FOUND_MULTIPLE_INSTANCES_OF_EXTERNALAPPCONF",
             "@type": "error",
-            "user_id": 314
+            "user_id": 318
         },
         "content_type": "application/json",
         "status": 500

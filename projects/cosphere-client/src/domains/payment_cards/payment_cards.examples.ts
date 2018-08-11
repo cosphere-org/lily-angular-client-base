@@ -24,7 +24,7 @@ export const AsDefaultMarkPaymentcardExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_PAYMENTCARD",
             "@type": "error",
-            "user_id": 467
+            "user_id": 471
         },
         "content_type": "application/json",
         "status": 404
@@ -52,9 +52,9 @@ export const BulkReadPaymentcardsExamples = {
                     "payments": [
                         {
                             "@type": "payment",
-                            "amount": "139",
+                            "amount": "114",
                             "created_timestamp": 1512213241.0,
-                            "display_amount": "1.39",
+                            "display_amount": "1.14",
                             "product": {
                                 "@type": "product",
                                 "currency": "PLN",
@@ -80,9 +80,9 @@ export const BulkReadPaymentcardsExamples = {
                     "payments": [
                         {
                             "@type": "payment",
-                            "amount": "182",
+                            "amount": "102",
                             "created_timestamp": 1511349241.0,
-                            "display_amount": "1.82",
+                            "display_amount": "1.02",
                             "product": {
                                 "@type": "product",
                                 "currency": "PLN",
@@ -149,7 +149,7 @@ export const CreatePaymentcardExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 475
+            "user_id": 479
         },
         "content_type": "application/json",
         "status": 400
@@ -174,7 +174,7 @@ export const DeletePaymentcardExamples = {
             "@event": "COULD_NOT_REMOVE_DEFAULT_PAYMENT_CARD",
             "@type": "error",
             "payment_card_id": "89",
-            "user_id": 479
+            "user_id": 483
         },
         "content_type": "application/json",
         "status": 400
@@ -184,7 +184,7 @@ export const DeletePaymentcardExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_PAYMENTCARD",
             "@type": "error",
-            "user_id": 483
+            "user_id": 487
         },
         "content_type": "application/json",
         "status": 404
@@ -200,7 +200,7 @@ export const PayWithDefaultPaymentCardExamples = {
             "@event": "WITH_DEFAULT_PAYMENT_CARD_PAID",
             "@type": "payment",
             "amount": "190",
-            "created_timestamp": 1528833101.277283,
+            "created_timestamp": 1533064001.652019,
             "display_amount": "1.90",
             "product": {
                 "@type": "product",
@@ -226,7 +226,7 @@ export const PayWithDefaultPaymentCardExamples = {
                     "This field is required."
                 ]
             },
-            "user_id": 487
+            "user_id": 491
         },
         "content_type": "application/json",
         "status": 400
@@ -236,7 +236,7 @@ export const PayWithDefaultPaymentCardExamples = {
         "content": {
             "@event": "BROKEN",
             "@type": "error",
-            "user_id": 486
+            "user_id": 490
         },
         "content_type": "application/json",
         "status": 400
@@ -246,7 +246,7 @@ export const PayWithDefaultPaymentCardExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_INVOICE",
             "@type": "error",
-            "user_id": 488
+            "user_id": 492
         },
         "content_type": "application/json",
         "status": 404

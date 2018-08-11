@@ -6,7 +6,7 @@
  * Fragments Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/views/crud.py/#lines-78
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/views/crud.py/#lines-77
  */
 export interface BulkReadFragmentsQuery {
     ids: number[];
@@ -17,7 +17,7 @@ export interface BulkReadFragmentsQuery {
     query?: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-108
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-108
  */
 export interface BulkReadFragmentsResponseEntity {
     description: string;
@@ -29,10 +29,10 @@ export interface BulkReadFragmentsResponseEntity {
     title: string;
 }
 export interface BulkReadFragmentsResponse {
-    data: BulkReadFragmentsResponseEntity[];
+    fragments: BulkReadFragmentsResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/views/public.py/#lines-26
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/views/public.py/#lines-26
  */
 export interface BulkReadPublishedFragmentsQuery {
     limit?: number;
@@ -40,7 +40,7 @@ export interface BulkReadPublishedFragmentsQuery {
     query?: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-43
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-43
  */
 export interface BulkReadPublishedFragmentsResponseEntity {
     description: string;
@@ -49,10 +49,10 @@ export interface BulkReadPublishedFragmentsResponseEntity {
     title: string;
 }
 export interface BulkReadPublishedFragmentsResponse {
-    data: BulkReadPublishedFragmentsResponseEntity[];
+    fragments: BulkReadPublishedFragmentsResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-50
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-50
  */
 export interface CreateFragmentResponse {
     description: string;
@@ -64,22 +64,22 @@ export interface CreateFragmentResponse {
     title: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 export interface DeleteFragmentResponse {
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 export interface MergeFragmentResponse {
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 export interface PublishFragmentResponse {
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-127
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-127
  */
 export interface ReadFragmentResponse {
     cards_life_cycles: Object[];
@@ -94,7 +94,7 @@ export interface ReadFragmentResponse {
     title: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-150
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-150
  */
 export interface ReadFragmentDiffResponse {
     created_card_ids: number[];
@@ -111,13 +111,13 @@ export interface ReadFragmentDiffResponse {
     updated_path_ids: number[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/serializers.py/#lines-175
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/serializers.py/#lines-175
  */
 export interface ReadFragmentSampleResponse {
     cards: Object[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/cosphere_fragment_service/fragment/views/crud.py/#lines-199
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/cosphere_fragment_service/fragment/views/crud.py/#lines-198
  */
 export interface UpdateFragmentBody {
     card_ids: number[];
@@ -127,7 +127,7 @@ export interface UpdateFragmentBody {
     title: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-fragment-service/src/b023ad5da15027683028609c140260b0a1808452/.venv/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-fragment-service/src/3709b52e6d7c7399154582e8055c0e76139a4c00/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 export interface UpdateFragmentResponse {
 }

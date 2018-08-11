@@ -6,7 +6,7 @@
  * MediaItems Management Domain Models
  */
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/views.py/#lines-88
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/views.py/#lines-88
  */
 export interface BulkReadMediaitemsQuery {
     limit?: number;
@@ -15,7 +15,7 @@ export interface BulkReadMediaitemsQuery {
     query?: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-45
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-45
  */
 export interface BulkReadMediaitemsResponseEntity {
     content_host?: string;
@@ -30,22 +30,22 @@ export interface BulkReadMediaitemsResponseEntity {
     web_representations?: Object;
 }
 export interface BulkReadMediaitemsResponse {
-    data: BulkReadMediaitemsResponseEntity[];
+    mediaitems: BulkReadMediaitemsResponseEntity[];
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/views.py/#lines-266
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/views.py/#lines-266
  */
 export interface DeleteMediaitemQuery {
     card_ids: number[];
     force_delete?: boolean;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 export interface DeleteMediaitemResponse {
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 export interface ReadMediaitemResponse {
     content_host?: string;
@@ -60,7 +60,7 @@ export interface ReadMediaitemResponse {
     web_representations?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 export interface ReadMediaitemByProcessIdResponse {
     content_host?: string;
@@ -75,7 +75,7 @@ export interface ReadMediaitemByProcessIdResponse {
     web_representations?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/parsers.py/#lines-72
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/parsers.py/#lines-72
  */
 export interface ReadOrCreateMediaitemBody {
     card_ids: number[];
@@ -87,7 +87,7 @@ export interface ReadOrCreateMediaitemBody {
     type: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 export interface ReadOrCreateMediaitemResponse {
     content_host?: string;
@@ -102,7 +102,7 @@ export interface ReadOrCreateMediaitemResponse {
     web_representations?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/parsers.py/#lines-99
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/parsers.py/#lines-99
  */
 export interface UpdateMediaitemBody {
     card_ids: number[];
@@ -112,7 +112,7 @@ export interface UpdateMediaitemBody {
     type: string;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 export interface UpdateMediaitemResponse {
     content_host?: string;
@@ -127,7 +127,7 @@ export interface UpdateMediaitemResponse {
     web_representations?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/views.py/#lines-338
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/views.py/#lines-338
  */
 export interface UpdateMediaitemRepresentationBody {
     meta?: Object;
@@ -136,7 +136,7 @@ export interface UpdateMediaitemRepresentationBody {
     web_representations?: Object;
 }
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 export interface UpdateMediaitemRepresentationResponse {
     content_host?: string;

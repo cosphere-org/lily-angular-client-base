@@ -67,6 +67,21 @@ export declare class APIService {
     createGoogleBasedMobileAuthToken(body: X.CreateGoogleBasedMobileAuthTokenBody): Observable<X.CreateGoogleBasedMobileAuthTokenResponse>;
     updateAuthToken(): Observable<X.UpdateAuthTokenResponse>;
     /**
+     * Bricks Management domain
+     */
+    private _bricksDomain;
+    readonly bricksDomain: X.BricksDomain;
+    bulkReadGameattempts(gameId: any): DataState<X.BulkReadGameattemptsResponseEntity[]>;
+    bulkReadGameattempts2(gameId: any): Observable<X.BulkReadGameattemptsResponseEntity[]>;
+    bulkReadGames(): DataState<X.BulkReadGamesResponseEntity[]>;
+    bulkReadGames2(): Observable<X.BulkReadGamesResponseEntity[]>;
+    createGame(body: X.CreateGameBody): Observable<X.CreateGameResponse>;
+    createGameattempt(gameId: any, body: X.CreateGameattemptBody): Observable<X.CreateGameattemptResponse>;
+    deleteGame(gameId: any): Observable<X.DeleteGameResponse>;
+    readGame(gameId: any): DataState<X.ReadGameResponse>;
+    readGame2(gameId: any): Observable<X.ReadGameResponse>;
+    updateGame(gameId: any, body: X.UpdateGameBody): Observable<X.UpdateGameResponse>;
+    /**
      * Cards Management domain
      */
     private _cardsDomain;
@@ -76,8 +91,7 @@ export declare class APIService {
     bulkReadCards2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]>;
     createCard(body: X.CreateCardBody): Observable<X.CreateCardResponse>;
     readCard(cardId: any): DataState<X.ReadCardResponse>;
-    readCard2(cardId: any, params?: any): Observable<X.ReadCardResponse>;
-    bulkReadGeometriesOnly2(params: any): Observable<any>;
+    readCard2(cardId: any): Observable<X.ReadCardResponse>;
     updateCard(cardId: any, body: X.UpdateCardBody): Observable<X.UpdateCardResponse>;
     /**
      * Categories Management domain
@@ -172,6 +186,17 @@ export declare class APIService {
     readGraph(params: X.ReadGraphQuery): DataState<X.ReadGraphResponse>;
     readGraph2(params: X.ReadGraphQuery): Observable<X.ReadGraphResponse>;
     /**
+     * Gossip Commands Management domain
+     */
+    private _gossipDomain;
+    readonly gossipDomain: X.GossipDomain;
+    bulkReadSpeechLanguages(): DataState<X.BulkReadSpeechLanguagesResponseEntity[]>;
+    bulkReadSpeechLanguages2(): Observable<X.BulkReadSpeechLanguagesResponseEntity[]>;
+    bulkReadTextLanguages(): DataState<X.BulkReadTextLanguagesResponseEntity[]>;
+    bulkReadTextLanguages2(): Observable<X.BulkReadTextLanguagesResponseEntity[]>;
+    detectSpeechLanguages(body: X.DetectSpeechLanguagesBody): Observable<X.DetectSpeechLanguagesResponse>;
+    detectTextLanguages(body: X.DetectTextLanguagesBody): Observable<X.DetectTextLanguagesResponse>;
+    /**
      * Hashtags Management domain
      */
     private _hashtagsDomain;
@@ -183,12 +208,6 @@ export declare class APIService {
     readHashtagsToc(params: X.ReadHashtagsTocQuery): DataState<X.ReadHashtagsTocResponse>;
     readHashtagsToc2(params: X.ReadHashtagsTocQuery): Observable<X.ReadHashtagsTocResponse>;
     updateHashtag(hashtagId: any, body: X.UpdateHashtagBody): Observable<X.UpdateHashtagResponse>;
-    /**
-     * Internal Management domain
-     */
-    private _internalDomain;
-    readonly internalDomain: X.InternalDomain;
-    deleteEntriesForUser(userId: any): Observable<X.DeleteEntriesForUserResponse>;
     /**
      * Invoice Management domain
      */
@@ -215,8 +234,8 @@ export declare class APIService {
     deleteMediaitem(mediaitemId: any, params: X.DeleteMediaitemQuery): Observable<X.DeleteMediaitemResponse>;
     readMediaitem(mediaitemId: any): DataState<X.ReadMediaitemResponse>;
     readMediaitem2(mediaitemId: any): Observable<X.ReadMediaitemResponse>;
-    readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse>;
-    readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse>;
+    readMediaitemByProcessId(): DataState<X.ReadMediaitemByProcessIdResponse>;
+    readMediaitemByProcessId2(): Observable<X.ReadMediaitemByProcessIdResponse>;
     readOrCreateMediaitem(body: X.ReadOrCreateMediaitemBody): Observable<X.ReadOrCreateMediaitemResponse>;
     updateMediaitem(mediaitemId: any, body: X.UpdateMediaitemBody): Observable<X.UpdateMediaitemResponse>;
     updateMediaitemRepresentation(mediaitemId: any, body: X.UpdateMediaitemRepresentationBody): Observable<X.UpdateMediaitemRepresentationResponse>;
@@ -228,6 +247,13 @@ export declare class APIService {
     acknowledgeNotification(notificationId: any): Observable<X.AcknowledgeNotificationResponse>;
     bulkReadNotifications(params: X.BulkReadNotificationsQuery): DataState<X.BulkReadNotificationsResponseEntity[]>;
     bulkReadNotifications2(params: X.BulkReadNotificationsQuery): Observable<X.BulkReadNotificationsResponseEntity[]>;
+    /**
+     * Nouns Management domain
+     */
+    private _nounsDomain;
+    readonly nounsDomain: X.NounsDomain;
+    bulkReadIcons(params: X.BulkReadIconsQuery): DataState<X.BulkReadIconsResponseEntity[]>;
+    bulkReadIcons2(params: X.BulkReadIconsQuery): Observable<X.BulkReadIconsResponseEntity[]>;
     /**
      * Paths Management domain
      */
@@ -259,6 +285,38 @@ export declare class APIService {
     private _paymentsDomain;
     readonly paymentsDomain: X.PaymentsDomain;
     updatePaymentStatus(body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse>;
+    /**
+     * Processes Management domain
+     */
+    private _processesDomain;
+    readonly processesDomain: X.ProcessesDomain;
+    createDeletionProcess(body: X.CreateDeletionProcessBody): Observable<X.CreateDeletionProcessResponse>;
+    createDownloadProcess(body: X.CreateDownloadProcessBody): Observable<X.CreateDownloadProcessResponse>;
+    createMediaLock(body: X.CreateMediaLockBody): Observable<X.CreateMediaLockResponse>;
+    createUploadProcess(body: X.CreateUploadProcessBody): Observable<X.CreateUploadProcessResponse>;
+    readInvariants(params: X.ReadInvariantsQuery): DataState<X.ReadInvariantsResponse>;
+    readInvariants2(params: X.ReadInvariantsQuery): Observable<X.ReadInvariantsResponse>;
+    readProcessState(params: X.ReadProcessStateQuery): DataState<X.ReadProcessStateResponse>;
+    readProcessState2(params: X.ReadProcessStateQuery): Observable<X.ReadProcessStateResponse>;
+    signProcess(params: X.SignProcessQuery): DataState<X.SignProcessResponse>;
+    signProcess2(params: X.SignProcessQuery): Observable<X.SignProcessResponse>;
+    watchConversionStatus(waiterId: any, params: X.WatchConversionStatusQuery): DataState<X.WatchConversionStatusResponse>;
+    watchConversionStatus2(waiterId: any, params: X.WatchConversionStatusQuery): Observable<X.WatchConversionStatusResponse>;
+    /**
+     * Quizzer Entities Management domain
+     */
+    private _quizzerDomain;
+    readonly quizzerDomain: X.QuizzerDomain;
+    bulkReadQuizattempts(quizId: any): DataState<X.BulkReadQuizattemptsResponseEntity[]>;
+    bulkReadQuizattempts2(quizId: any): Observable<X.BulkReadQuizattemptsResponseEntity[]>;
+    bulkReadQuizzes(): DataState<X.BulkReadQuizzesResponseEntity[]>;
+    bulkReadQuizzes2(): Observable<X.BulkReadQuizzesResponseEntity[]>;
+    createQuiz(body: X.CreateQuizBody): Observable<X.CreateQuizResponse>;
+    createQuizattempt(quizId: any, body: X.CreateQuizattemptBody): Observable<X.CreateQuizattemptResponse>;
+    deleteQuiz(quizId: any): Observable<X.DeleteQuizResponse>;
+    readQuiz(quizId: any): DataState<X.ReadQuizResponse>;
+    readQuiz2(quizId: any): Observable<X.ReadQuizResponse>;
+    updateQuiz(quizId: any, body: X.UpdateQuizBody): Observable<X.UpdateQuizResponse>;
     /**
      * Recall Management domain
      */

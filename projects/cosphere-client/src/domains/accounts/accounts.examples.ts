@@ -49,7 +49,6 @@ export const ActivateAccountExamples = {
         "content": {
             "@event": "COULD_NOT_FIND_ACCOUNT",
             "@type": "error",
-            "email": "jake@whatever.com",
             "user_id": "anonymous"
         },
         "content_type": "application/json",
@@ -97,7 +96,7 @@ export const ChangePasswordExamples = {
                     "Ensure this field has at least 8 characters."
                 ]
             },
-            "user_id": 254
+            "user_id": 258
         },
         "content_type": "application/json",
         "status": 400
@@ -165,7 +164,7 @@ export const ReadAccountExamples = {
             "@event": "ACCOUNT_READ",
             "@type": "account",
             "atype": "LEARNER",
-            "avatar_uri": "http://www.hayes-watsica.info/main/blog/wp-content/faq.php",
+            "avatar_uri": "http://flatley.com/search/explore/login.html",
             "show_in_ranking": true,
             "user_id": 221,
             "username": "l0@doll.org"

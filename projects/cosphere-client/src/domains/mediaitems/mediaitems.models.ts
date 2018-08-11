@@ -8,7 +8,7 @@
  */
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/views.py/#lines-88
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/views.py/#lines-88
  */
 
 export interface BulkReadMediaitemsQuery {
@@ -19,7 +19,7 @@ export interface BulkReadMediaitemsQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-45
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-45
  */
 
 export interface BulkReadMediaitemsResponseEntity {
@@ -36,11 +36,11 @@ export interface BulkReadMediaitemsResponseEntity {
 }
 
 export interface BulkReadMediaitemsResponse {
-    data: BulkReadMediaitemsResponseEntity[];
+    mediaitems: BulkReadMediaitemsResponseEntity[];
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/views.py/#lines-266
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/views.py/#lines-266
  */
 
 export interface DeleteMediaitemQuery {
@@ -49,13 +49,13 @@ export interface DeleteMediaitemQuery {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/src/lily/lily/base/serializers.py/#lines-158
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/.venv/src/lily/lily/base/serializers.py/#lines-158
  */
 
 export interface DeleteMediaitemResponse {}
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 
 export interface ReadMediaitemResponse {
@@ -72,7 +72,7 @@ export interface ReadMediaitemResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 
 export interface ReadMediaitemByProcessIdResponse {
@@ -89,7 +89,7 @@ export interface ReadMediaitemByProcessIdResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/parsers.py/#lines-72
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/parsers.py/#lines-72
  */
 
 export interface ReadOrCreateMediaitemBody {
@@ -103,7 +103,7 @@ export interface ReadOrCreateMediaitemBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 
 export interface ReadOrCreateMediaitemResponse {
@@ -120,7 +120,7 @@ export interface ReadOrCreateMediaitemResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/parsers.py/#lines-99
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/parsers.py/#lines-99
  */
 
 export interface UpdateMediaitemBody {
@@ -132,7 +132,7 @@ export interface UpdateMediaitemBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 
 export interface UpdateMediaitemResponse {
@@ -149,7 +149,7 @@ export interface UpdateMediaitemResponse {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/views.py/#lines-338
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/views.py/#lines-338
  */
 
 export interface UpdateMediaitemRepresentationBody {
@@ -160,7 +160,7 @@ export interface UpdateMediaitemRepresentationBody {
 }
 
 /**
- * https://bitbucket.org/goodai/cosphere-entity-service/src/b8dec3cf13d1897109220787f995546558de477d/cosphere_entity_service/mediaitem/serializers.py/#lines-8
+ * https://bitbucket.org/goodai/cosphere-entity-service/src/5f215fabba7fa3925151c098fad0051162452821/cosphere_entity_service/mediaitem/serializers.py/#lines-8
  */
 
 export interface UpdateMediaitemRepresentationResponse {
