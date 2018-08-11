@@ -1,1 +1,0 @@
-[{"__symbolic":"module","version":4,"metadata":{"BulkReadAttemptsByCardsResponseEntity":{"__symbolic":"interface"},"BulkReadAttemptsByCardsResponse":{"__symbolic":"interface"},"CreateAttemptBody":{"__symbolic":"interface"},"CreateAttemptResponse":{"__symbolic":"interface"},"UpdateAttemptBody":{"__symbolic":"interface"},"UpdateAttemptResponse":{"__symbolic":"interface"}}}]

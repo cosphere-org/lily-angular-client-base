@@ -1,1 +1,0 @@
-[{"__symbolic":"module","version":4,"metadata":{"AcknowledgeNotificationResponse":{"__symbolic":"interface"},"BulkReadNotificationsQuery":{"__symbolic":"interface"},"BulkReadNotificationsResponseKind":{"FRAGMENT_UPDATE":"FRAGMENT_UPDATE"},"BulkReadNotificationsResponseEntity":{"__symbolic":"interface"},"BulkReadNotificationsResponse":{"__symbolic":"interface"}}}]
