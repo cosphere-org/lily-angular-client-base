@@ -27,11 +27,11 @@ export class MediaitemsDomain {
      * List MediaItems
      */
     public bulkReadMediaitems(params: X.BulkReadMediaitemsQuery): DataState<X.BulkReadMediaitemsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'mediaitems', authorizationRequired: true });
     }
     
     public bulkReadMediaitems2(params: X.BulkReadMediaitemsQuery): Observable<X.BulkReadMediaitemsResponseEntity[]> {
-        return this.client.get<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadMediaitemsResponseEntity[]>('/mediaitems/', { params, responseMap: 'mediaitems', authorizationRequired: true });
     }
 
     /**
@@ -66,12 +66,12 @@ export class MediaitemsDomain {
      *
      * Read MediaItem by Process Id
      */
-    public readMediaitemByProcessId(): DataState<X.ReadMediaitemByProcessIdResponse> {
-        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>('/mediaitems/by_process/(?P<process_id>[\w+\=]+)', { authorizationRequired: true });
+    public readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
+        return this.client.getDataState<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
     }
     
-    public readMediaitemByProcessId2(): Observable<X.ReadMediaitemByProcessIdResponse> {
-        return this.client.get<X.ReadMediaitemByProcessIdResponse>('/mediaitems/by_process/(?P<process_id>[\w+\=]+)', { authorizationRequired: true });
+    public readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse> {
+        return this.client.get<X.ReadMediaitemByProcessIdResponse>(`/mediaitems/by_process/${processId}`, { authorizationRequired: true });
     }
 
     /**

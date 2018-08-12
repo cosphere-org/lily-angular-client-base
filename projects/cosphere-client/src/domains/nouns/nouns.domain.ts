@@ -24,11 +24,11 @@ export class NounsDomain {
      * Bulk Read Noun Project Icons
      */
     public bulkReadIcons(params: X.BulkReadIconsQuery): DataState<X.BulkReadIconsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadIconsResponseEntity[]>('/nouns/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadIconsResponseEntity[]>('/nouns/', { params, responseMap: 'icons', authorizationRequired: true });
     }
     
     public bulkReadIcons2(params: X.BulkReadIconsQuery): Observable<X.BulkReadIconsResponseEntity[]> {
-        return this.client.get<X.BulkReadIconsResponseEntity[]>('/nouns/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadIconsResponseEntity[]>('/nouns/', { params, responseMap: 'icons', authorizationRequired: true });
     }
 
 }

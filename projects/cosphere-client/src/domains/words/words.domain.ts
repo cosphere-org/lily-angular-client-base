@@ -27,11 +27,11 @@ export class WordsDomain {
      * List Words by first character. It allows one to fetch list of words by first character.
      */
     public bulkReadWords(params: X.BulkReadWordsQuery): DataState<X.BulkReadWordsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadWordsResponseEntity[]>('/words/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadWordsResponseEntity[]>('/words/', { params, responseMap: 'words', authorizationRequired: true });
     }
     
     public bulkReadWords2(params: X.BulkReadWordsQuery): Observable<X.BulkReadWordsResponseEntity[]> {
-        return this.client.get<X.BulkReadWordsResponseEntity[]>('/words/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadWordsResponseEntity[]>('/words/', { params, responseMap: 'words', authorizationRequired: true });
     }
 
 }

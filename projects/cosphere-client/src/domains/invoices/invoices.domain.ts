@@ -27,11 +27,11 @@ export class InvoicesDomain {
      * Enables the the User to list all of the Invoices which were generated for his Donations or Subscription payments.
      */
     public bulkReadInvoices(): DataState<X.BulkReadInvoicesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'invoices', authorizationRequired: true });
     }
     
     public bulkReadInvoices2(): Observable<X.BulkReadInvoicesResponseEntity[]> {
-        return this.client.get<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadInvoicesResponseEntity[]>('/payments/invoices/', { responseMap: 'invoices', authorizationRequired: true });
     }
 
     /**

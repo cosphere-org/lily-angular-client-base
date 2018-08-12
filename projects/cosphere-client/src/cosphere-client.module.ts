@@ -43,7 +43,7 @@ import { WordsDomain } from './domains/words/index';
 /** Services */
 import { ClientService } from './services/client.service';
 import { APIService } from './services/api.service';
-import { Config } from './services/config.service';
+import { Config } from './services/config.interface';
 
 @NgModule({
     imports: [HttpClientModule],

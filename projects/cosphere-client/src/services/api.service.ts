@@ -759,12 +759,12 @@ export class APIService {
         return this.mediaitemsDomain.readMediaitem2(mediaitemId);
     }
 
-    readMediaitemByProcessId(): DataState<X.ReadMediaitemByProcessIdResponse> {
-        return this.mediaitemsDomain.readMediaitemByProcessId();
+    readMediaitemByProcessId(processId: any): DataState<X.ReadMediaitemByProcessIdResponse> {
+        return this.mediaitemsDomain.readMediaitemByProcessId(processId);
     }
     
-    readMediaitemByProcessId2(): Observable<X.ReadMediaitemByProcessIdResponse> {
-        return this.mediaitemsDomain.readMediaitemByProcessId2();
+    readMediaitemByProcessId2(processId: any): Observable<X.ReadMediaitemByProcessIdResponse> {
+        return this.mediaitemsDomain.readMediaitemByProcessId2(processId);
     }
 
     readOrCreateMediaitem(body: X.ReadOrCreateMediaitemBody): Observable<X.ReadOrCreateMediaitemResponse> {
@@ -924,8 +924,8 @@ export class APIService {
         return this._paymentsDomain;
     }
 
-    updatePaymentStatus(body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse> {
-        return this.paymentsDomain.updatePaymentStatus(body);
+    updatePaymentStatus(sessionId: any, body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse> {
+        return this.paymentsDomain.updatePaymentStatus(sessionId, body);
     }
 
     /**
@@ -981,12 +981,12 @@ export class APIService {
         return this.processesDomain.signProcess2(params);
     }
 
-    watchConversionStatus(waiterId: any, params: X.WatchConversionStatusQuery): DataState<X.WatchConversionStatusResponse> {
-        return this.processesDomain.watchConversionStatus(waiterId, params);
+    watchConversionStatus(processId: any, waiterId: any, params: X.WatchConversionStatusQuery): DataState<X.WatchConversionStatusResponse> {
+        return this.processesDomain.watchConversionStatus(processId, waiterId, params);
     }
     
-    watchConversionStatus2(waiterId: any, params: X.WatchConversionStatusQuery): Observable<X.WatchConversionStatusResponse> {
-        return this.processesDomain.watchConversionStatus2(waiterId, params);
+    watchConversionStatus2(processId: any, waiterId: any, params: X.WatchConversionStatusQuery): Observable<X.WatchConversionStatusResponse> {
+        return this.processesDomain.watchConversionStatus2(processId, waiterId, params);
     }
 
     /**

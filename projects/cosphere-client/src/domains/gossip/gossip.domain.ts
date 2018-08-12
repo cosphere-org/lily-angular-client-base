@@ -24,22 +24,22 @@ export class GossipDomain {
      * Bulk Read all supported spoken languages
      */
     public bulkReadSpeechLanguages(): DataState<X.BulkReadSpeechLanguagesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadSpeechLanguagesResponseEntity[]>('/gossip/speech/languages/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadSpeechLanguagesResponseEntity[]>('/gossip/speech/languages/', { responseMap: 'languages', authorizationRequired: true });
     }
     
     public bulkReadSpeechLanguages2(): Observable<X.BulkReadSpeechLanguagesResponseEntity[]> {
-        return this.client.get<X.BulkReadSpeechLanguagesResponseEntity[]>('/gossip/speech/languages/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadSpeechLanguagesResponseEntity[]>('/gossip/speech/languages/', { responseMap: 'languages', authorizationRequired: true });
     }
 
     /**
      * Bulk Read all supported voice languages
      */
     public bulkReadTextLanguages(): DataState<X.BulkReadTextLanguagesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadTextLanguagesResponseEntity[]>('/gossip/text/languages/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadTextLanguagesResponseEntity[]>('/gossip/text/languages/', { responseMap: 'languages', authorizationRequired: true });
     }
     
     public bulkReadTextLanguages2(): Observable<X.BulkReadTextLanguagesResponseEntity[]> {
-        return this.client.get<X.BulkReadTextLanguagesResponseEntity[]>('/gossip/text/languages/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadTextLanguagesResponseEntity[]>('/gossip/text/languages/', { responseMap: 'languages', authorizationRequired: true });
     }
 
     /**

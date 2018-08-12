@@ -39,11 +39,11 @@ export class PaymentCardsDomain {
      * Enables the the User to list all of the Payment Cards which were added by him / her. Among all returned Payment Cards there must be one and only one which is marked as **default**.
      */
     public bulkReadPaymentcards(): DataState<X.BulkReadPaymentcardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'payment_cards', authorizationRequired: true });
     }
     
     public bulkReadPaymentcards2(): Observable<X.BulkReadPaymentcardsResponseEntity[]> {
-        return this.client.get<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadPaymentcardsResponseEntity[]>('/payments/payment_cards/', { responseMap: 'payment_cards', authorizationRequired: true });
     }
 
     /**

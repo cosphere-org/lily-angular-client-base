@@ -12,7 +12,7 @@
  */
 
 export interface BulkReadFragmentsQuery {
-    ids: number[];
+    ids?: number[];
     is_author?: boolean;
     is_learner?: boolean;
     limit?: number;
@@ -144,11 +144,11 @@ export interface ReadFragmentSampleResponse {
  */
 
 export interface UpdateFragmentBody {
-    card_ids: number[];
-    description: string;
+    card_ids?: number[];
+    description?: string;
     is_premium?: boolean;
-    path_ids: number[];
-    title: string;
+    path_ids?: number[];
+    title?: string;
 }
 
 /**

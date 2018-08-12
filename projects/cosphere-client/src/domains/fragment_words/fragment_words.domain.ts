@@ -27,11 +27,11 @@ export class FragmentWordsDomain {
      * List Words
      */
     public bulkReadFragmentWords(params: X.BulkReadFragmentWordsQuery): DataState<X.BulkReadFragmentWordsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'words', authorizationRequired: true });
     }
     
     public bulkReadFragmentWords2(params: X.BulkReadFragmentWordsQuery): Observable<X.BulkReadFragmentWordsResponseEntity[]> {
-        return this.client.get<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadFragmentWordsResponseEntity[]>('/fragments/words/', { params, responseMap: 'words', authorizationRequired: true });
     }
 
     /**
@@ -41,11 +41,11 @@ export class FragmentWordsDomain {
      * List Published Words
      */
     public bulkReadPublishedFragmentWords(params: X.BulkReadPublishedFragmentWordsQuery): DataState<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'data', authorizationRequired: false });
+        return this.client.getDataState<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'words', authorizationRequired: false });
     }
     
     public bulkReadPublishedFragmentWords2(params: X.BulkReadPublishedFragmentWordsQuery): Observable<X.BulkReadPublishedFragmentWordsResponseEntity[]> {
-        return this.client.get<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'data', authorizationRequired: false });
+        return this.client.get<X.BulkReadPublishedFragmentWordsResponseEntity[]>('/fragments/words/published/', { params, responseMap: 'words', authorizationRequired: false });
     }
 
 }

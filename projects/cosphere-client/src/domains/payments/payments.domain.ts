@@ -26,9 +26,9 @@ export class PaymentsDomain {
      *
      * Update the Payment instance identified by the `session_id`. This command is for external use only therefore it doesn't expose internal ids of the payments but rather session id.
      */
-    public updatePaymentStatus(body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse> {
+    public updatePaymentStatus(sessionId: any, body: X.UpdatePaymentStatusBody): Observable<X.UpdatePaymentStatusResponse> {
         return this.client
-            .post<X.UpdatePaymentStatusResponse>('/payments/(?P<session_id>[\w\-]+)', body, { authorizationRequired: false })
+            .post<X.UpdatePaymentStatusResponse>(`/payments/${sessionId}`, body, { authorizationRequired: false })
             .pipe(filter(x => !_.isEmpty(x)));
     }
 

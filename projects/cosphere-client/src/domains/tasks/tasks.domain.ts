@@ -27,11 +27,11 @@ export class TasksDomain {
      * List tasks
      */
     public bulkReadTasks(params: X.BulkReadTasksQuery): DataState<X.BulkReadTasksResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadTasksResponseEntity[]>('/tasks/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadTasksResponseEntity[]>('/tasks/', { params, responseMap: 'tasks', authorizationRequired: true });
     }
     
     public bulkReadTasks2(params: X.BulkReadTasksQuery): Observable<X.BulkReadTasksResponseEntity[]> {
-        return this.client.get<X.BulkReadTasksResponseEntity[]>('/tasks/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadTasksResponseEntity[]>('/tasks/', { params, responseMap: 'tasks', authorizationRequired: true });
     }
 
     /**
@@ -41,11 +41,11 @@ export class TasksDomain {
      * List Tasks Bins
      */
     public bulkReadTaskBins(params: X.BulkReadTaskBinsQuery): DataState<X.BulkReadTaskBinsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadTaskBinsResponseEntity[]>('/tasks/bins/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadTaskBinsResponseEntity[]>('/tasks/bins/', { params, responseMap: 'tasks_bins', authorizationRequired: true });
     }
     
     public bulkReadTaskBins2(params: X.BulkReadTaskBinsQuery): Observable<X.BulkReadTaskBinsResponseEntity[]> {
-        return this.client.get<X.BulkReadTaskBinsResponseEntity[]>('/tasks/bins/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadTaskBinsResponseEntity[]>('/tasks/bins/', { params, responseMap: 'tasks_bins', authorizationRequired: true });
     }
 
 }

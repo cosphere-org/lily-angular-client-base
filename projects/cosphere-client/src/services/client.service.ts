@@ -9,7 +9,7 @@ import { BehaviorSubject, Subject, Observable, throwError } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
 import * as _ from 'underscore';
 
-import { Config } from './config.service';
+import { Config } from './config.interface';
 import { Options, State, DataState, RequestState } from './client.interface';
 
 @Injectable({
@@ -40,35 +40,35 @@ export class ClientService {
   }
 
   get<T>(endpoint: string, options?: Options): Observable<T> {
-    const url = this.getUrl(endpoint);
+    const url = options && options.ignoreBaseUrl ? endpoint : this.getUrl(endpoint);
     const httpOptions = this.getHttpOptions(options);
     return this.http
       .get(url, httpOptions)
-      .pipe(retry(3), catchError(this.handleError)) as Observable<T>;
+      .pipe(/* retry(3), */catchError(this.handleError)) as Observable<T>;
   }
 
   post<T>(endpoint: string, body: any, options?: Options): Observable<T> {
-    const url = this.getUrl(endpoint);
+    const url = options && options.ignoreBaseUrl ? endpoint : this.getUrl(endpoint);
     const httpOptions = this.getHttpOptions(options);
     return this.http
       .post(url, body, httpOptions)
-      .pipe(retry(3), catchError(this.handleError)) as Observable<T>;
+      .pipe(/* retry(3), */catchError(this.handleError)) as Observable<T>;
   }
 
   put<T>(endpoint: string, body: any, options?: Options): Observable<T> {
-    const url = this.getUrl(endpoint);
+    const url = options && options.ignoreBaseUrl ? endpoint : this.getUrl(endpoint);
     const httpOptions = this.getHttpOptions(options);
     return this.http
       .put(url, body, httpOptions)
-      .pipe(retry(3), catchError(this.handleError)) as Observable<T>;
+      .pipe(/* retry(3), */catchError(this.handleError)) as Observable<T>;
   }
 
   delete<T>(endpoint: string, options?: Options): Observable<T> {
-    const url = this.getUrl(endpoint);
+    const url = options && options.ignoreBaseUrl ? endpoint : this.getUrl(endpoint);
     const httpOptions = this.getHttpOptions(options);
     return this.http
       .delete(url, httpOptions)
-      .pipe(retry(3), catchError(this.handleError)) as Observable<T>;
+      .pipe(/* retry(3), */catchError(this.handleError)) as Observable<T>;
   }
 
   getDataState<T>(endpoint: string, options?: Options): DataState<T> {
@@ -151,6 +151,7 @@ export class ClientService {
     params?: HttpParams | { [param: string]: string | string[] };
     headers?: HttpHeaders | { [header: string]: string | string[] };
     reportProgress?: boolean;
+    responseType?: any;
   } {
     const authorizationRequired = _.has(options, 'authorizationRequired')
       ? options.authorizationRequired
@@ -161,6 +162,7 @@ export class ClientService {
       params?: HttpParams | { [param: string]: string | string[] };
       headers?: HttpHeaders | { [header: string]: string | string[] };
       reportProgress?: boolean;
+      responseType?: any;
     } = {
       headers: this.getHeaders(authorizationRequired, etag)
     };
@@ -179,6 +181,10 @@ export class ClientService {
 
     if (_.has(options, 'reportProgress')) {
       httpOptions.reportProgress = options.reportProgress;
+    }
+
+    if (_.has(options, 'responseType')) {
+      httpOptions.responseType = options.responseType;
     }
 
     return httpOptions;
@@ -219,7 +225,7 @@ export class ClientService {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
       console.error(
-        `Backend returned code ${error.status}, ` + `body was: ${error.error}`
+        `Backend returned code ${error.status}, ` + `body was:`, error.error
       );
     }
 

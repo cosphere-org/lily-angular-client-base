@@ -39,11 +39,11 @@ export class CardsDomain {
      * List subset of Cards depending on various filtering flags.
      */
     public bulkReadCards(params: X.BulkReadCardsQuery): DataState<X.BulkReadCardsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'cards', authorizationRequired: true });
     }
     
     public bulkReadCards2(params: X.BulkReadCardsQuery): Observable<X.BulkReadCardsResponseEntity[]> {
-        return this.client.get<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadCardsResponseEntity[]>('/cards/', { params, responseMap: 'cards', authorizationRequired: true });
     }
 
     /**

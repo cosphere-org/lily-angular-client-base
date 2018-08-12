@@ -95,12 +95,12 @@ export class ProcessesDomain {
      *
      * Endpoint called by the external conversion service.
      */
-    public watchConversionStatus(waiterId: any, params: X.WatchConversionStatusQuery): DataState<X.WatchConversionStatusResponse> {
-        return this.client.getDataState<X.WatchConversionStatusResponse>(`/mediafiles/convert_processes/(?P<process_id>[0-9a-zA-Z\_\-\=]+)/${waiterId}`, { params, authorizationRequired: false });
+    public watchConversionStatus(processId: any, waiterId: any, params: X.WatchConversionStatusQuery): DataState<X.WatchConversionStatusResponse> {
+        return this.client.getDataState<X.WatchConversionStatusResponse>(`/mediafiles/convert_processes/${processId}/${waiterId}`, { params, authorizationRequired: false });
     }
     
-    public watchConversionStatus2(waiterId: any, params: X.WatchConversionStatusQuery): Observable<X.WatchConversionStatusResponse> {
-        return this.client.get<X.WatchConversionStatusResponse>(`/mediafiles/convert_processes/(?P<process_id>[0-9a-zA-Z\_\-\=]+)/${waiterId}`, { params, authorizationRequired: false });
+    public watchConversionStatus2(processId: any, waiterId: any, params: X.WatchConversionStatusQuery): Observable<X.WatchConversionStatusResponse> {
+        return this.client.get<X.WatchConversionStatusResponse>(`/mediafiles/convert_processes/${processId}/${waiterId}`, { params, authorizationRequired: false });
     }
 
 }

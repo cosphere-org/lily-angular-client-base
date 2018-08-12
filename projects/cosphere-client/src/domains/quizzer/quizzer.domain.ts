@@ -24,22 +24,22 @@ export class QuizzerDomain {
      * Build Read Quiz Attempts
      */
     public bulkReadQuizattempts(quizId: any): DataState<X.BulkReadQuizattemptsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadQuizattemptsResponseEntity[]>(`/quizzes/${quizId}/attempts/`, { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadQuizattemptsResponseEntity[]>(`/quizzes/${quizId}/attempts/`, { responseMap: 'quiz_attempts', authorizationRequired: true });
     }
     
     public bulkReadQuizattempts2(quizId: any): Observable<X.BulkReadQuizattemptsResponseEntity[]> {
-        return this.client.get<X.BulkReadQuizattemptsResponseEntity[]>(`/quizzes/${quizId}/attempts/`, { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadQuizattemptsResponseEntity[]>(`/quizzes/${quizId}/attempts/`, { responseMap: 'quiz_attempts', authorizationRequired: true });
     }
 
     /**
      * Bulk Read Quizzes
      */
     public bulkReadQuizzes(): DataState<X.BulkReadQuizzesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadQuizzesResponseEntity[]>('/quizzes/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadQuizzesResponseEntity[]>('/quizzes/', { responseMap: 'quizzes', authorizationRequired: true });
     }
     
     public bulkReadQuizzes2(): Observable<X.BulkReadQuizzesResponseEntity[]> {
-        return this.client.get<X.BulkReadQuizzesResponseEntity[]>('/quizzes/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadQuizzesResponseEntity[]>('/quizzes/', { responseMap: 'quizzes', authorizationRequired: true });
     }
 
     /**

@@ -27,25 +27,25 @@ export class FragmentHashtagsDomain {
      * List Hashtags
      */
     public bulkReadFragmentHashtags(params: X.BulkReadFragmentHashtagsQuery): DataState<X.BulkReadFragmentHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadFragmentHashtagsResponseEntity[]>('/fragments/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadFragmentHashtagsResponseEntity[]>('/fragments/hashtags/', { params, responseMap: 'hashtags', authorizationRequired: true });
     }
     
     public bulkReadFragmentHashtags2(params: X.BulkReadFragmentHashtagsQuery): Observable<X.BulkReadFragmentHashtagsResponseEntity[]> {
-        return this.client.get<X.BulkReadFragmentHashtagsResponseEntity[]>('/fragments/hashtags/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadFragmentHashtagsResponseEntity[]>('/fragments/hashtags/', { params, responseMap: 'hashtags', authorizationRequired: true });
     }
 
     /**
-     * List Published Hashtags
+     * List Published Hashtags <!!! shoudn't be Public?
      * -------------
      *
      * List Published Hashtags
      */
     public bulkReadPublishedFragmentHashtags(params: X.BulkReadPublishedFragmentHashtagsQuery): DataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]>('/fragments/hashtags/published/', { params, responseMap: 'data', authorizationRequired: false });
+        return this.client.getDataState<X.BulkReadPublishedFragmentHashtagsResponseEntity[]>('/fragments/hashtags/published/', { params, responseMap: 'hashtags', authorizationRequired: false });
     }
     
     public bulkReadPublishedFragmentHashtags2(params: X.BulkReadPublishedFragmentHashtagsQuery): Observable<X.BulkReadPublishedFragmentHashtagsResponseEntity[]> {
-        return this.client.get<X.BulkReadPublishedFragmentHashtagsResponseEntity[]>('/fragments/hashtags/published/', { params, responseMap: 'data', authorizationRequired: false });
+        return this.client.get<X.BulkReadPublishedFragmentHashtagsResponseEntity[]>('/fragments/hashtags/published/', { params, responseMap: 'hashtags', authorizationRequired: false });
     }
 
 }

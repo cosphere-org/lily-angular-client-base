@@ -99,7 +99,7 @@ export interface ReadOrCreateMediaitemBody {
     external_data: Object;
     is_card_type?: boolean;
     process_ids?: Object;
-    type: string;
+    type?: string;
 }
 
 /**
@@ -125,10 +125,10 @@ export interface ReadOrCreateMediaitemResponse {
 
 export interface UpdateMediaitemBody {
     card_ids: number[];
-    content_host: string;
-    content_uri: string;
-    external_data: Object;
-    type: string;
+    content_host?: string;
+    content_uri?: string;
+    external_data?: Object;
+    type?: string;
 }
 
 /**

@@ -13,6 +13,8 @@ export interface Options {
   headers?: HttpHeaders | { [header: string]: string | string[] };
   reportProgress?: boolean;
   responseMap?: string;
+  ignoreBaseUrl?: boolean;
+  responseType?: any;
 }
 
 export interface State<T> {

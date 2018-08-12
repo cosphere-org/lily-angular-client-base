@@ -24,22 +24,22 @@ export class BricksDomain {
      * Bulk Read Bricks Game Attempts
      */
     public bulkReadGameattempts(gameId: any): DataState<X.BulkReadGameattemptsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadGameattemptsResponseEntity[]>(`/games/${gameId}/attempts/`, { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadGameattemptsResponseEntity[]>(`/games/${gameId}/attempts/`, { responseMap: 'attempts', authorizationRequired: true });
     }
     
     public bulkReadGameattempts2(gameId: any): Observable<X.BulkReadGameattemptsResponseEntity[]> {
-        return this.client.get<X.BulkReadGameattemptsResponseEntity[]>(`/games/${gameId}/attempts/`, { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadGameattemptsResponseEntity[]>(`/games/${gameId}/attempts/`, { responseMap: 'attempts', authorizationRequired: true });
     }
 
     /**
      * Bulk Read Game
      */
     public bulkReadGames(): DataState<X.BulkReadGamesResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadGamesResponseEntity[]>('/games/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadGamesResponseEntity[]>('/games/', { responseMap: 'games', authorizationRequired: true });
     }
     
     public bulkReadGames2(): Observable<X.BulkReadGamesResponseEntity[]> {
-        return this.client.get<X.BulkReadGamesResponseEntity[]>('/games/', { responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadGamesResponseEntity[]>('/games/', { responseMap: 'games', authorizationRequired: true });
     }
 
     /**

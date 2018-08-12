@@ -32,10 +32,11 @@ export interface BulkDeleteCardsResponse {
 
 export interface BulkReadCardsQuery {
     category_id?: number;
-    ids: number[];
+    ids?: number[];
     limit?: number;
     offset?: number;
     query?: string;
+    ids_only?: boolean;
 }
 
 /**

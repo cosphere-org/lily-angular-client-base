@@ -108,6 +108,7 @@ export interface ReadInvariantsResponse {
 
 export interface ReadProcessStateQuery {
     process_id: string;
+    is_canvas?: boolean;
 }
 
 /**

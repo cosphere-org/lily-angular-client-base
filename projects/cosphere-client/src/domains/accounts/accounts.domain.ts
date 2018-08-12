@@ -39,11 +39,11 @@ export class AccountsDomain {
      * Enable one to Read all available Mentor accounts
      */
     public bulkReadAccounts(params: X.BulkReadAccountsQuery): DataState<X.BulkReadAccountsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'accounts', authorizationRequired: true });
     }
     
     public bulkReadAccounts2(params: X.BulkReadAccountsQuery): Observable<X.BulkReadAccountsResponseEntity[]> {
-        return this.client.get<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadAccountsResponseEntity[]>('/auth/accounts/', { params, responseMap: 'accounts', authorizationRequired: true });
     }
 
     /**

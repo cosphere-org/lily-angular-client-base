@@ -27,25 +27,25 @@ export class FragmentsDomain {
      * List Remote Fragments
      */
     public bulkReadFragments(params: X.BulkReadFragmentsQuery): DataState<X.BulkReadFragmentsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.getDataState<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'fragments', authorizationRequired: true });
     }
     
     public bulkReadFragments2(params: X.BulkReadFragmentsQuery): Observable<X.BulkReadFragmentsResponseEntity[]> {
-        return this.client.get<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'data', authorizationRequired: true });
+        return this.client.get<X.BulkReadFragmentsResponseEntity[]>('/fragments/', { params, responseMap: 'fragments', authorizationRequired: true });
     }
 
     /**
-     * List Published Remote Fragments
+     * List Published Remote Fragments <!!! shoudn't be Public?
      * -------------
      *
      * List Published Remote Fragments
      */
     public bulkReadPublishedFragments(params: X.BulkReadPublishedFragmentsQuery): DataState<X.BulkReadPublishedFragmentsResponseEntity[]> {
-        return this.client.getDataState<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'data', authorizationRequired: false });
+        return this.client.getDataState<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'fragments', authorizationRequired: false });
     }
     
     public bulkReadPublishedFragments2(params: X.BulkReadPublishedFragmentsQuery): Observable<X.BulkReadPublishedFragmentsResponseEntity[]> {
-        return this.client.get<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'data', authorizationRequired: false });
+        return this.client.get<X.BulkReadPublishedFragmentsResponseEntity[]>('/fragments/published/', { params, responseMap: 'fragments', authorizationRequired: false });
     }
 
     /**
