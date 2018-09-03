@@ -20,7 +20,7 @@
     "paths": {
       "@angular/*": ["node_modules/@angular/*"],
       "rxjs/*": ["node_modules/rxjs/*"],
-      "@cosphere/client/*": ["./projects/cosphere-client/src/public_api"]
+      "@__CLIENT_PREFIX__/client/*": ["./projects/client/src/public_api"]
     }
   }
 }

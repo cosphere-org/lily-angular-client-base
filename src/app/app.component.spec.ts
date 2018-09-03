@@ -13,15 +13,15 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'CoSphere Client'`, async(() => {
+  it(`should have as title 'Lily Angular 2+ Client'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('CoSphere Client');
+    expect(app.title).toEqual('Lily Angular 2+ Client');
   }));
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to CoSphere Client!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Lily Angular 2+ Client!');
   }));
 });

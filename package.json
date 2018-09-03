@@ -1,16 +1,16 @@
 {
-  "name": "@cosphere/client",
+  "name": "@__CLIENT_PREFIX__/client",
   "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "rimraf dist && ng build cosphere-client",
+    "build": "rimraf dist && ng build __CLIENT_PREFIX__-client",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "main": "./dist/bundles/cosphere-client.umd.js",
-  "types": "./dist/cosphere-client.d.ts",
+  "main": "./dist/bundles/__CLIENT_PREFIX__-client.umd.js",
+  "types": "./dist/__CLIENT_PREFIX__-client.d.ts",
   "private": true,
   "dependencies": {
     "@angular/animations": "6.1.1",
