@@ -7,14 +7,13 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 /** Services */
-import { ClientService } from './services/client.service';
+import { HttpService, Config } from '@lily/http';
 import { APIService } from './services/api.service';
-import { Config } from './services/config.interface';
 
 @NgModule({
     imports: [HttpClientModule],
     providers: [
-        ClientService,
+        HttpService,
 
         // Facade
         APIService,
