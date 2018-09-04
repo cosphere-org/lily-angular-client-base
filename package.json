@@ -13,7 +13,6 @@
   "types": "./dist/__CLIENT_PREFIX__-client.d.ts",
   "private": true,
   "dependencies": {
-    "@lily/http": "git+ssh://git@bitbucket.org/goodai/lily-angular-http.git",
     "@angular/animations": "6.1.1",
     "@angular/common": "6.1.1",
     "@angular/compiler": "6.1.1",

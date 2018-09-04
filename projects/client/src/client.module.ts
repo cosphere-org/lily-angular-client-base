@@ -4,17 +4,14 @@
   */
 
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 /** Services */
-import { HttpService, Config } from '@lily/http';
+import { Config, LilyHttpModule } from '@lily/http';
 import { APIService } from './services/api.service';
 
 @NgModule({
-    imports: [HttpClientModule],
+    imports: [LilyHttpModule],
     providers: [
-        HttpService,
-
         // Facade
         APIService,
     ]
