@@ -1,6 +1,6 @@
 {
   "name": "@__CLIENT_PREFIX__/client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,6 +13,7 @@
   "types": "./dist/__CLIENT_PREFIX__-client.d.ts",
   "private": true,
   "dependencies": {
+    "@lily/http": "git+ssh://git@bitbucket.org/goodai/lily-angular-http.git",
     "@angular/animations": "6.1.1",
     "@angular/common": "6.1.1",
     "@angular/compiler": "6.1.1",
