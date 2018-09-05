@@ -3,26 +3,15 @@
   * OVERWRITTEN
   */
 
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 /** Services */
-import { Config, LilyHttpModule } from '@lily/http';
 import { APIService } from './services/api.service';
 
 @NgModule({
-    imports: [LilyHttpModule],
     providers: [
         // Facade
         APIService,
     ]
 })
-export class ClientModule {
-    static forRoot(config: Config): ModuleWithProviders {
-        return {
-            ngModule: ClientModule,
-            providers: [
-                { provide: 'config', useValue: config }
-            ]
-        };
-    }
-}
+export class ClientModule {}
