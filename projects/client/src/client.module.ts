@@ -3,15 +3,33 @@
   * OVERWRITTEN
   */
 
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 /** Services */
 import { APIService } from './services/api.service';
+import { HttpService, Config } from './http.service';
 
 @NgModule({
+    imports: [HttpClientModule],
     providers: [
         // Facade
         APIService,
+        HttpService,
     ]
 })
-export class ClientModule {}
+export class ClientModule {
+
+  static forRoot(config: Config): ModuleWithProviders<ClientModule> {
+
+    return {
+
+      ngModule: ClientModule,
+
+      providers: [{ provide: 'COSPHERE_CLIENT_CONFIG_TOKEN', useValue: config }]
+
+    };
+
+  }
+
+}
