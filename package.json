@@ -6,9 +6,7 @@
     "build": "rimraf dist && ng build __CLIENT_PREFIX__-client --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "ivy": "ngcc",
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+    "e2e": "ng e2e"
   },
   "main": "./dist/bundles/__CLIENT_PREFIX__-client.umd.js",
   "types": "./dist/__CLIENT_PREFIX__-client.d.ts",
