@@ -6,6 +6,9 @@
     "@angular/core": ">= 7.0.0",
     "rxjs": ">= 6.3.0"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "ngPackage": {
     "lib": {
       "entryFile": "src/public_api"
