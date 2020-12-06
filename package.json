@@ -1,16 +1,15 @@
 {
   "name": "@__CLIENT_PREFIX__/client",
-  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "rimraf dist && ng build __CLIENT_PREFIX__-client",
+    "build": "rimraf dist && ng build __CLIENT_PREFIX__-client --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "ivy": "ngcc",
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
   },
-  "main_ivy_ngcc": "__ivy_ngcc__/dist/bundles/__CLIENT_PREFIX__-client.umd.js",
   "main": "./dist/bundles/__CLIENT_PREFIX__-client.umd.js",
   "types": "./dist/__CLIENT_PREFIX__-client.d.ts",
   "private": true,
@@ -27,7 +26,7 @@
     "qs": "^6.6.0",
     "rxjs": "6.6.3",
     "tslib": "^2.0.0",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -53,9 +52,5 @@
     "ts-node": "~7.0.1",
     "tslint": "~6.1.0",
     "typescript": "4.0.5"
-  },
-  "__processed_by_ivy_ngcc__": {
-    "main": "11.0.3",
-    "typings": "11.0.3"
   }
 }
