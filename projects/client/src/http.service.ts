@@ -34,7 +34,7 @@ export class HttpService {
   private readonly defaultAuthToken: string = "auth_token";
 
   constructor(
-    @Inject("COSPHERE_CLIENT_CONFIG_TOKEN") private config: Config,
+    @Inject("CLIENT_CONFIG_TOKEN") private config: Config,
     private http: HttpClient
   ) {
     this.baseUrl = this.config.baseUrl;
